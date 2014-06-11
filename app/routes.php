@@ -22,6 +22,12 @@ Route::get('signup', function()
 
     return View::make('signup'); //->with('users', $users);
 });
+Route::get('pages.oduller', function()
+{
+    
+
+    return View::make('pages.oduller'); //->with('users', $users);
+});
 
 Route::get('login', function()
 {
