@@ -33,7 +33,7 @@ class UserController extends BaseController {
 			$user->password = Hash::make(Input::get('passwordText'));
             $user->save();
 
-            Session::flash('message', 'Successfully created!');
+            Session::flash('message', 'Başarıyla Oluşturuldu !');
             $users = User::where('username', 'LIKE', '%'.$user->username.'%')->get();
             $idk = 12365;
             foreach ($users as $user)
@@ -67,7 +67,7 @@ class UserController extends BaseController {
                 ->withInput(Input::except('password'));
         }else if (Auth::attempt(array('username' => $username, 'password' => $password)))
         {
-            Session::flash('message', 'login successful!');
+            Session::flash('message', 'Başarıyla Giriş Yaptınız !');
             $users = User::where('username', '=', $username)->get();
             $idk = 12365;
             foreach ($users as $user)
@@ -78,7 +78,7 @@ class UserController extends BaseController {
 
             return Redirect::intended('profile/' . $idk);
         }else {
-            Session::flash('message', 'login failed!');
+            Session::flash('message', 'Giriş Başarısız !');
             return Redirect::intended('signup');
         }
 
@@ -89,6 +89,11 @@ class UserController extends BaseController {
         if (Session::has('id') ){
 
             Session::forget('id');
+
+             Session::flash('message', 'Başarıyla Çıkış Yaptınız !');
+
+             return Redirect::intended('index');
+
 
         }
     }
