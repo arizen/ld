@@ -82,7 +82,7 @@
         <center>  {{ Form::label('usernameLabel', 'Username') }} {{ Form::text('usernameText') }}
         {{ Form::label('emailLabel', 'E-mail') }} {{ Form::text('emailText') }}
         {{ Form::label('passwordLabel', 'Password') }} {{ Form::password('passwordText') }}
-        {{ Form::label('passwordLabel', 'Password') }} {{ Form::password('passwordText2') }}<br />                    
+        {{ Form::label('passwordLabel', 'Password (Tekrar)') }} {{ Form::password('passwordText2') }}<br />                    
         {{ Form::submit('OK', array('class' => 'btn btn-primary btn-lg')) }} </center>
 
 
