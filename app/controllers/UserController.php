@@ -84,4 +84,12 @@ class UserController extends BaseController {
 
     }
 
+    public function logout(){
+
+        if (Session::has('id') ){
+
+            Session::forget('id');
+
+        }
+    }
 }
