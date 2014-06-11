@@ -52,20 +52,31 @@
                                     </span>
                                 </a>
                              
+                            </li>@if (Session::has('id'))
+    
+  <li style="margin-left:100px; float:right;">
+                                <a href="#">
+                                    <span class="label-nav">
+                                        Çıkış Yap
+                                    </span>
+                                </a>
+                         
                             </li>
+@else
+
                             <li>
                                 <a href="#">
                                     <span class="label-nav">
                                         Giriş Yap
                                     </span>
                                 </a>
-                          <ul>	{{ Form::open(array('action' => 'UserController@login', 'id'=>'signup')) }}
+                          <ul>  {{ Form::open(array('action' => 'UserController@login', 'id'=>'signup')) }}
                                  
-		<br /><center><h2>Yeni bir deneyime hazır mısın? </h2></center>
-		<center>{{ Form::label('usernameLabel', 'Username') }} {{ Form::text('usernameText') }}
-		{{ Form::label('passwordLabel', 'Password') }}{{ Form::password('passwordText') }}		<br />	
-		{{ Form::submit('Login', array('class' => 'btn btn-primary btn-lg')) }}	</center>
-	{{ Form::close() }}</ul>
+        <br /><center><h2>Yeni bir deneyime hazır mısın? </h2></center>
+        <center>{{ Form::label('usernameLabel', 'Username') }} {{ Form::text('usernameText') }}
+        {{ Form::label('passwordLabel', 'Password') }}{{ Form::password('passwordText') }}      <br />  
+        {{ Form::submit('Login', array('class' => 'btn btn-primary btn-lg')) }} </center>
+    {{ Form::close() }}</ul>
                             </li>
                           
                             <li>
@@ -89,6 +100,9 @@
        {{ Form::close() }}
                                 </ul>
                             </li>
+
+
+@endif
                         </ul>
 
                     </nav>
