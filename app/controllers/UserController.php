@@ -84,17 +84,5 @@ class UserController extends BaseController {
 
     }
 
-    public function logout(){
-
-        if (Session::has('id') ){
-
-            Session::forget('id');
-
-             Session::flash('message', 'Başarıyla Çıkış Yaptınız !');
-
-             return Redirect::intended('index');
-
-
-        }
-    }
+    
 }

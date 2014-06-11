@@ -26,11 +26,11 @@ Route::get('logout', function()
     return View::make('logout'); //->with('users', $users);
 });
 
-Route::get('pages.oduller', function()
+Route::get('oduller', function()
 {
     
 
-    return View::make('pages.oduller'); //->with('users', $users);
+    return View::make('oduller'); //->with('users', $users);
 });
 
 Route::get('login', function()

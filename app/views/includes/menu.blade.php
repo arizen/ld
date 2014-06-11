@@ -30,7 +30,7 @@
                     <nav>
                         <ul class="navigation">
                             <li>
-                                <a href="index.html">
+                                <a href="/">
                                     <span class="label-nav">
                                         Ana Sayfa
                                     </span>
@@ -38,7 +38,7 @@
                             
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="/blog">
                                     <span class="label-nav">
                                        Blog
                                     </span>
@@ -46,7 +46,7 @@
                              
                             </li>
                               <li>
-                                <a href="oduller.html">
+                                <a href="/oduller">
                                     <span class="label-nav">
                                         Ödüller
                                     </span>
