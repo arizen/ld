@@ -1,5 +1,11 @@
 @extends('layouts.default')
 @section('content')
+{{ HTML::ul($errors->all()) }}
+
+@if (Session::has('message'))
+    <div class="alert alert-info">{{ Session::get('message') }}</div>
+@endif
+
 	  <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12">  
