@@ -81,7 +81,8 @@
         <br /><center><h2>Duonuzu Bulmanın Zamanı Geldi.</h2></center>
         <center>  {{ Form::label('usernameLabel', 'Username') }} {{ Form::text('usernameText') }}
         {{ Form::label('emailLabel', 'E-mail') }} {{ Form::text('emailText') }}
-        {{ Form::label('passwordLabel', 'Password') }} {{ Form::password('passwordText') }}<br />                    
+        {{ Form::label('passwordLabel', 'Password') }} {{ Form::password('passwordText') }}
+        {{ Form::label('passwordLabel', 'Password') }} {{ Form::password('passwordText2') }}<br />                    
         {{ Form::submit('OK', array('class' => 'btn btn-primary btn-lg')) }} </center>
 
 
