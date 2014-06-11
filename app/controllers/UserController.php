@@ -11,14 +11,15 @@ class UserController extends BaseController {
     	$rules = array(
 			'usernameText'       => 'required',
 			'emailText'      => 'required|email',
-			'leagueBox' => 'required',
-            'summonerText' => 'required',
-            'serverBox' => 'required',
-            'divisionBox' => 'required'
-
+            'passwordText'       => 'required',
+            'passwordText2'       => 'required'
 		);
 
 		$validator = Validator::make(Input::all(), $rules);
+
+        if( Input::get('passwordText') != Input::get('passwordText2') ){
+            echo "fail";
+        }
 
 		if ($validator->fails()) {
 			return Redirect::to('signup')
@@ -30,10 +31,6 @@ class UserController extends BaseController {
             $user->username = Input::get('usernameText');
             $user->email = Input::get('emailText');
 			$user->password = Hash::make(Input::get('passwordText'));
-            $user->summoner_name = Input::get('summonerText');
-            $user->server = Input::get('serverBox');
-            $user->league = Input::get('leagueBox');
-            $user->division = Input::get('divisionBox');
             $user->save();
 
             Session::flash('message', 'Successfully created!');
