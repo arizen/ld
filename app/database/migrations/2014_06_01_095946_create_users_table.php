@@ -17,6 +17,7 @@ class CreateUsersTable extends Migration {
         	$table->increments('id');
        		$table->string('email')->unique();
         	$table->string('username');
+        	$table->integer('ld_points');
         	$table->string('league');
         	$table->string('division');
         	$table->string('password');
