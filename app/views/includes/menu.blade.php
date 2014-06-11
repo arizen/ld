@@ -59,12 +59,13 @@
                                         Giriş Yap
                                     </span>
                                 </a>
-                          <ul>	<form id="signup">
+                          <ul>	{{ Form::open(array('action' => 'UserController@login', 'id'=>'signup')) }}
+                                 
 		<br /><center><h2>Duonuzu Bulmanın Zamanı Geldi.</h2></center>
-		<center><input type="email" placeholder="info@leagueduo.com" required="yes" name="email">
-		<input type="password" placeholder="Şifrenizi yazınız." required="yes" name="sifre">		<br />	
-		<button type="submit" class="btn btn-primary btn-lg">Giriş Yapın ! </button>	</center>
-	</form></ul>
+		<center>{{ Form::label('usernameLabel', 'Username') }} {{ Form::text('usernameText') }}
+		{{ Form::label('passwordLabel', 'Password') }}{{ Form::password('passwordText') }}		<br />	
+		{{ Form::submit('Login', array('class' => 'btn btn-primary btn-lg')) }}	</center>
+	{{ Form::close() }}</ul>
                             </li>
                           
                             <li>
