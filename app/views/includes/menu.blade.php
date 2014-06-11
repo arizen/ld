@@ -61,7 +61,7 @@
                                 </a>
                           <ul>	{{ Form::open(array('action' => 'UserController@login', 'id'=>'signup')) }}
                                  
-		<br /><center><h2>Duonuzu Bulmanın Zamanı Geldi.</h2></center>
+		<br /><center><h2>Yeni bir deneyime hazır mısın? </h2></center>
 		<center>{{ Form::label('usernameLabel', 'Username') }} {{ Form::text('usernameText') }}
 		{{ Form::label('passwordLabel', 'Password') }}{{ Form::password('passwordText') }}		<br />	
 		{{ Form::submit('Login', array('class' => 'btn btn-primary btn-lg')) }}	</center>
@@ -75,13 +75,13 @@
                                     </span>
                                 </a>
                                 <ul>
-                  	<form id="signup" action="kayit_kontrol.php" method="post">
-		<br /><center><h2>Duonuzu Bulmanın Zamanı Geldi.</h2></center>
-		<center><input type="email" placeholder="info@leagueduo.com" required="yes" id="email" name="email">
-		<input type="password" placeholder="Şifrenizi yazınız." required="yes" id="sifre" name="sifre">
-		<input type="password" placeholder="Şifrenizi Tekrar Yazınız." required="yes" id="sifre2" name="sifre2"><br />					
-		<button type="submit" class="btn btn-primary btn-lg">Şimdi Kayıt Olun ! </button>	</center>
-	</form>
+                    {{ Form::open(array('action' => 'UserController@saveUser', 'id'=>'signup2')) }}
+        <br /><center><h2>Duonuzu Bulmanın Zamanı Geldi.</h2></center>
+        <center>  {{ Form::label('usernameLabel', 'Username') }}{{ Form::text('usernameText') }}
+        {{ Form::label('emailLabel', 'E-mail') }}{{ Form::text('emailText') }}
+        {{ Form::label('passwordLabel', 'Password') }}{{ Form::password('passwordText') }}<br />                    
+        {{ Form::submit('OK', array('class' => 'btn btn-primary btn-lg') }} </center>
+       {{ Form::close() }}
                                 </ul>
                             </li>
                         </ul>
