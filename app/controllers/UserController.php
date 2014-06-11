@@ -99,16 +99,18 @@ class UserController extends BaseController {
                 ->withInput(Input::except('password'));
         }else
         {
-            $user = User::find(Session::get('id'));
+            echo Input::get('summoner_nameText') . "<br>";
+            echo Input::get('serverBox');
+            //$user = User::find(Session::get('id'));
 
-            $user->summoner_name = Input::get('summoner_nameText');
-            $user->server = Input::get('serverBox');
+            //$user->summoner_name = Input::get('summoner_nameText');
+            //$user->server = Input::get('serverBox');
 
-            $user->save();
+            //$user->save();
 
-            Session::flash('message', 'Başarıyla Oluşturuldu !');
+            //Session::flash('message', 'Başarıyla Oluşturuldu !');
 
-            return Redirect::intended('profile/' . Session::get('id') );
+            //return Redirect::intended('profile/' . Session::get('id') );
         }
     }    
 }
