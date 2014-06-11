@@ -55,7 +55,7 @@
                             </li>@if (Session::has('id'))
     
   <li style="margin-left:100px; float:right;">
-                                <a href="#">
+                                <a href="/logout">
                                     <span class="label-nav">
                                         Çıkış Yap
                                     </span>
