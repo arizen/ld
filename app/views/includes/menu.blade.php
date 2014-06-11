@@ -75,12 +75,16 @@
                                     </span>
                                 </a>
                                 <ul>
-                    {{ Form::open(array('action' => 'UserController@saveUser', 'id'=>'signup2')) }}
+                    {{ Form::open(array('action' => 'UserController@saveUser', 'id'=>'signup')) }}
+
+
         <br /><center><h2>Duonuzu Bulmanın Zamanı Geldi.</h2></center>
-        <center>  {{ Form::label('usernameLabel', 'Username') }}{{ Form::text('usernameText') }}
-        {{ Form::label('emailLabel', 'E-mail') }}{{ Form::text('emailText') }}
-        {{ Form::label('passwordLabel', 'Password') }}{{ Form::password('passwordText') }}<br />                    
-        {{ Form::submit('OK', array('class' => 'btn btn-primary btn-lg') }} </center>
+        <center>  {{ Form::label('usernameLabel', 'Username') }} {{ Form::text('usernameText') }}
+        {{ Form::label('emailLabel', 'E-mail') }} {{ Form::text('emailText') }}
+        {{ Form::label('passwordLabel', 'Password') }} {{ Form::password('passwordText') }}<br />                    
+        {{ Form::submit('OK', array('class' => 'btn btn-primary btn-lg')) }} </center>
+
+
        {{ Form::close() }}
                                 </ul>
                             </li>

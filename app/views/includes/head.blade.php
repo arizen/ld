@@ -1,6 +1,6 @@
 <meta charset="utf-8">
         <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-        <title>Zeina HTML5 Theme</title>
+        <title>League DUO</title>
         <!--[if lt IE 9]>
         <script type="text/javascript" src="js/ie-fixes.js"></script>
         <script type="text/javascript" src="js/_excanvas.compiled.js"></script>
