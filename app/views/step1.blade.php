@@ -1,7 +1,7 @@
 @extends('layouts.default')
 @section('content')
 
-
+{{ HTML::ul($errors->all()) }}
 <center>
 {{ Form::open(array('action' => 'UserController@checkStep1', 'id'=>'signup')) }}
 {{ Form::label('summoner_nameLabel', 'Sihirdar Adınız') }} {{ Form::text('summoner_nameText') }}

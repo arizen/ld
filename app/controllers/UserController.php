@@ -94,9 +94,8 @@ class UserController extends BaseController {
         $validator = Validator::make(Input::all(), $rules);
 
         if ($validator->fails()) {
-            return Redirect::to('login')
-                ->withErrors($validator)
-                ->withInput(Input::except('password'));
+            return Redirect::to('step1')
+                ->withErrors($validator);
         }else
         {
             echo Input::get('summoner_nameText') . "<br>";
