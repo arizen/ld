@@ -108,7 +108,7 @@ class UserController extends BaseController {
 
             Session::flash('message', 'Başarıyla Oluşturuldu !');
 
-            return Redirect::intended('profile/' . $idk);
+            return Redirect::intended('profile/' . Session::get('id') );
         }
     }    
 }
