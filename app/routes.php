@@ -20,6 +20,12 @@ Route::get('signup', function()
 {
     return View::make('signup'); //->with('users', $users);
 });
+
+Route::get('logout', function()
+{
+    return View::make('logout'); //->with('users', $users);
+});
+
 Route::get('pages.oduller', function()
 {
     
