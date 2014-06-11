@@ -55,7 +55,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'lolduo_db',
+			'database'  => 'league_3',
 			'username'  => 'league_3',
 			'password'  => '6ev5duw6',
 			'charset'   => 'utf8',
