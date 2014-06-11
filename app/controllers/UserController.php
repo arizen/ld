@@ -84,5 +84,31 @@ class UserController extends BaseController {
 
     }
 
-    
+    public function checkStep1(){
+
+        $rules = array(
+            'summoner_nameText'       => 'required',
+            'serverBox' => 'required'
+        );
+
+        $validator = Validator::make(Input::all(), $rules);
+
+        if ($validator->fails()) {
+            return Redirect::to('login')
+                ->withErrors($validator)
+                ->withInput(Input::except('password'));
+        }else
+        {
+            $user = User::find(Session::get('id'));
+
+            $user->summoner_name = Input::get('summoner_nameText');
+            $user->server = Input::get('serverBox');
+
+            $user->save();
+
+            Session::flash('message', 'Başarıyla Oluşturuldu !');
+
+            return Redirect::intended('profile/' . $idk);
+        }
+    }    
 }

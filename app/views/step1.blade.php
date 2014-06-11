@@ -3,7 +3,7 @@
 
 
 <center>
-{{ Form::open(array('action' => 'UserController@login', 'id'=>'signup')) }}
+{{ Form::open(array('action' => 'UserController@checkStep1', 'id'=>'signup')) }}
 {{ Form::label('summoner_nameLabel', 'Sihirdar Adınız') }} {{ Form::text('summoner_nameText') }}
 <select name="serverBox" style="width:500px; height:50px; font-size:20px;">
 <option value="Turkey">Türkiye</option>
