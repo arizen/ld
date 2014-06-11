@@ -7,4 +7,8 @@
 
         }}
         @endif
+
+         <div align="center" class="alert alert-success">
+    <strong style="font-size:30px;">Başarıyla Çıkış Yaptınız!</strong></div>
+
 @stop

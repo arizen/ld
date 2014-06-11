@@ -21,6 +21,11 @@ Route::get('signup', function()
     return View::make('signup'); //->with('users', $users);
 });
 
+Route::get('step1', function()
+{
+    return View::make('step1'); //->with('users', $users);
+});
+
 Route::get('logout', function()
 {
     return View::make('logout'); //->with('users', $users);
