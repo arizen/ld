@@ -28,8 +28,6 @@ Route::get('logout', function()
 
 Route::get('oduller', function()
 {
-    
-
     return View::make('oduller'); //->with('users', $users);
 });
 
