@@ -145,6 +145,6 @@ class UserController extends BaseController {
             $user->skype_info = $skype;
             $user->save();
 
-            return Redirect::intended('step4');
+            return Redirect::intended('profile/' . $user->id);
     }  
 }
