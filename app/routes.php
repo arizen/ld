@@ -50,9 +50,9 @@ Route::get('login', function()
     return View::make('login'); //->with('users', $users);
 });
 
-Route::get('profile/{id}', function($id)
+Route::get('profile/{username}', function($username)
 {
-	$user = User::find($id);
+	$user = User::all()->where('username',$username);
 
     return View::make('profile')->with('user', $user);
 });
