@@ -7,7 +7,7 @@
                     <div class="col-md-3 col-sm-3 footer-col">
                         <div class="footer-content">
                             <div class="footer-content-logo">
-                                <img src="/images/logo.png" alt=""/>
+                                <img src="/images/logo.png" alt="League Duo"/>
                             </div>
                             <div class="footer-content-text">
 
