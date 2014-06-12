@@ -1,13 +1,12 @@
 <meta charset="utf-8">
         <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-        <title>League DUO</title>
+        <title>League of Legends'da Partnerini Bul</title>
         <!--[if lt IE 9]>
         <script type="text/javascript" src="js/ie-fixes.js"></script>
         <script type="text/javascript" src="js/_excanvas.compiled.js"></script>
-        <link rel="stylesheet" href="css/ie-fixes.css">
+        <li></li>nk rel="stylesheet" href="css/ie-fixes.css">
         <![endif]-->
-        <meta name="keywords" content="webmaster blogu, web tasarım dersleri, php oyun scriptleri, php dersleri, php scriptleri, SEO Dersleri" />
-        <meta name="description" content="Güncel Webmaster Blogu. Bugsuz oyun scriptleri, Php ve Web Tasarım Dersleri, Seo Dersleri, Seo İpuçları" />
+      
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--- This should placed first off all other scripts -->
