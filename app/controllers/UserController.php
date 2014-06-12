@@ -68,15 +68,8 @@ class UserController extends BaseController {
         }else if (Auth::attempt(array('username' => $username, 'password' => $password)))
         {
             Session::flash('message', 'Başarıyla Giriş Yaptınız !');
-            $users = User::where('username', '=', $username)->get();
-            $idk = 12365;
-            foreach ($users as $user)
-            {
-                Session::put('id', $user->id);
-                $idk = $user->id;
-            }
-
-            return Redirect::intended('profile/' . $idk);
+            
+            return Redirect::intended('profile/' . $username);
         }else {
             Session::flash('message', 'Giriş Başarısız !');
             return Redirect::intended('login');
