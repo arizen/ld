@@ -52,8 +52,8 @@ Route::get('login', function()
 
 Route::get('profile/{username}', function($username)
 {
-	$user = User::all()->where('username',$username);
-
+	$user = User::where('username', '=', $username)->first();
+    
     return View::make('profile')->with('user', $user);
 });
 
