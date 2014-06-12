@@ -79,7 +79,7 @@ Route::get('mh', function()
 	MatchHistoryController::getMatchHistoryFromUser($user);
 });
 
-Route::post('login', array('uses' => 'UserController@saveUser'));
+
 Route::post('login', array('uses' => 'UserController@login'));
 Route::post('step1', array('uses' => 'UserController@checkStep1'));
 Route::post('step2', array('uses' => 'UserController@checkStep2'));
