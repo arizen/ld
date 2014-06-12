@@ -120,7 +120,7 @@ class UserController extends BaseController {
         $validator = Validator::make(Input::all(), $rules);
 
         if ($validator->fails()) {
-            return Redirect::to('step1')
+            return Redirect::to('step2')
                 ->withErrors($validator);
         }else
         {
@@ -135,4 +135,17 @@ class UserController extends BaseController {
 
         }
     }   
+
+    public function checkStep3(){
+
+            $skype = Input::get('skype');
+
+            $user = User::find(Session::get('id'));
+
+            $user->skype_info = $skype;
+            $user->save();
+
+            return Redirect::intended('step4');
+        }
+    }  
 }
