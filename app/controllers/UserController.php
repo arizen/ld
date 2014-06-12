@@ -98,16 +98,28 @@ class UserController extends BaseController {
                 ->withErrors($validator);
         }else
         {
-$user = User::find(Session::get('id'));
-
-$user->summoner_name = Input::get('summoner_nameText');
-$user->server = Input::get('serverBox');
-
-$user->save();
-
-Session::flash('message', 'Başarıyla Oluşturuldu !');
-
-return Redirect::intended('profile/' . Session::get('id') );
+            $user = User::find(Session::get('id'));
+            
+            $user->summoner_name = Input::get('summoner_nameText');
+            $user->server = Input::get('serverBox');
+            
+            $user->save();
+            
+            Session::flash('message', 'Başarıyla Oluşturuldu !');
+            
+            return Redirect::intended('step2');
         }
-    }    
+    } 
+
+    public function checkStep2(){
+
+        $inputVal = Input::get('avatar_id');
+
+        $user = User::find(Session::get('id'));
+
+        $user->avatar_id = substr($inputVal, -1);
+        $user->save();
+
+        return Redirect::intended('step3');
+    }   
 }
