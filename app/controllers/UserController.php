@@ -20,12 +20,12 @@ class UserController extends BaseController {
         if( Input::get('passwordText') != Input::get('passwordText2') ){
             echo "fail";
         }
-        else{
-                if ($validator->fails()) {
-            return Redirect::to('signup')
+        else if ($validator->fails()) {
+            return Redirect::to('login')
                 ->withErrors($validator)
                 ->withInput(Input::except('password'));
-                }else {
+                }
+        else {
                     $user = new User;
 
                     $user->username = Input::get('usernameText');
@@ -46,11 +46,7 @@ class UserController extends BaseController {
                 // $user = User::find($id);
 
                 // return View::make('user.profile', array('user' => $user));
-                }
-
-        }
-
-		
+            }
     }
 
     public function login(){
