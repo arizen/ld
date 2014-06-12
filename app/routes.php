@@ -25,6 +25,10 @@ Route::get('step1', function()
 {
     return View::make('step1'); //->with('users', $users);
 });
+Route::get('step2', function()
+{
+    return View::make('step2'); //->with('users', $users);
+});
 
 Route::get('logout', function()
 {

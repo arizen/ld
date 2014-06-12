@@ -15,7 +15,7 @@
 <option value="Latin America North">Latin America North</option>
 <option value="Latin America South">Latin America South</option>
 </select>
-{{ Form::submit('Ekle', array('class' => 'btn btn-primary btn-lg')) }}
+{{ Form::submit('İleri', array('class' => 'btn btn-primary btn-lg')) }}
 {{ Form::close() }}
 </center>
 @stop
