@@ -7,8 +7,8 @@
                 
                 
                 <div class="col-md-2 col-sm-4 col-xs-4 logo">
-                    <a href="index.html">
-                        <img src="images/logo.png" alt="Zeina HTML5 Theme"/>
+                    <a href="/">
+                        <img src="images/logo.png" alt="League Duo"/>
                     </a>
                 </div>
                 

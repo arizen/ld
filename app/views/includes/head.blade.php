@@ -1,11 +1,7 @@
 <meta charset="utf-8">
-        <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
         <title>League of Legends'da Partnerini Bul</title>
-        <!--[if lt IE 9]>
-        <script type="text/javascript" src="js/ie-fixes.js"></script>
-        <script type="text/javascript" src="js/_excanvas.compiled.js"></script>
-        <li></li>nk rel="stylesheet" href="css/ie-fixes.css">
-        <![endif]-->
+
       
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
