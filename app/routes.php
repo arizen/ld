@@ -45,9 +45,9 @@ Route::get('oduller', function()
     return View::make('oduller'); //->with('users', $users);
 });
 
-Route::get('profile2', function()
+Route::get('profile', function()
 {
-    return View::make('profile2'); //->with('users', $users);
+    return View::make('profile'); //->with('users', $users);
 });
 
 Route::get('login', function()
