@@ -45,6 +45,11 @@ Route::get('oduller', function()
     return View::make('oduller'); //->with('users', $users);
 });
 
+Route::get('profile2', function()
+{
+    return View::make('profile2'); //->with('users', $users);
+});
+
 Route::get('login', function()
 {
     return View::make('login'); //->with('users', $users);
