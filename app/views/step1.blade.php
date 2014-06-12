@@ -5,7 +5,7 @@
 <center>
 {{ Form::open(array('action' => 'UserController@checkStep1', 'id'=>'signup')) }}
 {{ Form::label('summoner_nameLabel', 'Username') }} {{ Form::text('summoner_nameText') }}
-<select name="serverBox">
+<select name="serverBox" style="width:500px; height:50px; font-size:20px;">
 <option value="North America">North America</option>
 <option value="Europe West">Europe West</option>
 <option value="Europe Nordic East">Europe Nordic East</option>
