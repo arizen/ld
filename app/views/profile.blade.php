@@ -2,7 +2,7 @@
 @section('content')
 
 {{ HTML::ul($errors->all()) }}
-<div class="container">
+<div class="container">asdasdasd
         <div class="row">
             <div class="col-md-12 col-sm-12">  
                 <div class="callout-box clearfix">  
