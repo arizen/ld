@@ -20,33 +20,37 @@ class UserController extends BaseController {
         if( Input::get('passwordText') != Input::get('passwordText2') ){
             echo "fail";
         }
+        else{
+                if ($validator->fails()) {
+            return Redirect::to('signup')
+                ->withErrors($validator)
+                ->withInput(Input::except('password'));
+                }else {
+                    $user = new User;
 
-		if ($validator->fails()) {
-			return Redirect::to('signup')
-				->withErrors($validator)
-				->withInput(Input::except('password'));
-		}else {
-            $user = new User;
+                    $user->username = Input::get('usernameText');
+                    $user->email = Input::get('emailText');
+                    $user->password = Hash::make(Input::get('passwordText'));
+                    $user->save();
 
-            $user->username = Input::get('usernameText');
-            $user->email = Input::get('emailText');
-			$user->password = Hash::make(Input::get('passwordText'));
-            $user->save();
+                    Session::flash('message', 'Başarıyla Oluşturuldu !');
+                    $users = User::where('username', 'LIKE', '%'.$user->username.'%')->get();
+                    $idk = 12365;
+                    foreach ($users as $user)
+                    {
+                        Session::put('id', $user->id);
+                        $idk = $user->id;
+                    }
 
-            Session::flash('message', 'Başarıyla Oluşturuldu !');
-            $users = User::where('username', 'LIKE', '%'.$user->username.'%')->get();
-            $idk = 12365;
-            foreach ($users as $user)
-            {
-                Session::put('id', $user->id);
-                $idk = $user->id;
-            }
+                    return Redirect::to('profile/' . $idk);
+                // $user = User::find($id);
 
-            return Redirect::to('profile/' . $idk);
-        // $user = User::find($id);
+                // return View::make('user.profile', array('user' => $user));
+                }
 
-        // return View::make('user.profile', array('user' => $user));
-		}
+        }
+
+		
     }
 
     public function login(){
