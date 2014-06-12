@@ -20,7 +20,7 @@ class UserController extends BaseController {
         if( Input::get('passwordText') != Input::get('passwordText2') ){
             echo "fail";
         }
-        else if ($validator->fails()) {
+        elseif ($validator->fails()) {
             return Redirect::to('login')
                 ->withErrors($validator)
                 ->withInput(Input::except('password'));
