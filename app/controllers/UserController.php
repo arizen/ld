@@ -113,13 +113,26 @@ class UserController extends BaseController {
 
     public function checkStep2(){
 
-        $inputVal = Input::get('avatar_id');
+        $rules = array(
+            'avatar_id'       => 'required'
+        );
 
-        $user = User::find(Session::get('id'));
+        $validator = Validator::make(Input::all(), $rules);
 
-        $user->avatar_id = substr($inputVal, -1);
-        $user->save();
+        if ($validator->fails()) {
+            return Redirect::to('step1')
+                ->withErrors($validator);
+        }else
+        {
+            $inputVal = Input::get('avatar_id');
 
-        return Redirect::intended('step3');
+            $user = User::find(Session::get('id'));
+
+            $user->avatar_id = substr($inputVal, -1);
+            $user->save();
+
+            return Redirect::intended('step3');
+
+        }
     }   
 }
