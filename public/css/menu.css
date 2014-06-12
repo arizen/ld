@@ -188,19 +188,6 @@ body {
 		}		 
                 
         /* Üye resim ve bilgi div */
-                
-                
-        .sag {
-                    float:inherit;
-                    margin-right:20px;
-                    text-align:center;
-                
-                }
-        .sol {
-                    float:left;
-                    margin-left:20px;
-                }
-        .ssdivici {
-                    float:left;
-                    margin-left:15%;
-                }
+
+
+ 
