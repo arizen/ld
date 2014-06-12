@@ -27,8 +27,6 @@
         
              <link href="css/skins/flat-blue.css" rel='stylesheet' type='text/css' id="skin-file">
 
-        
-<img src="resimadresi" id="1">
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
         <script type="text/javascript" src="js/_jq.js"></script>
 <script type="text/javascript" src="js/_jquery.placeholder.js"></script>
