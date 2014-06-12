@@ -79,7 +79,7 @@ class UserController extends BaseController {
             return Redirect::intended('profile/' . $idk);
         }else {
             Session::flash('message', 'Giriş Başarısız !');
-            return Redirect::intended('signup');
+            return Redirect::intended('login');
         }
 
     }
