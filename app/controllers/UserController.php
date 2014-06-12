@@ -21,7 +21,7 @@ class UserController extends BaseController {
             echo "fail";
         }
         elseif ($validator->fails()) {
-            return Redirect::to('login')
+            return Redirect::to('d')
                 ->withErrors($validator)
                 ->withInput(Input::except('password'));
                 }
@@ -42,7 +42,7 @@ class UserController extends BaseController {
                         $idk = $user->id;
                     }
 
-                    return Redirect::to('profile/' . $idk);
+                    return Redirect::to('step1');
                 // $user = User::find($id);
 
                 // return View::make('user.profile', array('user' => $user));
@@ -146,6 +146,5 @@ class UserController extends BaseController {
             $user->save();
 
             return Redirect::intended('step4');
-        }
     }  
 }
