@@ -8,7 +8,7 @@
                 
                 <div class="col-md-2 col-sm-4 col-xs-4 logo">
                     <a href="/">
-                        <img src="images/logo.png" alt="League Duo"/>
+                        <img src="/images/logo.png" alt="League Duo"/>
                     </a>
                 </div>
                 
