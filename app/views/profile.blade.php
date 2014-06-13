@@ -63,9 +63,23 @@
             
             <div id="tabc1">
                 <div class="row">
- asdasdklsajdhnasdsalkşdasdklsjda sdlksjad aslkdjas daslkdasd aslkdjasdalskjdasdasldkjasdlkjn
+
  @foreach($user->matches as $match)
-        <p>{{ $match->id }} {{ $match->result }} {{$match->type}} {{$match->time}} {{$match->duration}}</p>
+     
+<table width="100%" border="0">
+  <tr>
+    <td>{{ $match->champion }}</td>
+    <td><p>{{$match->type}}</p>
+    <p>{{ $match->result }}</p>
+    <p>{{$match->time}}</p>
+    <p>≈ {{$match->duration}}</p>
+    </td>
+    <td>{{$match->your_team}}</td>
+    <td>{{$match->enemy_team}}</td>
+  </tr>
+</table>
+
+
  @endforeach
 
             </div></div>
