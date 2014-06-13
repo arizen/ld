@@ -2,9 +2,20 @@
 
 class MatchHistoryController extends BaseController {
 
+	public static function varDumpToString ($var)
+	{
+    ob_start();
+    var_dump($var);
+    $result = ob_get_clean();
+    return $result;
+	}
+
     public static function getMatchHistoryFromUser($user){
     	//comment
-    	$url= 'http://www.lolskill.net/summoner/TR/' . $user->summoner_name;
+    //	$url= 'http://www.lolskill.net/summoner/TR/' . $user->username;
+
+    	$url= 'http://www.lolskill.net/summoner/TR/' . $user->username ;
+
 
 	    $ch = curl_init();
 		$timeout = 0;
@@ -23,11 +34,53 @@ class MatchHistoryController extends BaseController {
 		$dom->loadHTML($html);
 		$dom->preserveWhiteSpace = false;
 
+		$domString = MatchHistoryController::varDumpToString($dom);
 
-		$tableMatchHistory = $dom->getElementById('matchHistory');
-
+		if(strpos($domString, 'Summoner Not Found') !== FALSE){
+			//summonerNotFound
+		}
+		else{
+			//summonerHasFound
+		}
 		
 
+		$divRank = $dom->getElementById('rank');
+		foreach($divRank->childNodes as $eachContainer)
+		{
+			if( $eachContainer->nodeType == 1){
+				$id = $eachContainer->getAttribute('id');
+				if ('solo' == $id ){
+					foreach($eachContainer->childNodes as $eachContainerElement)
+					{
+						if( $eachContainerElement->nodeType == 1){
+							$classValue = $eachContainerElement->getAttribute('class');
+							if('body' == $classValue){
+								foreach($eachContainerElement->childNodes as $bodyElement)
+								{
+									if( $bodyElement->nodeType == 1){
+										$classValue = $bodyElement->getAttribute('class');
+										if('tier' == $classValue){
+											echo $bodyElement->nodeValue;
+											$explodedString = explode(" ", $bodyElement->nodeValue);
+											$league = $explodedString[0];
+											$user->league = $league;
+											$division = $explodedString[1];
+											$user->division = $division;
+											$user->save();
+										}											 
+									}
+								}
+							}
+						}						
+					}
+				}
+			}
+		}
+
+
+
+
+		$tableMatchHistory = $dom->getElementById('matchHistory');
 		foreach($tableMatchHistory->childNodes as $eachMatch)
 		{
 			$class_value = $eachMatch->getAttribute('class');
@@ -114,12 +167,8 @@ class MatchHistoryController extends BaseController {
 					}					
 				}
 					$match->save();		
-			} 	
-		  	
+			} 			  	
 		}
-
-		
-
 
 		if (FALSE === $html)
 	        throw new Exception(curl_error($ch), curl_errno($ch));
@@ -133,4 +182,5 @@ class MatchHistoryController extends BaseController {
 		curl_close($ch);
     	
     }
+
 }
