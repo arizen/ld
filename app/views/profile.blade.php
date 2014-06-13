@@ -7,9 +7,9 @@
             <div class="col-md-12 col-sm-12">  
 <div style="float: left; width: 50%;"><div style="position: relative; max-width: 620px;overflow: hidden; height: 230px;  background-size: cover; background-position: top; background-position-y: -30px; border-radius: 4px;background-color: rgb(227, 227, 227);">
      <div style="position: absolute; top: 30px;">
-     <div style="float: left; width: 170px;margin-left: 15px;">
+     <div style="float: left; width: 170px; margin-left: 15px;">
          <img src="http://avatar-user.s.aeriastatic.com/61386851/0327ddc4-84fe-4306-a367-80a8e947171e" style="height: 170px;border-radius: 10px;border: 1px solid rgb(0, 0, 0);box-shadow: 0 0 10px #000;">
-         <div style="text-align: center;  color: #A8A8A8;    font: normal 16px &quot;Trebuchet MS&quot;,Arial,sans-serif;font-weight: bold;margin-top: -3px;">Diamond II</div>
+         <div style=" text-align: center;  color: #A8A8A8;    font: normal 16px &quot;Trebuchet MS&quot;,Arial,sans-serif;font-weight: bold;margin-top: 6px;">Diamond II</div>
      </div> 
      <div style="float: left; margin-top: -5px; margin-left: 25px;min-width: 220px;max-width: 300px;">
          <span style="color: #AF9717; font-weight: bold;font: normal 36px &quot;Trebuchet MS&quot;,Arial,sans-serif;">{{ $user->username }}</span><hr class="space" style="background: url(http://lolturk.net/images/hr.png);  display: block;  height: 2px;  margin: 6px;  border: 0;  max-width: 600px;">
