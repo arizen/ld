@@ -12,7 +12,7 @@
          <div style="text-align: center;  color: #A8A8A8;    font: normal 16px &quot;Trebuchet MS&quot;,Arial,sans-serif;font-weight: bold;margin-top: -3px;">Diamond II</div>
      </div> 
      <div style="float: left; margin-top: -5px; margin-left: 25px;min-width: 220px;max-width: 300px;">
-         <span style="color: #AF9717; font-weight: bold;font: normal 36px &quot;Trebuchet MS&quot;,Arial,sans-serif;">LT WingmaN</span><hr class="space" style="background: url(http://lolturk.net/images/hr.png);  display: block;  height: 2px;  margin: 6px;  border: 0;  max-width: 600px;">
+         <span style="color: #AF9717; font-weight: bold;font: normal 36px &quot;Trebuchet MS&quot;,Arial,sans-serif;">{{ $user->username }}</span><hr class="space" style="background: url(http://lolturk.net/images/hr.png);  display: block;  height: 2px;  margin: 6px;  border: 0;  max-width: 600px;">
          <span style="color: #A8A8A8; font-size: 18px;font: normal 16px &quot;Trebuchet MS&quot;,Arial,sans-serif;">Zafer: <span class="win" style="color: rgb(67, 187, 134);">56</span> / Bozgun: <span class="loss" style="color: rgb(165, 79, 79);">46</span></span><br>
          <span class="last" style="color: #A8A8A8;  font-size: 18px;  font: normal 16px &quot;Trebuchet MS&quot;,Arial,sans-serif;">Son Oyun:<span class="win" style="color: rgb(67, 187, 134);"> Zafer</span></span>
          <hr class="space" style="background: url(http://lolturk.net/images/hr.png);  display: block;  height: 2px;  margin: 6px;  border: 0;  max-width: 600px;">
