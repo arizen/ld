@@ -2,11 +2,10 @@
 
         <title>League of Legends'da Partnerini Bul</title>
 
-      
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+ 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--- This should placed first off all other scripts -->
-        
+
+          <link rel="shortcut icon" type="image/x-icon" href="http://leagueduo.com/images/favicon.ico">
              <link rel="stylesheet" href="/css/font-awesome-ie7.css">
              <link rel="stylesheet" href="/css/menu.css">
              <link rel="stylesheet" href="/css/font-awesome-ie7.min.css">
