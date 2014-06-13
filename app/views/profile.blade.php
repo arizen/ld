@@ -64,6 +64,9 @@
             <div id="tabc1">
                 <div class="row">
  asdasdklsajdhnasdsalkşdasdklsjda sdlksjad aslkdjas daslkdasd aslkdjasdalskjdasdasldkjasdlkjn
+ @foreach($user->matches as $match)
+        <p>{{ $match->id }} {{ $match->result }} {{$match->type}} {{$match->time}} {{$match->duration}}</p>
+ @endforeach
 
 
             </div></div>
