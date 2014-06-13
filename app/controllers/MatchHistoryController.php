@@ -14,7 +14,7 @@ class MatchHistoryController extends BaseController {
     	//comment
     //	$url= 'http://www.lolskill.net/summoner/TR/' . $user->username;
 
-    	$url= 'http://www.lolskill.net/summoner/TR/' . $user->username ;
+    	$url= 'http://www.lolskill.net/summoner/TR/' . $user->summoner_name ;
 
 
 	    $ch = curl_init();

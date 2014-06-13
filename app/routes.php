@@ -77,7 +77,7 @@ Route::get('mh', function()
 
     //return View::make('users')->with('users', $users);
 
-    $user = User::find(4);
+    $user = User::find(3);
 //
     //foreach($user->matches as $match){
     	//echo $match->id;

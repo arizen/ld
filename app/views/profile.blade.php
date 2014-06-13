@@ -66,7 +66,7 @@
 
  @foreach($user->matches as $match)
      
-<table width="100%" border="0">
+<table width="600px" border="1" align="center">
   <tr>
     <td>{{ $match->champion }}</td>
     <td><p>{{$match->type}}</p>
@@ -77,7 +77,7 @@
     <td>{{$match->your_team}}</td>
     <td>{{$match->enemy_team}}</td>
   </tr>
-</table>
+</table><br />
 
 
  @endforeach
