@@ -5,7 +5,7 @@
 <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12">  
-<div style="float: left; width: 50%;"><div style="position: relative; max-width: 620px;overflow: hidden; height: 230px;  background-size: cover; background-position: top; background-position-y: -30px; border-radius: 4px;background-color: rgb(36, 36, 36);">
+<div style="float: left; width: 50%;"><div style="position: relative; max-width: 620px;overflow: hidden; height: 230px;  background-size: cover; background-position: top; background-position-y: -30px; border-radius: 4px;background-color: rgb(227, 227, 227);">
      <div style="position: absolute; top: 30px;">
      <div style="float: left; width: 170px;margin-left: 15px;">
          <img src="http://avatar-user.s.aeriastatic.com/61386851/0327ddc4-84fe-4306-a367-80a8e947171e" style="height: 170px;border-radius: 10px;border: 1px solid rgb(0, 0, 0);box-shadow: 0 0 10px #000;">
