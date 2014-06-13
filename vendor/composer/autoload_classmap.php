@@ -30,6 +30,7 @@ return array(
     'ClassPreloader\\Parser\\NodeTraverser' => $vendorDir . '/classpreloader/classpreloader/src/ClassPreloader/Parser/NodeTraverser.php',
     'CreateDuosTable' => $baseDir . '/app/database/migrations/2014_06_03_105449_create_duos_table.php',
     'CreateMatchesTable' => $baseDir . '/app/database/migrations/2014_06_08_131801_create_matches_table.php',
+    'CreateMessagesTable' => $baseDir . '/app/database/migrations/2014_06_13_211415_create_messages_table.php',
     'CreateUsersTable' => $baseDir . '/app/database/migrations/2014_06_01_095946_create_users_table.php',
     'Crypt_AES' => $vendorDir . '/phpseclib/phpseclib/phpseclib/Crypt/AES.php',
     'Crypt_Base' => $vendorDir . '/phpseclib/phpseclib/phpseclib/Crypt/Base.php',

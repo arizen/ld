@@ -68,7 +68,6 @@
         <p>{{ $match->id }} {{ $match->result }} {{$match->type}} {{$match->time}} {{$match->duration}}</p>
  @endforeach
 
-
             </div></div>
             <div id="tabc2">
                <div class="row"></div>

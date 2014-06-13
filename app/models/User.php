@@ -85,6 +85,11 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         return $this->hasMany('Duo','to_id');
     }
 
+     public function messages()
+    {
+        return $this->hasMany('Message', 'to_id');
+    }
+
     public function matches()
     {
         return $this->hasMany('Match');
