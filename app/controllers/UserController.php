@@ -26,7 +26,7 @@ class UserController extends BaseController {
                 ->withInput(Input::except('password'));
                 }
         else {
-            echo "tamam";
+
                     $user = new User;
 
                     $user->username = Input::get('usernameText');

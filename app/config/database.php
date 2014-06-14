@@ -57,7 +57,7 @@ return array(
 			'host'      => 'localhost',
 			'database'  => 'league_3',
 			'username'  => 'league_3',
-			'password'  => '88ki01j',
+			'password'  => '6ev5duw6',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
