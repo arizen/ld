@@ -8,14 +8,14 @@ class UserController extends BaseController {
     public function saveUser()
     {
 
-    	$rules = array(
-			'usernameText'       => 'required',
-			'emailText'      => 'required|email',
+        $rules = array(
+            'usernameText'       => 'required',
+            'emailText'      => 'required|email',
             'passwordText'       => 'required',
             'passwordText2'       => 'required'
-		);
+        );
 
-		$validator = Validator::make(Input::all(), $rules);
+        $validator = Validator::make(Input::all(), $rules);
 
         if( Input::get('passwordText') != Input::get('passwordText2') ){
             echo "fail";
@@ -26,25 +26,26 @@ class UserController extends BaseController {
                 ->withInput(Input::except('password'));
                 }
         else {
-
-                    $user = new User;
-
-                    $user->username = Input::get('usernameText');
-                    $user->email = Input::get('emailText');
-                    $user->password = Hash::make(Input::get('passwordText'));
-                    $user->save();
-
-                    Session::flash('message', 'Başarıyla Oluşturuldu !');
-                    $users = User::where('username', 'LIKE', '%'.$user->username.'%')->get();
-                    $idk = 12365;
-                    foreach ($users as $user)
-                    {
-                        Session::put('id', $user->id);
-                        $idk = $user->id;
-                    }
-                    echo "redirect";
-                    return Redirect::to('step1');
-                // $user = User::find($id);
+            echo "1";
+            $user = new User;
+            echo "2";
+            $user->username = Input::get('usernameText');
+            $user->email = Input::get('emailText');
+            $user->password = Hash::make(Input::get('passwordText'));
+            $user->save();
+            echo "3";
+            Session::flash('message', 'Başarıyla Oluşturuldu !');
+            $users = User::where('username', 'LIKE', '%'.$user->username.'%')->get();
+            $idk = 12365;
+            echo "4";
+            foreach ($users as $user)
+            {
+                Session::put('id', $user->id);
+                $idk = $user->id;
+            }
+            echo "redirect";
+            return Redirect::to('step1');
+        
 
                 // return View::make('user.profile', array('user' => $user));
             }
