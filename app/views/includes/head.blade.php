@@ -10,6 +10,8 @@
              <link rel="stylesheet" href="/css/menu.css">
              <link rel="stylesheet" href="/css/font-awesome-ie7.min.css">
              <link rel="stylesheet" href="/css/font-awesome.css">
+             <link rel="stylesheet" href="/css/profile.css">
+             <link rel="stylesheet" href="/css/profilmenu.css">
              <link rel="stylesheet" href="/css/font-awesome.min.css">
              <link rel="stylesheet" href="/css/revolution_settings.css">
              <link rel="stylesheet" href="/css/bootstrap.min.css">

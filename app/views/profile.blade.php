@@ -5,165 +5,202 @@
 <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12">  
-<div style="float: left; width: 50%;"><div style="position: relative; max-width: 620px;overflow: hidden; height: 230px;  background-size: cover; background-position: top; background-position-y: -30px; border-radius: 4px;background-color: rgb(227, 227, 227);">
-     <div style="position: absolute; top: 30px;">
-     <div style="float: left; width: 170px; margin-left: 15px;">
-         <img src="http://avatar-user.s.aeriastatic.com/61386851/0327ddc4-84fe-4306-a367-80a8e947171e" style="height: 170px;border-radius: 10px;border: 1px solid rgb(0, 0, 0);box-shadow: 0 0 10px #000;">
-         <div style=" text-align: center;  color: #A8A8A8;    font: normal 16px &quot;Trebuchet MS&quot;,Arial,sans-serif;font-weight: bold;margin-top: 6px;">Diamond II</div>
-     </div> 
-     <div style="float: left; margin-top: -5px; margin-left: 25px;min-width: 220px;max-width: 300px;">
-         <span style="color: #AF9717; font-weight: bold;font: normal 36px &quot;Trebuchet MS&quot;,Arial,sans-serif;">{{ $user->username }}</span><hr class="space" style="background: url(http://lolturk.net/images/hr.png);  display: block;  height: 2px;  margin: 6px;  border: 0;  max-width: 600px;">
-         <span style="color: #A8A8A8; font-size: 18px;font: normal 16px &quot;Trebuchet MS&quot;,Arial,sans-serif;">Zafer: <span class="win" style="color: rgb(67, 187, 134);">56</span> / Bozgun: <span class="loss" style="color: rgb(165, 79, 79);">46</span></span><br>
-         <span class="last" style="color: #A8A8A8;  font-size: 18px;  font: normal 16px &quot;Trebuchet MS&quot;,Arial,sans-serif;">Son Oyun:<span class="win" style="color: rgb(67, 187, 134);"> Zafer</span></span>
-         <hr class="space" style="background: url(http://lolturk.net/images/hr.png);  display: block;  height: 2px;  margin: 6px;  border: 0;  max-width: 600px;">
-     </div>
-     <div class="last" style="  font-size: 18px;  font: normal 16px &quot;Trebuchet MS&quot;,Arial,sans-serif;float: right;margin-top: -20px;margin-left: 75px;color: rgb(255, 215, 3);width: 110px;">
-         <a href="#" class="ld-icon" style="background: url(http://leagueduo.com/images/ldicon.png);width: 32px;height: 32px;float: left;margin-right: 5px;background-size: 32px;margin-top: -4px;"></a>
-         <span class="text">Puan<span class="win" style="color: rgb(221, 235, 211);"> 1290</span></span>
-     </div>
-     </div>
+ <div class="row">
+ <center> <div class="col-md-3"> <div class="profilei">
+<h3 class="profilei-title">Profil</h3>
+<div style="text-shadow: 1px 1px 1px #000; color:#D74536; font: normal 34px &quot;Trebuchet MS&quot;,Arial,sans-serif;font-weight: bold;margin-bottom: 6px; margin-left:1px; margin-top:6px;">{{$user->username}}</div>
+<div style="position:static; top: 30px;"><img src="http://avatar-user.s.aeriastatic.com/61386851/0327ddc4-84fe-4306-a367-80a8e947171e" style="height: 200px;border-radius: 10px;border: 1px solid rgb(0, 0, 0);box-shadow: 0 0 10px #000;"></div>        
+  <div style="position:static; top: 30px;"><img src="http://elo-boost.net/images/tiers/challenger_1.png" style="height: 170px;"></div>
+   <div style="color: black; font: normal 26px &quot;Trebuchet MS&quot;,Arial,sans-serif;font-weight: bold;margin-top: -10px; margin-left:1px; margin-bottom:15px;">Diamond II</div>
+            
+<div id='profilemsol'>
+<ul>
+   <li class='active'><a href='index.html'><span>Yorumlar</span></a></li>
+   <li><a href='#'><span>Mesajlarım (0)</span></a></li>
+   <li><a href='#'><span>DUO İsteklerim (0)</span></a></li>
+   <li class='last'><a href='#'><span>Destek Al</span></a></li>
+</ul>
+</div> 
+<div class="istatistik" style="margin-top:20px;" >
+                <table >
+                    <tr>
+                        <td>
+                            Ranked İstatistikleri
+                        </td>
+                           <td>
+                           
+                        </td>
+                      
+                    </tr>
+                    <tr>
+                        <td >
+                           Toplam Oyun :
+                        </td>
+                        <td>
+                            1
+                        </td>
+                      
+                    </tr>
+                    <tr>
+                        <td >
+                           Katledilenler :
+                        </td>
+                        <td>
+                           1
+                        </td>
+                      
+                    </tr>
+                    <tr>
+                        <td >
+                           Ölümler :
+                        </td>
+                        <td>
+                           3
+                        </td>
+                      
+                    </tr>
+                    <tr>
+                        <td >
+                           Asistler :
+                        </td>
+                        <td>
+                           4
+                        </td>
+                      
+                    </tr>
+                    <tr>
+                        <td>
+                           Öldürülen Minion :
+                        </td>
+                        <td>
+                           5
+                        </td>
+                      
+                    </tr>
+                    <tr>
+                        <td >
+                           Öldürülen Yaratık :
+                        </td>
+                        <td>
+                            6
+                        </td>
+                      
+                    </tr>
+                    <tr>
+                        <td >
+                           Kazanılan Altın :
+                        </td>
+                        <td>
+                            7
+                        </td>
+                      
+                    </tr>
+                     <tr>
+                        <td >
+                           2 de 2 :
+                        </td>
+                        <td>
+                            8
+                        </td>
+                      
+                    </tr>
+                    <tr>
+                        <td >
+                           3 te 3 :
+                        </td>
+                        <td>
+                            9
+                        </td>
+                      
+                    </tr>
+                    <tr>
+                        <td >
+                           4 te 4 :
+                        </td>
+                        <td>
+                           10
+                        </td>
+                      
+                    </tr>
+                    <tr>
+                        <td >
+                           5 te 5 :
+                        </td>
+                        <td>
+                            11
+                        </td>
+                      
+                    </tr>
+                    <tr>
+                        <td >
+                           Yıkılan Kuleler :
+                        </td>
+                        <td>
+                            12
+                        </td>
+                      
+                    </tr>
+                 
+                </table>
+            </div>   
+<div class="clear"></div>		
 </div></div>
+  </center>
 
-<div style="float: left; width: 50%;">
+<!-- Sağ İçerik -->
+  <div class="col-md-9">
+  <div class="profilei">
+<h3 class="profilei-title">Hakkımda</h3>
+<p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
+<p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
+<p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
+<div class="clear"></div>		
+</div>
+<div class="profilei">
+<h3 class="profilei-title">Son 10 Maç</h3>
+<p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
+<p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
+<p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
+<p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
+<p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
+<p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
+<p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
+<p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
+<p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
+<p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
+<p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
+<p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
+<p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
+<p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
+<p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
+<p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
+<p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
+<p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
+<p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
+<p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
+<p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
+<p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
+<p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
+<p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
+<p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
+<p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
+<p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
+<p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
+<p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
+<p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
+<div class="clear"></div>		
 </div>
 
 
+										</div>
+</div>
 
 
 
             </div>
         </div>
-<div class="section-content section-tabs section-alter">
-        <div class="tab-container">
-    <div class="section-etabs-container">
-        <ul class="section-etabs">
-            <li class="tab active">
-                <a href="#tabc1">Son 10 Maç</a>
-            </li>
-            <li class="tab">
-                <a href="#tabc2">Yorumlar</a>
-            </li>
-            <li class="tab">
-                <a href="#tabc3">Duo İstekleri (0)</a>
-            </li>
-            <li class="tab">
-                <a href="#tabc4">Mesajlar (0)</a>
-            </li>
-              <li class="tab">
-                <a href="#tabc5">Duolarım (0)</a>
-            </li>
-              <li class="tab">
-                <a href="#tabc6">Kullanıcı Ayarları</a>
-            </li>
-        </ul>
-    </div>
-    <div class="container">
 
-        <div class="tab-content">
-            
-            <div id="tabc1">
-                <div class="row">
-
-  <div class="col-md-10 col-sm-10">  
-
- @foreach($user->matches as $match)
-
-
-     <div class="row">
-    <div class="col-sm-2 col-md-3"><img src="http://1-ps.googleusercontent.com/x/www.lolskill.net/static.lolskill.net/img/skins/96/xtryndamere_0.jpg.pagespeed.ic.2XILxMtwQz.webp"></div>
-    <div class="col-sm-2 col-md-3"><p>{{$match->type}}</p>
-    <p>{{ $match->result }}</p>
-    <p>{{$match->time}}</p>
-    <p>≈ {{$match->duration}}</p></div>
-    <div class="col-sm-2 col-md-3">{{$match->your_team}}</div>
-    <div class="col-sm-2 col-md-3">{{$match->enemy_team}}</div>
-</div><br />
-
-
- @endforeach
-</div>
-
-
-
-
-            </div></div>
-            <div id="tabc2">
-               <div class="row"></div>
-        DENEME
-                         </div>
-            <div id="tabc3">
-                
-                <div class="row">
-
-
-        <!-- Üye Ayar Başlangıç -->
-asdasdasd
-
-
-        <!-- Üye Ayar Bitiş -->
-
-
-
-                </div>
-            </div>
-
-
- <div id="tabc4">
-                
-                <div class="row">
-
-
-        <!-- Üye Ayar Başlangıç -->
-asdasdasd
-
-
-        <!-- Üye Ayar Bitiş -->
-
-
-
-                </div>
-            </div>
-
-
-            <div id="tabc5">
-                
-                <div class="row">
-
-
-        <!-- Üye Ayar Başlangıç -->
-asdasdasd123123123
-
-
-        <!-- Üye Ayar Bitiş -->
-
-
-
-                </div>
-            </div>
-
-
-            <div id="tabc6">
-                
-                <div class="row">
-
-
-        <!-- Üye Ayar Başlangıç -->
-asdasdasd'+'^324234234324'
-
-
-        <!-- Üye Ayar Bitiş -->
-
-
-
-                </div>
-            </div>
-
-
-
-
-            
-        </div>
-    </div>
-</div>    </div>
 
 @stop
+
+
