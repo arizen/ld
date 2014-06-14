@@ -26,18 +26,18 @@ class UserController extends BaseController {
                 ->withInput(Input::except('password'));
                 }
         else {
-            echo "1";
+
             $user = new User;
-            echo "2";
+
             $user->username = Input::get('usernameText');
             $user->email = Input::get('emailText');
             $user->password = Hash::make(Input::get('passwordText'));
             $user->save();
-            echo "3";
+
             Session::flash('message', 'Başarıyla Oluşturuldu !');
             $users = User::where('username', 'LIKE', '%'.$user->username.'%')->get();
             $idk = 12365;
-            echo "4";
+
             foreach ($users as $user)
             {
                 Session::put('id', $user->id);
