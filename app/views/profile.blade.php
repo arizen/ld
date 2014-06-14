@@ -64,23 +64,27 @@
             <div id="tabc1">
                 <div class="row">
 
+  <div class="col-md-10 col-sm-10">  
+
  @foreach($user->matches as $match)
-     
-<table width="600px" border="1" align="center">
-  <tr>
-    <td>{{ $match->champion }}</td>
-    <td><p>{{$match->type}}</p>
+
+
+     <div class="row">
+    <div class="col-sm-2 col-md-3"><img src="http://1-ps.googleusercontent.com/x/www.lolskill.net/static.lolskill.net/img/skins/96/xtryndamere_0.jpg.pagespeed.ic.2XILxMtwQz.webp"></div>
+    <div class="col-sm-2 col-md-3"><p>{{$match->type}}</p>
     <p>{{ $match->result }}</p>
     <p>{{$match->time}}</p>
-    <p>≈ {{$match->duration}}</p>
-    </td>
-    <td>{{$match->your_team}}</td>
-    <td>{{$match->enemy_team}}</td>
-  </tr>
-</table><br />
+    <p>≈ {{$match->duration}}</p></div>
+    <div class="col-sm-2 col-md-3">{{$match->your_team}}</div>
+    <div class="col-sm-2 col-md-3">{{$match->enemy_team}}</div>
+</div><br />
 
 
  @endforeach
+</div>
+
+
+
 
             </div></div>
             <div id="tabc2">
