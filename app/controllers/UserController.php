@@ -26,6 +26,7 @@ class UserController extends BaseController {
                 ->withInput(Input::except('password'));
                 }
         else {
+            echo "tamam";
                     $user = new User;
 
                     $user->username = Input::get('usernameText');
@@ -41,7 +42,7 @@ class UserController extends BaseController {
                         Session::put('id', $user->id);
                         $idk = $user->id;
                     }
-
+                    echo "redirect";
                     return Redirect::to('step1');
                 // $user = User::find($id);
 
