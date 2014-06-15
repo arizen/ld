@@ -16,7 +16,7 @@ class CreateMatchesTable extends Migration {
 		Schema::create('matches', function($table)
    		{
         	$table->increments('id');
-        	$table->integer('user_id');
+        	$table->integer('summoner_id');
         	$table->string('result');
         	$table->string('champion');
         	$table->string('type');

@@ -77,15 +77,21 @@ Route::get('mh', function()
 
     //return View::make('users')->with('users', $users);
 
-    $user = User::find(3);
+    $user = User::find(1);
 //
     //foreach($user->matches as $match){
     	//echo $match->id;
     //}
 
-	MatchHistoryController::getMatchHistoryFromUser($user);
 });
 
+Route::get('k', function()
+{
+    $summoner = Summoner::find(1);
+
+    LolSkillController::getInformationFromSummoner($summoner);
+    
+});
 
 Route::post('-', array('uses' => 'UserController@saveUser'));
 Route::post('login', array('uses' => 'UserController@login'));
