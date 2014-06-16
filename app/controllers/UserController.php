@@ -101,10 +101,11 @@ class UserController extends BaseController {
                 ->withErrors($validator);
         }else
         {
-            $user = User::find(Session::get('id'));
+            $summoner = new Summoner;
             
-            $user->summoner_name = Input::get('summoner_nameText');
-            $user->server = Input::get('serverBox');
+            $summoner->user_id = Session::get('id');
+            $summoner->summoner_name = Input::get('summoner_nameText');
+            $summoner->server = Input::get('serverBox');
             
             $user->save();
             
