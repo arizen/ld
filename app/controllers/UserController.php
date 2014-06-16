@@ -106,6 +106,7 @@ class UserController extends BaseController {
             $summoner->user_id = Session::get('id');
             $summoner->summoner_name = Input::get('summoner_nameText');
             $summoner->server = Input::get('serverBox');
+            $summoner->summoner_confirmed = 0;
             
             $user->save();
             
