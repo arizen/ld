@@ -60,8 +60,16 @@ Route::get('profile', function()
 Route::get('profile/{username}', function($username)
 {
 	$user = User::where('username', '=', $username)->first();
-    
-    return View::make('profile')->with('user', $user);
+
+    $summoner = Summoner::where('user_id','=',$user->id)->first();
+
+    $stat = Stat::where('summoner_id', '=', $summoner->id)->first();
+
+    Session::put('user',$user);
+    Session::put('summoner',$summoner);
+    Session::put('stat',$stat);
+
+    return View::make('profile');
 });
 
 Route::get('users', function()
