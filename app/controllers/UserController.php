@@ -108,7 +108,7 @@ class UserController extends BaseController {
             $summoner->server = Input::get('serverBox');
             $summoner->summoner_confirmed = 0;
             
-            $user->save();
+            $summoner->save();
             
             Session::flash('message', 'Başarıyla Oluşturuldu !');
             
