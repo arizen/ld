@@ -149,6 +149,9 @@
 </div>
 <div class="profilei">
 <h3 class="profilei-title">Son 10 Maç</h3>
+@foreach( Session::get('summoner')->matches as $match)
+ <p>{{ $match->id }}<p>
+@endforeach
 <p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
 <p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
 <p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
