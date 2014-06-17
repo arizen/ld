@@ -8,7 +8,7 @@
  <div class="row">
  <center> <div class="col-md-3"> <div class="profilei">
 <h3 class="profilei-title">Profil</h3>
-<div style="text-shadow: 1px 1px 1px #000; color:#D74536; font: normal 34px &quot;Trebuchet MS&quot;,Arial,sans-serif;font-weight: bold;margin-bottom: 6px; margin-left:1px; margin-top:6px;">{{$user->username}}</div>
+<div style="text-shadow: 1px 1px 1px #000; color:#D74536; font: normal 34px &quot;Trebuchet MS&quot;,Arial,sans-serif;font-weight: bold;margin-bottom: 6px; margin-left:1px; margin-top:6px;">{{Session::get('user')->username}}</div>
 <div style="position:static; top: 30px;"><img src="http://avatar-user.s.aeriastatic.com/61386851/0327ddc4-84fe-4306-a367-80a8e947171e" style="height: 200px;border-radius: 10px;border: 1px solid rgb(0, 0, 0);box-shadow: 0 0 10px #000;"></div>        
   <div style="position:static; top: 30px;"><img src="http://elo-boost.net/images/tiers/challenger_1.png" style="height: 170px;"></div>
    <div style="color: black; font: normal 26px &quot;Trebuchet MS&quot;,Arial,sans-serif;font-weight: bold;margin-top: -10px; margin-left:1px; margin-bottom:15px;">Diamond II</div>
@@ -37,7 +37,7 @@
                            Toplam Oyun :
                         </td>
                         <td>
-                            1
+                          {{Session::get('stat')->games_played}}
                         </td>
                       
                     </tr>
@@ -46,7 +46,7 @@
                            Katledilenler :
                         </td>
                         <td>
-                           1
+                           {{Session::get('stat')->kills}}
                         </td>
                       
                     </tr>
@@ -55,7 +55,7 @@
                            Ölümler :
                         </td>
                         <td>
-                           3
+                          {{Session::get('stat')->deaths}}
                         </td>
                       
                     </tr>
@@ -64,25 +64,16 @@
                            Asistler :
                         </td>
                         <td>
-                           4
+                            {{Session::get('stat')->assists}}
                         </td>
                       
                     </tr>
                     <tr>
                         <td>
-                           Öldürülen Minion :
-                        </td>
-                        <td>
-                           5
-                        </td>
-                      
-                    </tr>
-                    <tr>
-                        <td >
                            Öldürülen Yaratık :
                         </td>
                         <td>
-                            6
+                            {{Session::get('stat')->minions_killed}}
                         </td>
                       
                     </tr>
@@ -91,7 +82,7 @@
                            Kazanılan Altın :
                         </td>
                         <td>
-                            7
+                            {{Session::get('stat')->gold_earned}}
                         </td>
                       
                     </tr>
@@ -100,7 +91,7 @@
                            2 de 2 :
                         </td>
                         <td>
-                            8
+                            {{Session::get('stat')->double_kills}}
                         </td>
                       
                     </tr>
@@ -109,7 +100,7 @@
                            3 te 3 :
                         </td>
                         <td>
-                            9
+                            {{Session::get('stat')->triple_kills}}
                         </td>
                       
                     </tr>
@@ -118,7 +109,7 @@
                            4 te 4 :
                         </td>
                         <td>
-                           10
+                           {{Session::get('stat')->quadra_kills}}
                         </td>
                       
                     </tr>
@@ -127,7 +118,7 @@
                            5 te 5 :
                         </td>
                         <td>
-                            11
+                            {{Session::get('stat')->penta_kills}}
                         </td>
                       
                     </tr>
@@ -136,7 +127,7 @@
                            Yıkılan Kuleler :
                         </td>
                         <td>
-                            12
+                            {{Session::get('stat')->turrets_destroyed}}
                         </td>
                       
                     </tr>

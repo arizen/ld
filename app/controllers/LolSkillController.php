@@ -21,9 +21,16 @@ class LolSkillController extends BaseController {
     public static function getInformationFromSummoner($summoner){
     	//comment
     //	$url= 'http://www.lolskill.net/summoner/TR/' . $user->username;
-
-    	$url= 'http://www.lolskill.net/summoner/TR/' . $summoner->summoner_name ;
-
+    	$summonerName = $summoner->summoner_name;
+    	
+    	//echo $summonerName . "<br>";
+    	if(strpos($summoner->summoner_name, ' ') !== FALSE){
+    		 $summonerName= str_replace(" ", "%20", $summonerName);
+    	}
+		//echo $summonerName . "<br>";
+		
+    	$url= 'http://www.lolskill.net/summoner/TR/' . $summonerName ;
+    	
 
 	    $ch = curl_init();
 		$timeout = 0;
@@ -50,6 +57,7 @@ class LolSkillController extends BaseController {
 		else{
 			//summonerHasFound
 		}
+
 		
 		$divStats = $dom->getElementById('stats');
 		$mk = trim($divStats->nodeValue);
@@ -145,12 +153,8 @@ class LolSkillController extends BaseController {
 				$j++;
 			}
 		}
+		
 		$stat->save();
-
-
-
-
-		/*
 
 
 
@@ -180,7 +184,7 @@ class LolSkillController extends BaseController {
 											$summoner->save();
 										}
 										else if('kda' == $classValue){
-											echo $bodyElement->nodeValue;
+											//echo $bodyElement->nodeValue;
 										}											 
 									}
 								}
@@ -230,10 +234,19 @@ class LolSkillController extends BaseController {
 
 									if("queue" == $class_value){
 										$explodedString = explode(" ", $infoDetail->nodeValue);
-										$ranked_unranked = $explodedString[0];
-										$solo_duo = $explodedString[1];
+										
+										if("Ranked" == $explodedString[0]){
+											$ranked_unranked = $explodedString[0];
+											$solo_duo = $explodedString[1];
 
-										$match->type = $ranked_unranked . " " . $solo_duo;
+											$match->type = $ranked_unranked . " " . $solo_duo;
+										}
+										else{
+											$match->type = $infoDetail->nodeValue;
+										}
+										
+
+										
 									}
 									else if("outcome" == $class_value){
 										$win_loss = $infoDetail->nodeValue;
@@ -280,7 +293,7 @@ class LolSkillController extends BaseController {
 					$match->save();		
 			} 			  	
 		}
-		*/
+		
 
 		if (FALSE === $html)
 	        throw new Exception(curl_error($ch), curl_errno($ch));

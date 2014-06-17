@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration {
         	$table->integer('ld_points');
         	$table->integer('avatar_id');
         	$table->string('skype_info');
+        	$table->string('about_me');
         	$table->string('password');
         	$table->timestamps();
     	});

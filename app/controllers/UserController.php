@@ -150,6 +150,10 @@ class UserController extends BaseController {
             $user->skype_info = $skype;
             $user->save();
 
+            $summoner = Summoner::where('user_id','=',$user->id)->first();
+
+            LolSkillController::getInformationFromSummoner($summoner);
+
             return Redirect::intended('profile/' . $user->username);
     }  
 }
