@@ -166,20 +166,34 @@
 <div class="clear"></div>		
 </div>
 <div class="profilei">
-<h3 class="profilei-title">Son 10 Maç</h3>
+<h3 class="profilei-title">Son 10 Maç</h3>  
 @foreach( Session::get('summoner')->matches as $match)
- <table width="100%" border="1">
+
+@if ($match->result  == 'Win')
+ <table width="100%" border="0" bgcolor="#002100">
   <tr>
-    <th scope="col">  <p>{{ $match->champion }}<p></th>
-    <th scope="col"><p>{{ $match->result }}<p></th>
-    <th scope="col"> <p>{{ $match->type }}<p></th>
-    <th scope="col"<p>{{ $match->time }}<p></th>
-    <th scope="col"><p>{{ $match->duration }}<p></th>
-    <th scope="col"><p>{{ $match->your_team }}<p></th>
-    <th scope="col"><p>{{ $match->enemy_team }}<p></th>
+    <th scope="col" bgcolor="#002100"><img src="http://leagueduo.com/static/champions/{{$match->champion}}.jpg" height="175" width="100" /></th>
+    <th scope="col" bgcolor="#002100" width="10%"><center><p>{{ $match->result }}<p>  </center></th>
+    <th scope="col" bgcolor="#002100" width="10%"><center> <p>{{ $match->type }}<p></center></th>
+    <th scope="col" bgcolor="#002100" width="10%"><center><p>{{ $match->time }}<p></center></th>
+    <th scope="col" bgcolor="#002100" width="10%"><center><p>{{ $match->duration }}<p></center></th>
+    <th scope="col" bgcolor="#002100" width="30%"><center><p>{{ $match->your_team }}<p></center></th>
+    <th scope="col" bgcolor="#002100" width="30%"><center><p>{{ $match->enemy_team }}<p></center></th>
   </tr>
 </table>
-
+@elseif ($match->result == 'Loss')
+ <table width="100%" border="0" bgcolor="#210000">
+  <tr>
+    <th scope="col" bgcolor="#210000"><img src="http://leagueduo.com/static/champions/{{$match->champion}}.jpg" height="175" width="100" /></th>
+    <th scope="col" bgcolor="#210000" width="10%"><center><p>{{ $match->result }}<p></center></th>
+    <th scope="col" bgcolor="#210000" width="10%"><center> <p>{{ $match->type }}<p></center></th>
+    <th scope="col" bgcolor="#210000" width="10%"><center><p>{{ $match->time }}<p></center></th>
+    <th scope="col" bgcolor="#210000" width="10%"><center><p>{{ $match->duration }}<p></center></th>
+    <th scope="col" bgcolor="#210000" width="30%"><center><p>{{ $match->your_team }}<p></center></th>
+    <th scope="col" bgcolor="#210000" width="30%"><center><p>{{ $match->enemy_team }}<p></center></th>
+  </tr>
+</table>
+@endif
 @endforeach
    <div
   class="fb-like"
