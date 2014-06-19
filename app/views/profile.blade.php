@@ -176,6 +176,7 @@
   data-width="450"
   data-show-faces="true">
 </div>
+
 <p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
 <div class="clear"></div>		
 </div>

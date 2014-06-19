@@ -23,7 +23,8 @@ class CreateSummonersTable extends Migration {
         	$table->string('division');
         	$table->string('server');
         	$table->string('kda');
-        	$table->string('win_lose');        	
+        	$table->string('win_lose');
+        	$table->string('best_champions');      	
         	$table->timestamps();
     	});
 	}

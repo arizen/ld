@@ -2,7 +2,7 @@
 
         <title>League of Legends'da Partnerini Bul</title>
 
- 
+        <meta property="og:title"           content="Chocolate Pecan Pie" /> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
           <link rel="shortcut icon" type="image/x-icon" href="http://leagueduo.com/images/favicon.ico">
