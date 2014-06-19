@@ -150,7 +150,18 @@
 <div class="profilei">
 <h3 class="profilei-title">Son 10 Maç</h3>
 @foreach( Session::get('summoner')->matches as $match)
- <p>{{ $match->id }}<p>
+ <table width="100%" border="1">
+  <tr>
+    <th scope="col">  <p>{{ $match->champion }}<p></th>
+    <th scope="col"><p>{{ $match->result }}<p></th>
+    <th scope="col"> <p>{{ $match->type }}<p></th>
+    <th scope="col"<p>{{ $match->time }}<p></th>
+    <th scope="col"><p>{{ $match->duration }}<p></th>
+    <th scope="col"><p>{{ $match->your_team }}<p></th>
+    <th scope="col"><p>{{ $match->enemy_team }}<p></th>
+  </tr>
+</table>
+
 @endforeach
    <div id="fb-root"></div>
    <script>
