@@ -157,11 +157,28 @@ class LolSkillController extends BaseController {
 		$stat->save();
 
 
+		$divBestChamp = $dom->getElementById('bestChampions');
+		$bestChampString = "";
+		foreach($divBestChamp->childNodes as $eachContainer)
+		{
+			if( $eachContainer->nodeType == 1){
+				$classValue = $eachContainer->getAttribute('class');
+				if("champion tooltip"){
+					$heroLink = $eachContainer->getAttribute('href');
+					$explodedString = explode("/", $heroLink);
 
-
+					$bestChampString = $bestChampString . $explodedString[1] . ";";
+				}
+			}
+		}
+		$summoner->best_champions = $bestChampString;
+		//summoner assada save ediliyor
+		
+			
 		$divRank = $dom->getElementById('rank');
 		foreach($divRank->childNodes as $eachContainer)
 		{
+
 			if( $eachContainer->nodeType == 1){
 				$id = $eachContainer->getAttribute('id');
 				if ('solo' == $id ){

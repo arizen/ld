@@ -1,6 +1,24 @@
 @extends('layouts.default')
 @section('content')
 
+<script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '748057568550130',
+          xfbml      : true,
+          version    : 'v2.0'
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+
 {{ HTML::ul($errors->all()) }}
 <div class="container">
         <div class="row">
@@ -163,38 +181,13 @@
 </table>
 
 @endforeach
-   <div id="fb-root"></div>
-   <script>
-   window.fbAsyncInit = function() {
-   FB.init({appId: '748057568550130', status: true, cookie: true,
-   xfbml: true});
-   };
-   (function() {
-   var e = document.createElement('script'); e.async = true;
-   e.src = document.location.protocol +
-   '//connect.facebook.net/en_US/all.js';
-   document.getElementById('fb-root').appendChild(e);
-   }());
-   </script>
+   <div
+  class="fb-like"
+  data-send="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
 
-      <script type="text/javascript">
-    $(document).ready(function(){
-    $('#share_button').click(function(e){
-    e.preventDefault();
-    FB.ui(
-    {
-    method: 'feed',
-    name: 'This is the content of the "name" field.',
-    link: ' http://www.hyperarts.com/',
-    picture: 'http://www.hyperarts.com/external-xfbml/share-image.gif',
-    caption: 'This is the content of the "caption" field.',
-    description: 'This is the content of the "description" field, below the caption.',
-    message: ''
-    });
-    });
-    });
-      </script>
-<img id="#share_button" src="http://www.tabpress.com/fbui_share/share_button.png">
 <p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
 <div class="clear"></div>		
 </div>

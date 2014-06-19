@@ -90,16 +90,13 @@ Route::get('mh', function()
     //foreach($user->matches as $match){
     	//echo $match->id;
     //}
-
-
-
 });
 
 Route::get('k', function()
 {
-    //$summoner = Summoner::find(1);
+    $summoner = Summoner::find(1);
 
-    //LolSkillController::getInformationFromSummoner($summoner);
+    LolSkillController::getInformationFromSummoner($summoner);
 
 });
 
