@@ -97,10 +97,10 @@ Route::get('mh', function()
 
 Route::get('k', function()
 {
-    $summoner = Summoner::find(1);
+    //$summoner = Summoner::find(1);
 
-    LolSkillController::getInformationFromSummoner($summoner);
-    
+    //LolSkillController::getInformationFromSummoner($summoner);
+
 });
 
 Route::post('-', array('uses' => 'UserController@saveUser'));
