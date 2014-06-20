@@ -159,54 +159,51 @@
 <!-- Sağ İçerik -->
   <div class="col-md-9">
   <div class="profilei">
-<h3 class="profilei-title">Hakkımda</h3>
-<p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
-<p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
-<p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
+<h3 class="profilei-title">Yorumlar</h3>
+<div class="testimonial-vertical">
+
+    <div class="testimonial-vertical-pics">
+        <ul>
+                        <li>
+                <a href="#accord-3">
+                    <img src="http://avatar-user.s.aeriastatic.com/61386851/0327ddc4-84fe-4306-a367-80a8e947171e" alt="John Doe"/>
+                </a>
+            </li>
+                    </ul>
+    </div>
+
+    <!-- Arrow -->
+    <div class="testimonial-vertical-arrow"></div>
+    <!-- Arrow -->
+
+    <div class="testimonial-vertical-content">
+                    <div class="testimonial-vertical-text" id="accord-3">
+                <div>
+                    Cras sem erat, aliquet in egestas cursus sem erat, ullamcorper vitae ligula. Nunc commodo lacinia eros ac condimentum Nunc commodo lacinia eros ac condimentu
+                </div>
+                <div class="testimonial-vertical-author">
+                    <a href='http://leagueduo.com/profile/{{Session::get('user')->username}}'>{{Session::get('user')->username}}</a>
+                </div>
+                <div class="testimonial-vertical-author-position">
+                      {{Session::get('summoner')->league}} {{Session::get('summoner')->division}}
+                </div>
+            </div>
+            </div>
+
+</div>
+<div style="height:10px; weight:100%;"></div>
+   <div class="divider divider-shadow"></div>
+<p style="font-size:22px; margin-left:10px; font-type:bold;"><a href='http://leagueduo.com/profile/{{Session::get('user')->username}}'>{{Session::get('user')->username}}</a> hakkındaki görüşleriniz :</p>
+   <form action="s" style="">
+
+<textarea style="width:100%; height:100px;" name="yorum" cols="" rows=""></textarea> <br />
+<input style="margin-top:15px;" class="btn btn-primary btn-lg" name="submit" type="submit" />
+
+</form>
+
 <div class="clear"></div>		
 </div>
-<div class="profilei">
-<h3 class="profilei-title">Son 10 Maç</h3>  
-@foreach( Session::get('summoner')->matches as $match)
 
-@if ($match->result  == 'Win')
- <table width="100%" border="0" bgcolor="#002100">
-  <tr>
-    <th scope="col" bgcolor="#002100"><img src="http://leagueduo.com/static/champions/{{$match->champion}}.jpg" height="175" width="100" /></th>
-    <th scope="col" bgcolor="#002100" width="10%"><center><p>{{ $match->result }}<p>  </center></th>
-    <th scope="col" bgcolor="#002100" width="10%"><center> <p>{{ $match->type }}<p></center></th>
-    <th scope="col" bgcolor="#002100" width="10%"><center><p>{{ $match->time }}<p></center></th>
-    <th scope="col" bgcolor="#002100" width="10%"><center><p>{{ $match->duration }}<p></center></th>
-    <th scope="col" bgcolor="#002100" width="30%"><center><p>{{ $match->your_team }}<p></center></th>
-    <th scope="col" bgcolor="#002100" width="30%"><center><p>{{ $match->enemy_team }}<p></center></th>
-  </tr>
-</table>
-<div style="height:10px; weight:100%; background-color:black;"></div>
-@elseif ($match->result == 'Loss')
- <table width="100%" border="0" bgcolor="#210000">
-  <tr>
-    <th scope="col" bgcolor="#210000"><img src="http://leagueduo.com/static/champions/{{$match->champion}}.jpg" height="175" width="100" /></th>
-    <th scope="col" bgcolor="#210000" width="10%"><center><p>{{ $match->result }}<p></center></th>
-    <th scope="col" bgcolor="#210000" width="10%"><center> <p>{{ $match->type }}<p></center></th>
-    <th scope="col" bgcolor="#210000" width="10%"><center><p>{{ $match->time }}<p></center></th>
-    <th scope="col" bgcolor="#210000" width="10%"><center><p>{{ $match->duration }}<p></center></th>
-    <th scope="col" bgcolor="#210000" width="30%"><center><p>{{ $match->your_team }}<p></center></th>
-    <th scope="col" bgcolor="#210000" width="30%"><center><p>{{ $match->enemy_team }}<p></center></th>
-  </tr>
-</table>
-<div style="height:10px; weight:100%; background-color:black;"></div>
-@endif
-@endforeach
-   <div
-  class="fb-like"
-  data-send="true"
-  data-width="450"
-  data-show-faces="true">
-</div>
-
-<p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
-<div class="clear"></div>		
-</div>
 
 
 										</div>
