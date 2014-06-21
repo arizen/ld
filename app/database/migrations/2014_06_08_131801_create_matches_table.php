@@ -24,6 +24,14 @@ class CreateMatchesTable extends Migration {
         	$table->string('duration');
         	$table->string('your_team');
         	$table->string('enemy_team');
+        	$table->string('performance');
+        	$table->string('kills');
+        	$table->string('deaths');
+        	$table->string('assists');
+        	$table->string('minion_kills');
+        	$table->string('gold_earned');
+        	$table->string('stealth_ward');
+        	$table->string('vision_ward');
         	$table->timestamps();
     	});
 	}

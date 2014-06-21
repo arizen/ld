@@ -305,9 +305,44 @@ class LolSkillController extends BaseController {
 								}
 							}
 						}
+						else if("stats" == $class_value){
+							echo $matchInformation->nodeValue . " <--- nodeVal <br>";
+							$explodedString = LolSkillController::multiexplode(array("\n"," ","\t"), $matchInformation->nodeValue );
+							
+							for ($i=0; $i < count($explodedString); $i++) {
+								if($explodedString[$i] != ""){
+									echo $explodedString[$i] . " " . $i . "jjj<br>" ;
+									$match->performance = $explodedString[$i];
+									if($i == 2){
+										$match->performance = $explodedString[$i]; //Level
+									}
+									else if($i == 4){
+										$match->kills = $explodedString[$i];
+									}
+									else if($i == 7){
+										$match->deaths = $explodedString[$i];
+									}
+									else if($i == 10){
+										$match->assists = $explodedString[$i];
+									}
+									else if($i == 13){
+										$match->minion_kills = $explodedString[$i];
+									}
+									else if($i == 16){
+										$match->gold_earned = $explodedString[$i];
+									}
+									else if($i == 19){
+										$match->stealth_ward = $explodedString[$i];
+									}
+									else if($i == 21){
+										$match->vision_ward = $explodedString[$i];
+									}
+								}
+							}
+						}
 					}					
 				}
-					$match->save();		
+				$match->save();		
 			} 			  	
 		}
 		
