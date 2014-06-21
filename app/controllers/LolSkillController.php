@@ -235,7 +235,7 @@ class LolSkillController extends BaseController {
 					if( $matchInformation->nodeType == 1){
 						$class_value = $matchInformation->getAttribute('class');
 
-						if("champion tiptip" == $class_value){
+						if("champion tooltip" == $class_value){
 							$fc = $matchInformation->firstChild;
 							$champion_href = $fc->getAttribute('href');
 							$explodedString = explode("/", $champion_href);
