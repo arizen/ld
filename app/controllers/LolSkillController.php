@@ -266,7 +266,7 @@ class LolSkillController extends BaseController {
 									else if("outcome" == $class_value){
 										$win_loss = $infoDetail->nodeValue;
 									}
-									else if("date tiptip" == $class_value){
+									else if("date tooltip" == $class_value){
 										$match_time = $infoDetail->nodeValue;
 
 										$match->time = $match_time;

@@ -159,64 +159,50 @@
 <!-- Sağ İçerik -->
   <div class="col-md-9">
   <div class="profilei">
-<h3 class="profilei-title">Hakkımda</h3>
-<p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
-<p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
-<p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
+<h3 class="profilei-title">Yorumlar</h3>
+
+<!-- DataTables CSS -->
+<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.0/css/jquery.dataTables.css">
+  
+<!-- jQuery -->
+<script type="text/javascript" charset="utf8" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+  
+<!-- DataTables -->
+<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.0/js/jquery.dataTables.js"></script>
+
+<script>
+$(document).ready( function () {
+    var table = $('#users_table').DataTable();
+
+} );
+///
+
+</script>
+
+<table id="users_table" class="display">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>League</th>
+            <th>Division</th>
+        </tr>
+    </thead>
+    <tbody>
+          @foreach($users as $user)
+          <tr>
+            <td> <a href='/lolduo/public/profile/{{$user->id}}'> {{ $user->username }} </a> </td>
+            <td>{{ $user->league }}</td>
+            <td>{{ $user->division }}</td>
+          </tr>
+          @endforeach
+    </tbody>
+</table>
+
+
+
 <div class="clear"></div>		
 </div>
-<div class="profilei">
-<h3 class="profilei-title">Son 10 Maç</h3>  
-@foreach( Session::get('summoner')->matches as $match)
 
-@if ($match->result  == 'Win')
- <table width="100%" border="0" bgcolor="#002100">
-  <tr>
-    <th scope="col" bgcolor="#002100"><img src="http://leagueduo.com/static/champions/{{$match->champion}}.jpg" height="175" width="100" /></th>
-    <th scope="col" bgcolor="#002100" width="10%"><center><p>{{ $match->result }}<p>  </center></th>
-    <th scope="col" bgcolor="#002100" width="10%"><center> <p>{{ $match->type }}<p></center></th>
-    <th scope="col" bgcolor="#002100" width="10%"><center><p>{{ $match->time }}<p></center></th>
-    <th scope="col" bgcolor="#002100" width="10%"><center><p>{{ $match->duration }}<p></center></th>
-    <th scope="col" bgcolor="#002100" width="30%">@foreach(ViewHelperController::stringToOneByOneArray($match->your_team,";") as $player)
-<center><p>{{ $player }}<p></center>
-    @endforeach</th>
-    <th scope="col" bgcolor="#002100" width="30%">@foreach(ViewHelperController::stringToOneByOneArray($match->enemy_team,";") as $player)
-<center><p>{{ $player }}<p></center>
-    @endforeach</th>
-  </tr>
-</table>
-<div style="height:10px; weight:100%; background-color:black;"></div>
-@elseif ($match->result == 'Loss')
- <table width="100%" border="0" bgcolor="#210000">
-  <tr>
-    <th scope="col" bgcolor="#210000"><img src="http://leagueduo.com/static/champions/{{$match->champion}}.jpg" height="175" width="100" /></th>
-    <th scope="col" bgcolor="#210000" width="10%"><center><p>{{ $match->result }}<p></center></th>
-    <th scope="col" bgcolor="#210000" width="10%"><center> <p>{{ $match->type }}<p></center></th>
-    <th scope="col" bgcolor="#210000" width="10%"><center><p>{{ $match->time }}<p></center></th>
-    <th scope="col" bgcolor="#210000" width="10%"><center><p>{{ $match->duration }}<p></center></th>
-           <th scope="col" bgcolor="#210000" width="30%"> @foreach(ViewHelperController::stringToOneByOneArray($match->your_team,";") as $player)
-<center><p>{{ $player }}<p></center>
-    @endforeach
-    </th>
-
-    <th scope="col" bgcolor="#210000" width="30%">@foreach(ViewHelperController::stringToOneByOneArray($match->enemy_team,";") as $player)
-<center><p>{{ $player }}<p></center>
-    @endforeach</th>
-  </tr>
-</table>
-<div style="height:10px; weight:100%; background-color:black;"></div>
-@endif
-@endforeach
-   <div
-  class="fb-like"
-  data-send="true"
-  data-width="450"
-  data-show-faces="true">
-</div>
-
-<p>DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME DENEME</p>
-<div class="clear"></div>		
-</div>
 
 
 										</div>

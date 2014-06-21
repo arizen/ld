@@ -45,7 +45,7 @@ Route::get('oduller', function()
     return View::make('oduller'); //->with('users', $users);
 });
 
-Route::get('comments/{username}', function($username)
+Route::get('profile/{username}/comments', function($username)
 {
     $user = User::where('username', '=', $username)->first();
 
@@ -58,6 +58,21 @@ Route::get('comments/{username}', function($username)
     Session::put('stat',$stat);
 
     return View::make('comments');
+});
+
+Route::get('profile/{username}/messages', function($username)
+{
+    $user = User::where('username', '=', $username)->first();
+
+    $summoner = Summoner::where('user_id','=',$user->id)->first();
+
+    $stat = Stat::where('summoner_id', '=', $summoner->id)->first();
+
+    Session::put('user',$user);
+    Session::put('summoner',$summoner);
+    Session::put('stat',$stat);
+
+    return View::make('messages');
 });
 
 Route::get('login', function()
