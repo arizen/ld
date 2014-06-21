@@ -190,7 +190,10 @@
     <th scope="col" bgcolor="#210000" width="10%"><center> <p>{{ $match->type }}<p></center></th>
     <th scope="col" bgcolor="#210000" width="10%"><center><p>{{ $match->time }}<p></center></th>
     <th scope="col" bgcolor="#210000" width="10%"><center><p>{{ $match->duration }}<p></center></th>
-    <th scope="col" bgcolor="#210000" width="30%"><center><p>{{ $match->your_team }}<p></center></th>
+    @foreach(ViewHelperController::stringToOneByOneArray($match->your_team,";") as $player)
+            <th scope="col" bgcolor="#210000" width="30%"><center><p>{{ $player }}<p></center></th>
+    @endforeach
+    
     <th scope="col" bgcolor="#210000" width="30%"><center><p>{{ $match->enemy_team }}<p></center></th>
   </tr>
 </table>
