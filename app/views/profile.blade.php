@@ -177,8 +177,12 @@
     <th scope="col" bgcolor="#002100" width="10%"><center> <p>{{ $match->type }}<p></center></th>
     <th scope="col" bgcolor="#002100" width="10%"><center><p>{{ $match->time }}<p></center></th>
     <th scope="col" bgcolor="#002100" width="10%"><center><p>{{ $match->duration }}<p></center></th>
-    <th scope="col" bgcolor="#002100" width="30%"><center><p>{{ $match->your_team }}<p></center></th>
-    <th scope="col" bgcolor="#002100" width="30%"><center><p>{{ $match->enemy_team }}<p></center></th>
+    <th scope="col" bgcolor="#002100" width="30%">@foreach(ViewHelperController::stringToOneByOneArray($match->your_team,";") as $player)
+<center><p>{{ $player }}<p></center>
+    @endforeach</th>
+    <th scope="col" bgcolor="#002100" width="30%">@foreach(ViewHelperController::stringToOneByOneArray($match->enemy_team,";") as $player)
+<center><p>{{ $player }}<p></center>
+    @endforeach</th>
   </tr>
 </table>
 <div style="height:10px; weight:100%; background-color:black;"></div>
@@ -190,11 +194,14 @@
     <th scope="col" bgcolor="#210000" width="10%"><center> <p>{{ $match->type }}<p></center></th>
     <th scope="col" bgcolor="#210000" width="10%"><center><p>{{ $match->time }}<p></center></th>
     <th scope="col" bgcolor="#210000" width="10%"><center><p>{{ $match->duration }}<p></center></th>
-    @foreach(ViewHelperController::stringToOneByOneArray($match->your_team,";") as $player)
-            <th scope="col" bgcolor="#210000" width="30%"><center><p>{{ $player }}<p></center></th>
+           <th scope="col" bgcolor="#210000" width="30%"> @foreach(ViewHelperController::stringToOneByOneArray($match->your_team,";") as $player)
+<center><p>{{ $player }}<p></center>
     @endforeach
-    
-    <th scope="col" bgcolor="#210000" width="30%"><center><p>{{ $match->enemy_team }}<p></center></th>
+    </th>
+
+    <th scope="col" bgcolor="#210000" width="30%">@foreach(ViewHelperController::stringToOneByOneArray($match->enemy_team,";") as $player)
+<center><p>{{ $player }}<p></center>
+    @endforeach</th>
   </tr>
 </table>
 <div style="height:10px; weight:100%; background-color:black;"></div>
