@@ -113,6 +113,13 @@ Route::get('k', function()
 
     LolSkillController::getInformationFromSummoner($summoner);
 
+    foreach ($summoner->matches as $match) {
+        foreach(ViewHelperController::stringToOneByOneArray($match->your_team,";") as $player){
+            echo $player;
+        }
+    }
+   
+
 });
 
 Route::post('-', array('uses' => 'UserController@saveUser'));

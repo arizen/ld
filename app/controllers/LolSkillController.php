@@ -262,8 +262,6 @@ class LolSkillController extends BaseController {
 											$match->type = $infoDetail->nodeValue;
 										}
 										
-
-										
 									}
 									else if("outcome" == $class_value){
 										$win_loss = $infoDetail->nodeValue;
@@ -289,9 +287,8 @@ class LolSkillController extends BaseController {
 									$teamString = "";
 									foreach( $teamInformation->childNodes as $playerInformation )
 									{
-										 
 										if( $playerInformation->nodeType == 1){
-											$summoner_name = $playerInformation->nodeValue; //takimdakilerin kullanici adi
+											$summoner_name = substr($playerInformation->nodeValue,0,-1); //takimdakilerin kullanici adi, sonda bi bosluk var
 											$teamString = $teamString . $summoner_name . ";";
 										}
 									}
@@ -306,12 +303,10 @@ class LolSkillController extends BaseController {
 							}
 						}
 						else if("stats" == $class_value){
-							echo $matchInformation->nodeValue . " <--- nodeVal <br>";
 							$explodedString = LolSkillController::multiexplode(array("\n"," ","\t"), $matchInformation->nodeValue );
 							
 							for ($i=0; $i < count($explodedString); $i++) {
 								if($explodedString[$i] != ""){
-									echo $explodedString[$i] . " " . $i . "jjj<br>" ;
 									$match->performance = $explodedString[$i];
 									if($i == 2){
 										$match->performance = $explodedString[$i]; //Level
