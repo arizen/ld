@@ -11,9 +11,19 @@
 |
 */
 
-Route::get('/', function()
+Route::get('/', function($username))
 {
-	return View::make('hello');
+    $user = User::where('username', '=', $username)->first();
+
+    $summoner = Summoner::where('user_id','=',$user->id)->first();
+
+    $stat = Stat::where('summoner_id', '=', $summoner->id)->first();
+
+    Session::put('user',$user);
+    Session::put('summoner',$summoner);
+    Session::put('stat',$stat);
+
+    return View::make('index');
 });
 
 Route::get('signup', function()
