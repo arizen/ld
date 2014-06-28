@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', function($username))
+Route::get('/', function($username)
 {
     $user = User::where('username', '=', $username)->first();
 
