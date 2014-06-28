@@ -1,0 +1,103 @@
+#coaching .row {
+  margin-top: 78px; }
+#coaching .coach-box {
+  border: 1px solid #e7e7e7;
+  margin: 0 auto;
+  background: #fff;
+  display: block;
+  width: 90%;
+  padding-bottom: 13px; 
+  margin-bottom: 20px; }
+  @media (min-width: 979px) and (max-width: 1200px) {
+    #coaching .coach-box {
+      width: 100%; } }
+  @media (min-width: 768px) and (max-width: 979px) {
+    #coaching .coach-box {
+      width: 100%;
+      margin: 0 0 20px 0; } }
+  @media (max-width: 767px) {
+    #coaching .coach-box {
+      width: 100%; } }
+  #coaching .coach-box header {
+    background: #2E3944;
+    padding: 20px 30px;
+    color: #fff;
+    margin-bottom: 0px;
+    width: 100%;
+    display: inline-block; }
+    #coaching .coach-box header span {
+      float: left;
+      font-style: italic;
+      font-size: 30px;
+      line-height: 26px; }
+    #coaching .coach-box header .coach {
+      float: left;
+      width: 45%; }
+      #coaching .coach-box header .coach p {
+        font-size: 78px;
+        float: left;
+        line-height: 75px; }
+      #coaching .coach-box header .coach span {
+        font-size: 19px;
+        margin-top: 10px;
+        font-weight: 400; }
+        @media (min-width: 768px) and (max-width: 979px) {
+          #coaching .coach-box header .coach span {
+            margin-top: 5px; } }
+  #coaching .coach-box .text {
+    padding: 15px 31px 20px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: center;
+    font-size: 16px; }
+  #coaching .coach-box .coach-tier {
+    float: right; }
+  #coaching .coach-box .perk {
+    color: #7A8289;
+    padding: 12px 0;
+    border-bottom: 1px solid #F3F3F3; }
+    #coaching .coach-box .perk .content {
+      margin: 0 auto;
+      width: 78%; }
+  #coaching .coach-box .btn {
+    display: block;
+    margin: 30px auto 0;
+    width: 180px;
+    text-transform: uppercase; }
+#coaching .price-pro {
+  position: relative;
+  top: -33px;
+  box-shadow: 1px 1px 2px 0px rgba(66, 66, 66, 0.1); }
+  @media (min-width: 768px) and (max-width: 979px) {
+    #coaching .price-pro {
+      top: 0; } }
+  @media (max-width: 767px) {
+    #coaching .price-pro {
+      top: 0; } }
+  #coaching .price-pro header span {
+    font-size: 40px;
+    font-weight: 400; }
+#coaching .cols4 .coach-box {
+  min-height: 395px;
+  width: 100%; }
+  #coaching .cols4 .coach-box header .coach p {
+    font-size: 50px;
+    line-height: 65px; }
+    @media (min-width: 979px) and (max-width: 1200px) {
+      #coaching .cols4 .coach-box header .coach p {
+        font-size: 40px; } }
+  #coaching .cols4 .coach-box header .coach span {
+    margin: 31px 0 0 12px; }
+  #coaching .coach .photo {
+    max-width: 100px;
+    border: 3px solid white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 0px 1px #BCBCBC;
+    display: block;
+    margin-top: 5px;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -ms-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
+}
