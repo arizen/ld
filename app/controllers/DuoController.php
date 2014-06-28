@@ -5,16 +5,15 @@ class DuoController extends BaseController {
 
  	public function sendDuoRequest()
     {
+        //return Redirect::to('profile/' . "yck32");
     	 $duo = new Duo;
 
     	 $duo->from_id = Session::get('id');
-    	 $duo->to_id = Input::get('user_id');
+    	 $duo->to_id = Session::get('user')->id;
     	 $duo->request_status = "Pending";
     	 $duo->save();
 
-        Session::flash('message', 'Duo request sent successfully!');
-
-        return Redirect::to('profile/' . Input::get('user_id'));
+        return Redirect::to('profile/' . Session::get('user')->username);
     }
 
     public function handleDuoRequest()
@@ -22,10 +21,10 @@ class DuoController extends BaseController {
     	$mk = Input::get('accept_button');
     	echo $mk;
 
-    	//Mehmetcanın dediği kontrolleri yap
-    	$duo = Duo::find(Input::get('duo_id'));
-    	$duo->request_status = "Accepted";
-    	$duo->save();
+    	//Butonlara id ver, veritabanından kontrol et ona gore
+    	//$duo = Duo::find(Input::get('duo_id'));
+    	//$duo->request_status = "Accepted";
+    	//$duo->save();
     	
     }
 

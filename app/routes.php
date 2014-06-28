@@ -153,4 +153,3 @@ Route::post('step1', array('uses' => 'UserController@checkStep1'));
 Route::post('step2', array('uses' => 'UserController@checkStep2'));
 Route::post('step3', array('uses' => 'UserController@checkStep3'));
 Route::post('profile/', array('uses' => 'DuoController@sendDuoRequest'));
-Route::post('profile/', array('uses' => 'DuoController@handleDuoRequest'));
