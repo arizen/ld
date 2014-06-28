@@ -190,4 +190,15 @@ body {
         /* Üye resim ve bilgi div */
 
 
- 
+  #ana_div {
+	width: 600px;
+	background-color: #000;
+}
+
+.div {
+	float: left;
+	width: 200px;
+	color: #FFFFFF;
+}
+
+

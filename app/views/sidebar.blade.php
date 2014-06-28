@@ -1,5 +1,5 @@
 <center> <div class="col-md-3"> <div class="profilei">
-  {{ Form::open(array('action' => 'DuoController@sendDuoRequest', 'id'=>'signup')) }}
+  {{ Form::open(array('action' => 'DuoController@sendDuoRequest')) }}
   {{ Form::submit('Duo Ekle', array('class' => 'btn btn-primary btn-lg')) }}
 {{ Form::close() }}
 <h3 class="profilei-title">Profil</h3>
