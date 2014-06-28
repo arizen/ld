@@ -23,6 +23,7 @@
              <link rel="stylesheet" href="/css/flexslider.css">
              <link href='/css/style.css' rel='stylesheet' type='text/css'> 
              <link href='/css/responsive.css' rel='stylesheet' type='text/css'>
+                <link href="/css/liste.css" rel="stylesheet" media="screen">
         
         <!--- Tema Skin -->
         
