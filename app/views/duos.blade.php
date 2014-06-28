@@ -39,7 +39,7 @@ ASDASDASDASDDSADASD
   <tr>
     <th scope="col"><a href='http://leagueduo.com/profile/{{Session::get('user')->username}}'>{{Session::get('user')->username}}</a></th>
     <th scope="col">{{Session::get('summoner')->league}} {{Session::get('summoner')->division}}</th>
-    <th scope="col"><button type="button" class="btn btn-success btn-lg">Success</button> <button type="button" class="btn btn-danger btn-lg">Danger</button></th>
+    <th scope="col"><button type="button" class="btn btn-success btn-lg">Kabul Et !</button> <button type="button" class="btn btn-danger btn-lg">Reddet!</button></th>
   </tr>
 </table>
 
