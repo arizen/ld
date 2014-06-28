@@ -36,11 +36,13 @@ ASDASDASDASDDSADASD
 <div></div>
 
 <table width="100%" border="1">
+  @foreach(Session::get("duoModelArray") as $duoModel)
   <tr>
-    <th scope="col"><a href='http://leagueduo.com/profile/{{Session::get('user')->username}}'>{{Session::get('user')->username}}</a></th>
-    <th scope="col">{{Session::get('summoner')->league}} {{Session::get('summoner')->division}}</th>
+    <th scope="col"><a href='http://leagueduo.com/profile/{{Session::get('user')->username}}'>{{ $duoModel->fromUser->username }}</a></th>
+    <th scope="col">{{$duoModel->fromSummoner->league}} {{$duoModel->fromSummoner->division}}</th>
     <th scope="col"><button type="button" class="btn btn-success btn-lg">Success</button> <button type="button" class="btn btn-danger btn-lg">Danger</button></th>
   </tr>
+  @endforeach
 </table>
 
  

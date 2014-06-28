@@ -88,8 +88,7 @@ Route::get('profile/{username}/messages', function($username)
 
 Route::get('profile/{username}/duos', function($username)
 {
-    $user = User::where('username', '=', $username)->first();
-
+    $user = User::find(Session::get('id'));
     $summoner = Summoner::where('user_id','=',$user->id)->first();
 
     $stat = Stat::where('summoner_id', '=', $summoner->id)->first();
@@ -98,6 +97,15 @@ Route::get('profile/{username}/duos', function($username)
     Session::put('summoner',$summoner);
     Session::put('stat',$stat);
 
+    $duoModelArray = array();
+    foreach($user->duos as $duo){
+        $duoRequest = new DuoRequestModel;
+        $duoRequest->fromUser = User::find($duo->from_id);
+        $duoRequest->fromSummoner = Summoner::where('user_id','=',$duoRequest->fromUser->id)->first();
+        array_push($duoModelArray, $duoRequest);
+    }
+    
+    Session::put('duoModelArray',$duoModelArray);
     return View::make('duos');
 });
 
@@ -153,7 +161,7 @@ Route::get('mh', function()
 
 Route::get('k', function()
 {
-    $summoner = Summoner::find(1);
+    $summoner = Summoner::find(4);
 
     LolSkillController::getInformationFromSummoner($summoner);
 
