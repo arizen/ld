@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function($username)
+Route::get('/', function()
 {
-    $user = User::where('username', '=', $username)->first();
+    $user = User::find(1);
 
     $summoner = Summoner::where('user_id','=',$user->id)->first();
 

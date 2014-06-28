@@ -182,17 +182,15 @@ $(document).ready( function () {
 <table id="users_table" class="display">
     <thead>
         <tr>
-            <th>Username</th>
-            <th>League</th>
-            <th>Division</th>
+            <th>Subject</th>
+            <th>From id</th>
         </tr>
     </thead>
     <tbody>
-          @foreach($users as $user)
+          @foreach(Session::get('user')->messages as $message)
           <tr>
-            <td> <a href='/lolduo/public/profile/{{$user->id}}'> {{ $user->username }} </a> </td>
-            <td>{{ $user->league }}</td>
-            <td>{{ $user->division }}</td>
+            <td>{{ $message->subject }}</td>
+            <td>{{ $message->from_id }}</td>
           </tr>
           @endforeach
     </tbody>
