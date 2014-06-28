@@ -1,3 +1,9 @@
+a { text-decoration:none; color:black;}
+a:link { text-decoration:none; color:black; }
+a:visited { text-decoration:none; color:black; }
+a:active { text-decoration:none; color:black;}
+a:hover { text-decoration:none; color:black;}
+
 #coaching .row {
   margin-top: 78px; }
 #coaching .coach-box {
@@ -19,7 +25,7 @@
     #coaching .coach-box {
       width: 100%; } }
   #coaching .coach-box header {
-    background: #2E3944;
+    background: #3498DB;
     padding: 20px 30px;
     color: #fff;
     margin-bottom: 0px;
@@ -28,6 +34,8 @@
     #coaching .coach-box header span {
       float: left;
       font-style: italic;
+      color: #000;
+      font-weight: bold;
       font-size: 30px;
       line-height: 26px; }
     #coaching .coach-box header .coach {
@@ -44,10 +52,15 @@
         @media (min-width: 768px) and (max-width: 979px) {
           #coaching .coach-box header .coach span {
             margin-top: 5px; } }
+  #coaching .coach-box .coach p {
+
+    font-style: bold;
+  }
   #coaching .coach-box .text {
     padding: 15px 31px 20px;
     font-weight: 400;
     line-height: 21px;
+    font-style: bold;
     text-align: center;
     font-size: 16px; }
   #coaching .coach-box .coach-tier {
