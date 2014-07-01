@@ -1,18 +1,9 @@
 @extends('layouts.default')
 @section('content')
 
-<script src="http://rcpyksl.com/table/jquery.js"></script>
-<script src="http://rcpyksl.com/table/js/powcheck.js"></script>
-<link rel="stylesheet" href="http://rcpyksl.com/table/css/slate.css">
-<script src="http://rcpyksl.com/table/js/bootstrap.min.js"></script>
-<script>
-$(function(){
-$("#test").powertable({
-showsize: "25",
-loadmoresize: "25"
-});
-});
-</script>
+<script src="http://leagueduo.com/js/jquery.watable.js"></script>
+<link rel="stylesheet" href="http://leagueduo.com/css/watable.css">
+
 
 	 <div class="container">
         
@@ -30,843 +21,253 @@ loadmoresize: "25"
                 </div>
         </div>
         
-        <div class="row">
+         <div class="row">
             <div class="col-md-12 col-sm-12">
-              <table id="test">
-<thead>
-<tr>
-<th search="1">Student Name</th>
-<th sort="1">Level</th>
-<th sort="1">Class</th>
-<th search="1" sort="1">School Number</th>
-<th sort="1">Mean Score</th>
-<th sort="1">Cost</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Edward Rick</td>
-<td>5</td>
-<td>C</td>
-<td>1001</td>
-<td>75</td>
-<td>36</td>
-</tr>
-<tr>
-<td>Madison Henry</td>
-<td>6</td>
-<td>F</td>
-<td>1002</td>
-<td>82</td>
-<td>55</td>
-</tr>
-<tr>
-<td>Lillian Henry</td>
-<td>12</td>
-<td>C</td>
-<td>1003</td>
-<td>87</td>
-<td>42</td>
-</tr>
-<tr>
-<td>John Madison</td>
-<td>6</td>
-<td>F</td>
-<td>1004</td>
-<td>98</td>
-<td>34</td>
-</tr>
-<tr>
-<td>Jim Emily</td>
-<td>12</td>
-<td>B</td>
-<td>1005</td>
-<td>89</td>
-<td>52</td>
-</tr>
-<tr>
-<td>Hailey Jennifer</td>
-<td>11</td>
-<td>E</td>
-<td>1006</td>
-<td>67</td>
-<td>43</td>
-</tr>
-<tr>
-<td>Megan Rick</td>
-<td>2</td>
-<td>A</td>
-<td>1007</td>
-<td>66</td>
-<td>58</td>
-</tr>
-<tr>
-<td>Emily James</td>
-<td>4</td>
-<td>C</td>
-<td>1008</td>
-<td>94</td>
-<td>44</td>
-</tr>
-<tr>
-<td>Rick Altair</td>
-<td>3</td>
-<td>C</td>
-<td>1009</td>
-<td>64</td>
-<td>52</td>
-</tr>
-<tr>
-<td>Isabella Jim</td>
-<td>6</td>
-<td>C</td>
-<td>1010</td>
-<td>42</td>
-<td>60</td>
-</tr>
-<tr>
-<td>Lisa Emily</td>
-<td>12</td>
-<td>E</td>
-<td>1011</td>
-<td>66</td>
-<td>58</td>
-</tr>
-<tr>
-<td>David Adam</td>
-<td>3</td>
-<td>A</td>
-<td>1012</td>
-<td>80</td>
-<td>53</td>
-</tr>
-<tr>
-<td>Alyssa James</td>
-<td>3</td>
-<td>C</td>
-<td>1013</td>
-<td>59</td>
-<td>36</td>
-</tr>
-<tr>
-<td>Altair Jennifer</td>
-<td>4</td>
-<td>C</td>
-<td>1014</td>
-<td>69</td>
-<td>45</td>
-</tr>
-<tr>
-<td>Lisa Rick</td>
-<td>8</td>
-<td>A</td>
-<td>1015</td>
-<td>87</td>
-<td>41</td>
-</tr>
-<tr>
-<td>Jennifer Altair</td>
-<td>6</td>
-<td>D</td>
-<td>1016</td>
-<td>56</td>
-<td>30.05</td>
-</tr>
-<tr>
-<td>Elizabeth Jane</td>
-<td>11</td>
-<td>F</td>
-<td>1017</td>
-<td>75</td>
-<td>34</td>
-</tr>
-<tr>
-<td>Hailey John</td>
-<td>5</td>
-<td>E</td>
-<td>1018</td>
-<td>87</td>
-<td>60</td>
-</tr>
-<tr>
-<td>Hailey Megan</td>
-<td>11</td>
-<td>E</td>
-<td>1019</td>
-<td>68</td>
-<td>38</td>
-</tr>
-<tr>
-<td>Adam Altair</td>
-<td>11</td>
-<td>C</td>
-<td>1020</td>
-<td>84</td>
-<td>37</td>
-</tr>
-<tr>
-<td>Nina Emma</td>
-<td>5</td>
-<td>C</td>
-<td>1021</td>
-<td>51</td>
-<td>46</td>
-</tr>
-<tr>
-<td>Rick Altair</td>
-<td>9</td>
-<td>F</td>
-<td>1022</td>
-<td>95</td>
-<td>44</td>
-</tr>
-<tr>
-<td>Henry Desmond</td>
-<td>12</td>
-<td>A</td>
-<td>1023</td>
-<td>70</td>
-<td>50</td>
-</tr>
-<tr>
-<td>George Rick</td>
-<td>7</td>
-<td>F</td>
-<td>1024</td>
-<td>42</td>
-<td>43</td>
-</tr>
-<tr>
-<td>Lisa John</td>
-<td>6</td>
-<td>C</td>
-<td>1025</td>
-<td>48</td>
-<td>42</td>
-</tr>
-<tr>
-<td>Adam Lily</td>
-<td>3</td>
-<td>E</td>
-<td>1026</td>
-<td>93</td>
-<td>57</td>
-</tr>
-<tr>
-<td>Rick Alexander</td>
-<td>9</td>
-<td>B</td>
-<td>1027</td>
-<td>92</td>
-<td>46</td>
-</tr>
-<tr>
-<td>Lily Hailey</td>
-<td>6</td>
-<td>D</td>
-<td>1028</td>
-<td>51</td>
-<td>48</td>
-</tr>
-<tr>
-<td>Jennifer Madison</td>
-<td>5</td>
-<td>B</td>
-<td>1029</td>
-<td>66</td>
-<td>53</td>
-</tr>
-<tr>
-<td>Alyssa Jennifer</td>
-<td>12</td>
-<td>E</td>
-<td>1030</td>
-<td>82</td>
-<td>38</td>
-</tr>
-<tr>
-<td>George Sandra</td>
-<td>3</td>
-<td>C</td>
-<td>1031</td>
-<td>75</td>
-<td>56</td>
-</tr>
-<tr>
-<td>Adam Henry</td>
-<td>7</td>
-<td>E</td>
-<td>1032</td>
-<td>50</td>
-<td>52</td>
-</tr>
-<tr>
-<td>Hailey Lily</td>
-<td>12</td>
-<td>F</td>
-<td>1033</td>
-<td>44</td>
-<td>47</td>
-</tr>
-<tr>
-<td>Isabella Altair</td>
-<td>11</td>
-<td>D</td>
-<td>1034</td>
-<td>61</td>
-<td>50</td>
-</tr>
-<tr>
-<td>Henry Emma</td>
-<td>5</td>
-<td>A</td>
-<td>1035</td>
-<td>79</td>
-<td>50</td>
-</tr>
-<tr>
-<td>Isabella David</td>
-<td>10</td>
-<td>E</td>
-<td>1036</td>
-<td>40</td>
-<td>55</td>
-</tr>
-<tr>
-<td>Edward Hailey</td>
-<td>3</td>
-<td>F</td>
-<td>1037</td>
-<td>43</td>
-<td>56</td>
-</tr>
-<tr>
-<td>Hailey Jane</td>
-<td>1</td>
-<td>C</td>
-<td>1038</td>
-<td>92</td>
-<td>60</td>
-</tr>
-<tr>
-<td>Adam Henry</td>
-<td>4</td>
-<td>B</td>
-<td>1039</td>
-<td>42</td>
-<td>58</td>
-</tr>
-<tr>
-<td>Jennifer David</td>
-<td>5</td>
-<td>E</td>
-<td>1040</td>
-<td>81</td>
-<td>57</td>
-</tr>
-<tr>
-<td>Lily Emma</td>
-<td>3</td>
-<td>A</td>
-<td>1041</td>
-<td>62</td>
-<td>48</td>
-</tr>
-<tr>
-<td>Alexander Emma</td>
-<td>6</td>
-<td>D</td>
-<td>1042</td>
-<td>53</td>
-<td>38</td>
-</tr>
-<tr>
-<td>Alexis Isabella</td>
-<td>11</td>
-<td>A</td>
-<td>1043</td>
-<td>88</td>
-<td>50</td>
-</tr>
-<tr>
-<td>Emily Altair</td>
-<td>2</td>
-<td>C</td>
-<td>1044</td>
-<td>52</td>
-<td>58</td>
-</tr>
-<tr>
-<td>David Nina</td>
-<td>12</td>
-<td>C</td>
-<td>1045</td>
-<td>42</td>
-<td>55</td>
-</tr>
-<tr>
-<td>David Megan</td>
-<td>1</td>
-<td>E</td>
-<td>1046</td>
-<td>64</td>
-<td>47</td>
-</tr>
-<tr>
-<td>Lisa Lily</td>
-<td>3</td>
-<td>A</td>
-<td>1047</td>
-<td>93</td>
-<td>56</td>
-</tr>
-<tr>
-<td>Altair David</td>
-<td>1</td>
-<td>D</td>
-<td>1048</td>
-<td>74</td>
-<td>58</td>
-</tr>
-<tr>
-<td>George Jim</td>
-<td>6</td>
-<td>C</td>
-<td>1049</td>
-<td>43</td>
-<td>45</td>
-</tr>
-<tr>
-<td>Henry Alyssa</td>
-<td>11</td>
-<td>C</td>
-<td>1050</td>
-<td>67</td>
-<td>54</td>
-</tr>
-<tr>
-<td>Elizabeth Megan</td>
-<td>4</td>
-<td>B</td>
-<td>1051</td>
-<td>59</td>
-<td>46</td>
-</tr>
-<tr>
-<td>James Jack</td>
-<td>3</td>
-<td>C</td>
-<td>1052</td>
-<td>87</td>
-<td>58</td>
-</tr>
-<tr>
-<td>Jim Alexander</td>
-<td>8</td>
-<td>C</td>
-<td>1053</td>
-<td>65</td>
-<td>50</td>
-</tr>
-<tr>
-<td>Rick Alyssa</td>
-<td>11</td>
-<td>B</td>
-<td>1054</td>
-<td>59</td>
-<td>30.10</td>
-</tr>
-<tr>
-<td>Alexis Jennifer</td>
-<td>2</td>
-<td>A</td>
-<td>1055</td>
-<td>45</td>
-<td>50</td>
-</tr>
-<tr>
-<td>Alexander Alyssa</td>
-<td>8</td>
-<td>A</td>
-<td>1056</td>
-<td>90</td>
-<td>56</td>
-</tr>
-<tr>
-<td>Alexander Altair</td>
-<td>7</td>
-<td>D</td>
-<td>1057</td>
-<td>47</td>
-<td>38</td>
-</tr>
-<tr>
-<td>Jim Madison</td>
-<td>3</td>
-<td>F</td>
-<td>1058</td>
-<td>42</td>
-<td>35</td>
-</tr>
-<tr>
-<td>Henry Alexander</td>
-<td>8</td>
-<td>C</td>
-<td>1059</td>
-<td>53</td>
-<td>38</td>
-</tr>
-<tr>
-<td>John David</td>
-<td>4</td>
-<td>E</td>
-<td>1060</td>
-<td>84</td>
-<td>53</td>
-</tr>
-<tr>
-<td>David Desmond</td>
-<td>2</td>
-<td>D</td>
-<td>1061</td>
-<td>49</td>
-<td>41</td>
-</tr>
-<tr>
-<td>Henry Madison</td>
-<td>8</td>
-<td>C</td>
-<td>1062</td>
-<td>77</td>
-<td>40</td>
-</tr>
-<tr>
-<td>Nina Madison</td>
-<td>10</td>
-<td>C</td>
-<td>1063</td>
-<td>81</td>
-<td>41</td>
-</tr>
-<tr>
-<td>Sandra Lillian</td>
-<td>2</td>
-<td>A</td>
-<td>1064</td>
-<td>68</td>
-<td>50</td>
-</tr>
-<tr>
-<td>Lillian Altair</td>
-<td>6</td>
-<td>F</td>
-<td>1065</td>
-<td>73</td>
-<td>59</td>
-</tr>
-<tr>
-<td>David John</td>
-<td>5</td>
-<td>A</td>
-<td>1066</td>
-<td>41</td>
-<td>44</td>
-</tr>
-<tr>
-<td>John Jim</td>
-<td>10</td>
-<td>B</td>
-<td>1067</td>
-<td>70</td>
-<td>57</td>
-</tr>
-<tr>
-<td>Isabella Hailey</td>
-<td>2</td>
-<td>A</td>
-<td>1068</td>
-<td>43</td>
-<td>45</td>
-</tr>
-<tr>
-<td>Jim Desmond</td>
-<td>7</td>
-<td>B</td>
-<td>1069</td>
-<td>57</td>
-<td>60</td>
-</tr>
-<tr>
-<td>Henry Megan</td>
-<td>4</td>
-<td>C</td>
-<td>1070</td>
-<td>57</td>
-<td>46</td>
-</tr>
-<tr>
-<td>Megan Edward</td>
-<td>6</td>
-<td>C</td>
-<td>1071</td>
-<td>79</td>
-<td>58</td>
-</tr>
-<tr>
-<td>Alexander Isabella</td>
-<td>6</td>
-<td>C</td>
-<td>1072</td>
-<td>69</td>
-<td>39</td>
-</tr>
-<tr>
-<td>Emily Jane</td>
-<td>4</td>
-<td>D</td>
-<td>1073</td>
-<td>61</td>
-<td>44</td>
-</tr>
-<tr>
-<td>John Emma</td>
-<td>5</td>
-<td>A</td>
-<td>1074</td>
-<td>63</td>
-<td>48</td>
-</tr>
-<tr>
-<td>Isabella Alexander</td>
-<td>10</td>
-<td>A</td>
-<td>1075</td>
-<td>49</td>
-<td>42</td>
-</tr>
-<tr>
-<td>Elizabeth Lily</td>
-<td>12</td>
-<td>C</td>
-<td>1076</td>
-<td>85</td>
-<td>33</td>
-</tr>
-<tr>
-<td>Hailey James</td>
-<td>10</td>
-<td>D</td>
-<td>1077</td>
-<td>87</td>
-<td>43</td>
-</tr>
-<tr>
-<td>Emily Rick</td>
-<td>10</td>
-<td>D</td>
-<td>1078</td>
-<td>59</td>
-<td>49</td>
-</tr>
-<tr>
-<td>George Madison</td>
-<td>11</td>
-<td>B</td>
-<td>1079</td>
-<td>100</td>
-<td>40</td>
-</tr>
-<tr>
-<td>Henry David</td>
-<td>8</td>
-<td>C</td>
-<td>1080</td>
-<td>92</td>
-<td>56</td>
-</tr>
-<tr>
-<td>Rick David</td>
-<td>12</td>
-<td>E</td>
-<td>1081</td>
-<td>72</td>
-<td>57</td>
-</tr>
-<tr>
-<td>Lisa Elizabeth</td>
-<td>4</td>
-<td>C</td>
-<td>1082</td>
-<td>46</td>
-<td>48</td>
-</tr>
-<tr>
-<td>Emma John</td>
-<td>9</td>
-<td>E</td>
-<td>1083</td>
-<td>50</td>
-<td>54</td>
-</tr>
-<tr>
-<td>Lily Altair</td>
-<td>7</td>
-<td>C</td>
-<td>1084</td>
-<td>90</td>
-<td>48</td>
-</tr>
-<tr>
-<td>Edward George</td>
-<td>11</td>
-<td>F</td>
-<td>1085</td>
-<td>79</td>
-<td>54</td>
-</tr>
-<tr>
-<td>Lily Jack</td>
-<td>2</td>
-<td>B</td>
-<td>1086</td>
-<td>85</td>
-<td>47</td>
-</tr>
-<tr>
-<td>Jack Altair</td>
-<td>3</td>
-<td>C</td>
-<td>1087</td>
-<td>82</td>
-<td>50</td>
-</tr>
-<tr>
-<td>Jack Rick</td>
-<td>9</td>
-<td>F</td>
-<td>1088</td>
-<td>78</td>
-<td>38</td>
-</tr>
-<tr>
-<td>Isabella Henry</td>
-<td>7</td>
-<td>C</td>
-<td>1089</td>
-<td>45</td>
-<td>34</td>
-</tr>
-<tr>
-<td>Jane Jack</td>
-<td>2</td>
-<td>F</td>
-<td>1090</td>
-<td>53</td>
-<td>45</td>
-</tr>
-<tr>
-<td>Emily Lisa</td>
-<td>7</td>
-<td>B</td>
-<td>1091</td>
-<td>75</td>
-<td>30.99</td>
-</tr>
-<tr>
-<td>Nina Megan</td>
-<td>2</td>
-<td>F</td>
-<td>1092</td>
-<td>56</td>
-<td>59</td>
-</tr>
-<tr>
-<td>David Alyssa</td>
-<td>11</td>
-<td>C</td>
-<td>1093</td>
-<td>94</td>
-<td>30.01</td>
-</tr>
-<tr>
-<td>Alexis Jack</td>
-<td>5</td>
-<td>D</td>
-<td>1094</td>
-<td>72</td>
-<td>42</td>
-</tr>
-<tr>
-<td>Lisa Madison</td>
-<td>6</td>
-<td>B</td>
-<td>1095</td>
-<td>88</td>
-<td>56</td>
-</tr>
-<tr>
-<td>David Jack</td>
-<td>9</td>
-<td>A</td>
-<td>1096</td>
-<td>86</td>
-<td>48</td>
-</tr>
-<tr>
-<td>Alyssa Lisa</td>
-<td>12</td>
-<td>C</td>
-<td>1097</td>
-<td>41</td>
-<td>39</td>
-</tr>
-<tr>
-<td>Alyssa Jane</td>
-<td>10</td>
-<td>D</td>
-<td>1098</td>
-<td>82</td>
-<td>38</td>
-</tr>
-<tr>
-<td>Isabella Emily</td>
-<td>2</td>
-<td>A</td>
-<td>1099</td>
-<td>61</td>
-<td>34</td>
-</tr>
-<tr>
-<td>Elizabeth Lisa</td>
-<td>6</td>
-<td>C</td>
-<td>1100</td>
-<td>45</td>
-<td>35</td>
-</tr>
-</tbody>
-<tfoot>
-<tr>
-<td>
-</td>
-<td>
-</td>
-<td>
-<span class="btn-success btn" loadmore="1">Load More</span>
-</td>
-<td>
-</td>
-<td>
-</td>
-<td>
-Total : <span total="1"></span>
-</td>
-</tr>
-</table>
-            </div>
-            
 
-        </div>
-        
+<div id="div1" style="width:100%;"></div>
+
+<script type="text/javascript">
+    $(document).ready( function() {
+
+        //An example with all options.
+         var waTable = $('#div1').WATable({
+            debug:true,                 //Prints some debug info to console
+            pageSize: 8,                //Initial pagesize
+            //transition: 'slide',       //Type of transition when paging (bounce, fade, flip, rotate, scroll, slide).Requires https://github.com/daneden/animate.css.
+            //transitionDuration: 0.2,    //Duration of transition in seconds.
+            filter: true,               //Show filter fields
+            sorting: true,              //Enable sorting
+            sortEmptyLast:true,         //Empty values will be shown last
+            columnPicker: true,         //Show the columnPicker button
+            pageSizes: [1,5,8,12,200],  //Set custom pageSizes. Leave empty array to hide button.
+            hidePagerOnEmpty: true,     //Removes the pager if data is empty.
+            checkboxes: true,           //Make rows checkable. (Note. You need a column with the 'unique' property)
+            checkAllToggle:true,        //Show the check-all toggle
+            preFill: true,              //Initially fills the table with empty rows (as many as the pagesize).
+            //url: '/someWebservice'    //Url to a webservice if not setting data manually as we do in this example
+            //urlData: { report:1 }     //Any data you need to pass to the webservice
+            //urlPost: true             //Use POST httpmethod to webservice. Default is GET.
+            types: {                    //Following are some specific properties related to the data types
+                string: {
+                    //filterTooltip: "Giggedi..."    //What to say in tooltip when hoovering filter fields. Set false to remove.
+                    //placeHolder: "Type here..."    //What to say in placeholder filter fields. Set false for empty.
+                },
+                number: {
+                    decimals: 1   //Sets decimal precision for float types
+                },
+                bool: {
+                    //filterTooltip: false
+                },
+                date: {
+                  utc: true,            //Show time as universal time, ie without timezones.
+                  //format: 'yy/dd/MM',   //The format. See all possible formats here http://arshaw.com/xdate/#Formatting.
+                  datePicker: true      //Requires "Datepicker for Bootstrap" plugin (http://www.eyecon.ro/bootstrap-datepicker).
+                }
+            },
+            actions: {                //This generates a button where you can add elements.
+                filter: true,         //If true, the filter fields can be toggled visible and hidden.
+                columnPicker: true,   //if true, the columnPicker can be toggled visible and hidden.
+                custom: [             //Add any other elements here. Here is a refresh and export example.
+                  $('<a href="#" class="refresh"><span class="glyphicon glyphicon-refresh"></span>&nbsp;Refresh</a>'),
+                  $('<a href="#" class="export_all"><span class="glyphicon glyphicon-share"></span>&nbsp;Export all rows</a>'),
+                  $('<a href="#" class="export_checked"><span class="glyphicon glyphicon-share"></span>&nbsp;Export checked rows</a>'),
+                  $('<a href="#" class="export_filtered"><span class="glyphicon glyphicon-share"></span>&nbsp;Export filtered rows</a>')
+                ]
+            },
+            tableCreated: function(data) {    //Fires when the table is created / recreated. Use it if you want to manipulate the table in any way.
+                console.log('table created'); //data.table holds the html table element.
+                console.log(data);            //'this' keyword also holds the html table element.
+            },
+            rowClicked: function(data) {      //Fires when a row is clicked (Note. You need a column with the 'unique' property).
+                console.log('row clicked');   //data.event holds the original jQuery event.
+                console.log(data);            //data.row holds the underlying row you supplied.
+                                              //data.column holds the underlying column you supplied.
+                                              //data.checked is true if row is checked.
+                                              //'this' keyword holds the clicked element.
+                if ( $(this).hasClass('userId') ) {
+                  data.event.preventDefault();
+                  alert('You clicked userId: ' + data.row.userId);
+                }
+            },
+            columnClicked: function(data) {    //Fires when a column is clicked
+              console.log('column clicked');  //data.event holds the original jQuery event
+              console.log(data);              //data.column holds the underlying column you supplied
+                                              //data.descending is true when sorted descending (duh)
+            },
+            pageChanged: function(data) {      //Fires when manually changing page
+              console.log('page changed');    //data.event holds the original jQuery event
+              console.log(data);              //data.page holds the new page index
+            },
+            pageSizeChanged: function(data) {  //Fires when manually changing pagesize
+              console.log('pagesize changed');//data.event holds teh original event
+              console.log(data);              //data.pageSize holds the new pagesize
+            }
+        }).data('WATable');  //This step reaches into the html data property to get the actual WATable object. Important if you want a reference to it as we want here.
+
+        //Generate some data
+        var data = getData();
+        waTable.setData(data);  //Sets the data.
+        //waTable.setData(data, true); //Sets the data but prevents any previously set columns from being overwritten
+        //waTable.setData(data, false, false); //Sets the data and prevents any previously checked rows from being reset
+
+        var allRows = waTable.getData(false); //Gets the data you previously set.
+        var checkedRows = waTable.getData(true); //Gets the data you previously set, but with checked rows only.
+        var filteredRows = waTable.getData(false, true); //Gets the data you previously set, but with filtered rows only.
+
+        var pageSize = waTable.option("pageSize"); //Get option
+        //waTable.option("pageSize", pageSize); //Set option
+
+        //Example event handler triggered by the custom refresh link above.
+        $('body').on('click', '.refresh', function(e) {
+            e.preventDefault();
+            var data = getData();
+            waTable.setData(data, true);
+        });
+        //Example event handler triggered by the custom export links above.
+        $('body').on('click', '.export_checked, .export_filtered, .export_all', function(e) {
+            e.preventDefault();
+            var elem = $(e.target);
+            var data;
+            if (elem.hasClass('export_all')) data = waTable.getData(false);
+            else if (elem.hasClass('export_checked')) data = waTable.getData(true);
+            else if (elem.hasClass('export_filtered')) data = waTable.getData(false, true);
+            console.log(data.rows.length + ' rows returned');
+            console.log(data);
+            alert(data.rows.length + ' rows returned.\nSee console for details.');
+        });
+
+    });
+
+    //Generates some data. This step is of course normally done by your web server.
+    function getData() {
+
+        //First define the columns
+        var cols = {
+            userId: {
+                index: 1, //The order this column should appear in the table
+                type: "number", //The type. Possible are string, number, bool, date(in milliseconds).
+                friendly: "<span class='glyphicon glyphicon-user'></span>",  //Name that will be used in header. Can also be any html as shown here.
+                format: "<a href='#' class='userId' target='_blank'>{0}</a>",  //Used to format the data anything you want. Use {0} as placeholder for the actual data.
+                unique: true,  //This is required if you want checkable rows, or to use the rowClicked callback. Be certain the values are really unique or weird things will happen.
+                sortOrder: "asc", //Data will initially be sorted by this column. Possible are "asc" or "desc"
+                tooltip: "This column has an initial filter", //Show some additional info about column
+                filter: "1..400" //Set initial filter.
+            },
+            name: {
+                index: 2,
+                type: "string",
+                friendly: "Name",
+                tooltip: "This column has a custom placeholder", //Show some additional info about column
+                placeHolder: "abc123" //Overrides default placeholder and placeholder specified in data types(row 34).
+            },
+            age: {
+                index: 3,
+                type: "number",
+                friendly: "Age",
+                sorting: false, //dont allow sorting
+                tooltip: "This column has filtering and sorting turned off", //Show some additional info about column
+                filter: false //Removes filter field for this column
+            },
+            weight: {
+                index: 4,
+                type: "number",
+                decimals: 2, //Force decimal precision
+                friendly: "Weight",
+                placeHolder: "50..90",
+                tooltip: "This column has no tooltip for the filter", //Show some additional info about column
+                filterTooltip: false //Turn off tooltip for this column
+            },
+            height: {
+                index: 5,
+                type: "number",
+                friendly: "Height",
+                hidden:true //Hides the column. Useful if you want this value later on but no visible to user. It's available to be visible if columnPicker is enabled.
+            },
+            important: {
+                index: 6,
+                type: "bool",
+                friendly: "Important"
+            },
+            someDate: {
+                index: 7,
+                type: "date", //Don't forget dates are expressed in milliseconds
+                friendly: "SomeDate"
+            }
+        };
+
+        /*
+          Create the actual data.
+          Whats worth mentioning is that you can use a 'format' property just as in the column definition,
+          but on a row level. See below on how we create a weightFormat property. This will be used when rendering the weight column.
+          Also, you can pre-check rows with the 'checked' property and prevent rows from being checkable with the 'checkable' property.
+        */
+        var rows = [];
+        var i = 1;
+        while(i <= 1000)
+        {
+            var weight = (Math.floor(Math.random()*40)+50) + (Math.floor(Math.random()*100)/100);
+            var weightClass = weight <70 ? 'green' : weight <80 && weight >=70 ? 'yellow' : 'red';
+
+            //We leave some fields intentionally undefined, so you can see how sorting/filtering works with these.
+            var doc = {
+                userId: i,
+                name: i%100 == 0 ? undefined : elfName(),
+                age: Math.floor(Math.random()*50)+20,
+                weight: weight > 50 && weight < 60 ? undefined:weight,
+                weightFormat:  "<div class='" + weightClass + "'>{0}</div>",
+                height: Math.floor(Math.random()*50)+150,
+                important: i%3 == 0 ? undefined : i%4 == 0,
+                someDate: i%4 == 0
+                    ? undefined
+                    : Date.now() + (i*Math.floor(Math.random()*(60*60*24*100))),
+                checkable: i % 4 != 0,
+                checked: i % 3 == 0
+            };
+            rows.push(doc);
+            i++;
+        }
+
+        //Create the returning object. Besides cols and rows, you can also pass any other object you would need later on.
+        var data = {
+            cols: cols,
+            rows: rows,
+            otherStuff: {
+                thatIMight: 1,
+                needLater: true
+            }
+        };
+
+        return data;
+    }
+
+    //Helper function to generate names
+    function elfName() {
+        var elf_male = new Array("Abardon", "Acaman", "Achard", "Ackmard", "Agon", "Agnar", "Abdun", "Aidan", "Airis", "Aldaren", "Alderman", "Alkirk", "Amerdan", "Anfarc", "Aslan", "Actar", "Atgur", "Atlin", "Aldan", "Badek", "Baduk", "Bedic", "Beeron", "Bein", "Bithon", "Bohl", "Boldel", "Bolrock", "Bredin", "Bredock", "Breen", "tristan", "Bydern", "Cainon", "Calden", "Camon", "Cardon", "Casdon", "Celthric", "Cevelt", "Chamon", "Chidak", "Cibrock", "Cipyar", "Colthan", "Connell", "Cordale", "Cos", "Cyton", "Daburn", "Dawood", "Dak", "Dakamon", "Darkboon", "Dark", "Darg", "Darmor", "Darpick", "Dask", "Deathmar", "Derik", "Dismer", "Dokohan", "Doran", "Dorn", "Dosman", "Draghone", "Drit", "Driz", "Drophar", "Durmark", "Dusaro", "Eckard", "Efar", "Egmardern", "Elvar", "Elmut", "Eli", "Elik", "Elson", "Elthin", "Elbane", "Eldor", "Elidin", "Eloon", "Enro", "Erik", "Erim", "Eritai", "Escariet", "Espardo", "Etar", "Eldar", "Elthen", "Elfdorn", "Etran", "Eythil", "Fearlock", "Fenrirr", "Fildon", "Firdorn", "Florian", "Folmer", "Fronar", "Fydar", "Gai", "Galin", "Galiron", "Gametris", "Gauthus", "Gehardt", "Gemedes", "Gefirr", "Gibolt", "Geth", "Gom", "Gosform", "Gothar", "Gothor", "Greste", "Grim", "Gryni", "Gundir", "Gustov", "Halmar", "Haston", "Hectar", "Hecton", "Helmon", "Hermedes", "Hezaq", "Hildar", "Idon", "Ieli", "Ipdorn", "Ibfist", "Iroldak", "Ixen", "Ixil", "Izic", "Jamik", "Jethol", "Jihb", "Jibar", "Jhin", "Julthor", "Justahl", "Kafar", "Kaldar", "Kelar", "Keran", "Kib", "Kilden", "Kilbas", "Kildar", "Kimdar", "Kilder", "Koldof", "Kylrad", "Lackus", "Lacspor", "Lahorn", "Laracal", "Ledal", "Leith", "Lalfar", "Lerin", "Letor", "Lidorn", "Lich", "Loban", "Lox", "Ludok", "Ladok", "Lupin", "Lurd", "Mardin", "Markard", "Merklin", "Mathar", "Meldin", "Merdon", "Meridan", "Mezo", "Migorn", "Milen", "Mitar", "Modric", "Modum", "Madon", "Mafur", "Mujardin", "Mylo", "Mythik", "Nalfar", "Nadorn", "Naphazw", "Neowald", "Nildale", "Nizel", "Nilex", "Niktohal", "Niro", "Nothar", "Nathon", "Nadale", "Nythil", "Ozhar", "Oceloth", "Odeir", "Ohmar", "Orin", "Oxpar", "Othelen", "Padan", "Palid", "Palpur", "Peitar", "Pendus", "Penduhl", "Pildoor", "Puthor", "Phar", "Phalloz", "Qidan", "Quid", "Qupar", "Randar", "Raydan", "Reaper", "Relboron", "Riandur", "Rikar", "Rismak", "Riss", "Ritic", "Ryodan", "Rysdan", "Rythen", "Rythorn", "Sabalz", "Sadaron", "Safize", "Samon", "Samot", "Secor", "Sedar", "Senic", "Santhil", "Sermak", "Seryth", "Seth", "Shane", "Shard", "Shardo", "Shillen", "Silco", "Sildo", "Silpal", "Sithik", "Soderman", "Sothale", "Staph", "Suktar", "zuth", "Sutlin", "Syr", "Syth", "Sythril", "Talberon", "Telpur", "Temil", "Tamilfist", "Tempist", "Teslanar", "Tespan", "Tesio", "Thiltran", "Tholan", "Tibers", "Tibolt", "Thol", "Tildor", "Tilthan", "Tobaz", "Todal", "Tothale", "Touck", "Tok", "Tuscan", "Tusdar", "Tyden", "Uerthe", "Uhmar", "Uhrd", "Updar", "Uther", "Vacon", "Valker", "Valyn", "Vectomon", "Veldar", "Velpar", "Vethelot", "Vildher", "Vigoth", "Vilan", "Vildar", "Vi", "Vinkol", "Virdo", "Voltain", "Wanar", "Wekmar", "Weshin", "Witfar", "Wrathran", "Waytel", "Wathmon", "Wider", "Wyeth", "Xandar", "Xavor", "Xenil", "Xelx", "Xithyl", "Yerpal", "Yesirn", "Ylzik", "Zak", "Zek", "Zerin", "Zestor", "Zidar", "Zigmal", "Zilex", "Zilz", "Zio", "Zotar", "Zutar", "Zytan");
+        var elf_female = new Array("Acele Acholate", "Ada", "Adiannon", "Adorra", "Ahanna", "Akara", "Akassa", "Akia", "Amara", "Amarisa", "Amarizi", "Ana", "Andonna", "Ariannona", "Arina", "Arryn", "Asada", "Awnia", "Ayne", "Basete", "Bathelie", "Bethel", "Brana", "Brynhilde", "Calene", "Calina", "Celestine", "Corda", "Enaldie", "Enoka", "Enoona", "Errinaya", "Fayne", "Frederika", "Frida", "Gvene", "Gwethana", "Helenia", "Hildandi", "Helvetica", "Idona", "Irina", "Irene", "Illia", "Irona", "Justalyne", "Kassina", "Kilia", "Kressara", "Laela", "Laenaya", "Lelani", "Luna", "Linyah", "Lyna", "Lynessa", "Mehande", "Melisande", "Midiga", "Mirayam", "Mylene", "Naria", "Narisa", "Nelena", "Nimaya", "Nymia", "Ochala", "Olivia", "Onathe", "Parthinia", "Philadona", "Prisane", "Rhyna", "Rivatha", "Ryiah", "Sanata", "Sathe", "Senira", "Sennetta", "Serane", "Sevestra", "Sidara", "Sidathe", "Sina", "Sunete", "Synestra", "Sythini", "zena", "Tabithi", "Tomara", "Teressa", "Tonica", "Thea", "Teressa", "Urda", "Usara", "Useli", "Unessa", "ursula", "Venessa", "Wanera", "Wellisa", "yeta", "Ysane", "Yve", "Yviene", "Zana", "Zathe", "Zecele", "Zenobe", "Zema", "Zestia", "Zilka", "Zoucka", "Zona", "Zyneste", "Zynoa");
+        var elf_surname = new Array("Abardon", "Acaman", "Achard", "Ackmard", "Agon", "Agnar", "Aldan", "Abdun", "Aidan", "Airis", "Aldaren", "Alderman", "Alkirk", "Amerdan", "Anfarc", "Aslan", "Actar", "Atgur", "Atlin", "Badek", "Baduk", "Bedic", "Beeron", "Bein", "Bithon", "Bohl", "Boldel", "Bolrock", "Bredin", "Bredock", "Breen", "tristan", "Bydern", "Cainon", "Calden", "Camon", "Cardon", "Casdon", "Celthric", "Cevelt", "Chamon", "Chidak", "Cibrock", "Cipyar", "Colthan", "Connell", "Cordale", "Cos", "Cyton", "Daburn", "Dawood", "Dak", "Dakamon", "Darkboon", "Dark", "Dark", "Darmor", "Darpick", "Dask", "Deathmar", "Derik", "Dismer", "Dokohan", "Doran", "Dorn", "Dosman", "Draghone", "Drit", "Driz", "Drophar", "Durmark", "Dusaro", "Eckard", "Efar", "Egmardern", "Elvar", "Elmut", "Eli", "Elik", "Elson", "Elthin", "Elbane", "Eldor", "Elidin", "Eloon", "Enro", "Erik", "Erim", "Eritai", "Escariet", "Espardo", "Etar", "Eldar", "Elthen", "Etran", "Eythil", "Fearlock", "Fenrirr", "Fildon", "Firdorn", "Florian", "Folmer", "Fronar", "Fydar", "Gai", "Galin", "Galiron", "Gametris", "Gauthus", "Gehardt", "Gemedes", "Gefirr", "Gibolt", "Geth", "Gom", "Gosform", "Gothar", "Gothor", "Greste", "Grim", "Gryni", "Gundir", "Gustov", "Halmar", "Haston", "Hectar", "Hecton", "Helmon", "Hermedes", "Hezaq", "Hildar", "Idon", "Ieli", "Ipdorn", "Ibfist", "Iroldak", "Ixen", "Ixil", "Izic", "Jamik", "Jethol", "Jihb", "Jibar", "Jhin", "Julthor", "Justahl", "Kafar", "Kaldar", "Kelar", "Keran", "Kib", "Kilden", "Kilbas", "Kildar", "Kimdar", "Kilder", "Koldof", "Kylrad", "Lackus", "Lacspor", "Lahorn", "Laracal", "Ledal", "Leith", "Lalfar", "Lerin", "Letor", "Lidorn", "Lich", "Loban", "Lox", "Ludok", "Ladok", "Lupin", "Lurd", "Mardin", "Markard", "Merklin", "Mathar", "Meldin", "Merdon", "Meridan", "Mezo", "Migorn", "Milen", "Mitar", "Modric", "Modum", "Madon", "Mafur", "Mujardin", "Mylo", "Mythik", "Nalfar", "Nadorn", "Naphazw", "Neowald", "Nildale", "Nizel", "Nilex", "Niktohal", "Niro", "Nothar", "Nathon", "Nadale", "Nythil", "Ozhar", "Oceloth", "Odeir", "Ohmar", "Orin", "Oxpar", "Othelen", "Padan", "Palid", "Palpur", "Peitar", "Pendus", "Penduhl", "Pildoor", "Puthor", "Phar", "Phalloz", "Qidan", "Quid", "Qupar", "Randar", "Raydan", "Reaper", "Relboron", "Riandur", "Rikar", "Rismak", "Riss", "Ritic", "Ryodan", "Rysdan", "Rythen", "Rythorn", "Sabalz", "Sadaron", "Safize", "Samon", "Samot", "Secor", "Sedar", "Senic", "Santhil", "Sermak", "Seryth", "Seth", "Shane", "Shard", "Shardo", "Shillen", "Silco", "Sildo", "Silpal", "Sithik", "Soderman", "Sothale", "Staph", "Suktar", "zuth", "Sutlin", "Syr", "Syth", "Sythril", "Talberon", "Telpur", "Temil", "Tamilfist", "Tempist", "Teslanar", "Tespan", "Tesio", "Thiltran", "Tholan", "Tibers", "Tibolt", "Thol", "Tildor", "Tilthan", "Tobaz", "Todal", "Tothale", "Touck", "Tok", "Tuscan", "Tusdar", "Tyden", "Uerthe", "Uhmar", "Uhrd", "Updar", "Uther", "Vacon", "Valker", "Valyn", "Vectomon", "Veldar", "Velpar", "Vethelot", "Vildher", "Vigoth", "Vilan", "Vildar", "Vi", "Vinkol", "Virdo", "Voltain", "Wanar", "Wekmar", "Weshin", "Witfar", "Wrathran", "Waytel", "Wathmon", "Wider", "Wyeth", "Xandar", "Xavor", "Xenil", "Xelx", "Xithyl", "Yerpal", "Yesirn", "Ylzik", "Zak", "Zek", "Zerin", "Zestor", "Zidar", "Zigmal", "Zilex", "Zilz", "Zio", "Zotar", "Zutar", "Zytan");
+        var prefix_male = elf_male;
+        var prefix_female = elf_female;
+        var suffix = elf_surname;
+        var n1m = parseInt(Math.random() * prefix_male.length);
+        var n1f = parseInt(Math.random() * prefix_female.length);
+        var n2 = parseInt(Math.random() * suffix.length);
+        var n2ekstra = parseInt(Math.random() * suffix.length);
+        var extraname = "extranahme";
+        var prename_male = prefix_male[n1m].slice(0, 1).toUpperCase() + prefix_male[n1m].slice(1);
+        var prename_female = prefix_female[n1f].slice(0, 1).toUpperCase() + prefix_female[n1f].slice(1);
+        var sufname = suffix[n2].slice(0, 1).toUpperCase() + suffix[n2].slice(1);
+        var extraname = suffix[n2ekstra].slice(0, 1).toUpperCase() + suffix[n2ekstra].slice(1);
+        var n3 = parseInt(Math.random() * 100);
+        if (n3 <= 40) {
+            name = prename_male + " " + sufname
+        } else if (n3 > 40 && n3 <= 70) {
+            name = prename_female + " " + sufname
+        }
+        return name;
+    }
+</script>
+
+            </div>
+            </div>
     </div>
 @stop
