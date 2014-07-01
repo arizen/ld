@@ -179,9 +179,11 @@ Route::get('mh', function()
 
 Route::get('k', function()
 {
-    $summoner = Summoner::find(4);
+    $user = User::find(4);
 
-    LolSkillController::getInformationFromSummoner($summoner);
+    //LolSkillController::getInformationFromSummoner($summoner);
+    Session::put("user",$user);
+    DuoController::didUserAddThisUser();
 
 //    foreach ($summoner->matches as $match) {
 //        foreach(ViewHelperController::stringToOneByOneArray($match->your_team,";") as $player){

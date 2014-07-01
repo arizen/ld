@@ -43,4 +43,25 @@ class DuoController extends BaseController {
 
     	return $user->username;
     }
+
+    public static function didUserAddThisUser(){
+        $user = User::find(Session::get('id'));
+        
+        $duos = Duo::where('from_id','=',$user->id)->get();
+
+        $thisUser = Session::get('user');
+        echo $thisUser->id;
+        
+        foreach ($duos as $duo) {
+            if($duo->from_id == $thisUser->id){
+                echo "mk";
+                return true;
+                
+            }
+        }
+        echo "sadrazam";
+        return false;
+        
+        
+    }
 }
