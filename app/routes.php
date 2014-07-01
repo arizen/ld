@@ -30,6 +30,21 @@ Route::get('signup', function()
 {
     return View::make('signup'); //->with('users', $users);
 });
+Route::get('lig', function()
+{
+    $user = User::find(1);
+
+    $summoner = Summoner::where('user_id','=',$user->id)->first();
+
+    $stat = Stat::where('summoner_id', '=', $summoner->id)->first();
+
+    Session::put('user',$user);
+    Session::put('summoner',$summoner);
+    Session::put('stat',$stat);
+
+    return View::make('lig');
+});
+
 
 Route::get('step1', function()
 {
