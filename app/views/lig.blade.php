@@ -18,26 +18,26 @@
                            <img src="http://avatar-user.s.aeriastatic.com/61386851/0327ddc4-84fe-4306-a367-80a8e947171e" class="photo">
                         </div>
                                                 <img src="http://leagueduo.com/static/league/{{Session::get('summoner')->league}}.png" style="height: 120px;" alt="{{Session::get('summoner')->league}}"><br />
-                       <p style="color:black; font-weight:bold;">{{Session::get('summoner')->league}} {{Session::get('summoner')->division}} </p>                      </header>
+                       <p style="color:white; font-weight:bold;">{{Session::get('summoner')->league}} {{Session::get('summoner')->division}} </p>                      </header>
 
                 <div class="perk center">
                         <div class="content">
-                           <span>
-                                                                                     <center>    <img src="http://fc03.deviantart.net/fs70/f/2013/172/7/d/button__online_by_spiderblare-d69zy0y.png" height="35px" width="170px">    </center>
+                           <span style="font-weight: bold;">
+                                                                                     <center>    ONLINE   </center>
                                                          </span>
                         </div>
                      </div>
                      <div class="perk center">
                         <div class="content">
                            <span>
-                                                            <small>
-                                KDA VS                    </small>
+                                                            <small style="font-weight: bold;">
+                               <center> <span style="color: rgb(51, 153, 102);">60</span> / <span style="color: rgb(255, 0, 0);">50</span>       </center>             </small>
                            </span>
                         </div>
                      </div>
                      <div class="perk center">
                         <div class="content">
-                           <span>BİRŞEYLER GELİR SANIRIM</span>
+                           <span style="font-weight: bold;"><center><span style="font-size:15px;">250</span> <img src="/images/ldicon.png" width="36" height="36"></center></span>
                         </div>
                      </div>
 

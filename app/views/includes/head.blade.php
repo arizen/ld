@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 
-        <title>League of Legends'da Partnerini Bul</title>
+        <title>League of Legends'ta Partnerini Bul</title>
 
         <meta property="og:title"           content="Chocolate Pecan Pie" /> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,6 +24,7 @@
              <link href='/css/style.css' rel='stylesheet' type='text/css'> 
              <link href='/css/responsive.css' rel='stylesheet' type='text/css'>
                 <link href="/css/liste.css" rel="stylesheet" media="screen">
+                <meta name="google-site-verification" content="M3WfxpEyeIup40Dy41m5Ws5HfDaE6JdgXsiSE2s6HUo" />
         
         <!--- Tema Skin -->
         

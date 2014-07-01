@@ -8,6 +8,7 @@ a:hover { text-decoration:none; color:black;}
   margin-top: 78px; }
 #coaching .coach-box {
   border: 1px solid #e7e7e7;
+  box-shadow: 10px 10px 5px #888888;
   margin: 0 auto;
   background: #fff;
   display: block;
@@ -25,7 +26,7 @@ a:hover { text-decoration:none; color:black;}
     #coaching .coach-box {
       width: 100%; } }
   #coaching .coach-box header {
-    background: #3498DB;
+    background: #2E3944;
     padding: 20px 30px;
     color: #fff;
     margin-bottom: 0px;
@@ -34,7 +35,7 @@ a:hover { text-decoration:none; color:black;}
     #coaching .coach-box header span {
       float: left;
       font-style: italic;
-      color: #000;
+      color: #fff;
       font-weight: bold;
       font-size: 30px;
       line-height: 26px; }

@@ -231,15 +231,14 @@ $(function() {
 <div class="alert alert-info">
     <strong>Hoşgeldiniz!</strong> aşağıdan lig seçerek DUOnuzu aramaya başlayabilirsiniz.</div>
 
+<a href="/lig"><img src="/static/league/Challenger.png" height="250" width="250"></a>
+  <a href="/lig"><img src="/static/league/Diamond.png" "250" width="250"></a>
+  <a href="/lig"><img src="/static/league/Platinum.png" "250" width="250"></a>
 
-<img src="/static/league/Challenger.png" height="250" width="250">
-  <img src="/static/league/Diamond.png" "250" width="250">
-  <img src="/static/league/Platinum.png" "250" width="250">
 
-
- <img src="/static/league/Gold.png" "250" width="250">
-<img src="/static/league/Silver.png" "250" width="250">
-<img src="/static/league/Bronze.png" "250" width="250">
+ <a href="/lig"><img src="/static/league/Gold.png" "250" width="250"></a>
+<a href="/lig"><img src="/static/league/Silver.png" "250" width="250"></a>
+<a href="/lig"><img src="/static/league/Bronze.png" "250" width="250"></a>
 <div class="clear"></div>		
 </div>
 
