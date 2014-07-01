@@ -5,12 +5,13 @@ class DuoController extends BaseController {
 
  	public function sendDuoRequest()
     {
-        //return Redirect::to('profile/' . "yck32");
-    	 $duo = new Duo;
+        //user'a daha önce duo atmamış olmalı
+        
+         $duo = new Duo;
 
     	 $duo->from_id = Session::get('id');
     	 $duo->to_id = Session::get('user')->id;
-    	 $duo->request_status = "Pending";
+    	 $duo->request_status = "Beklemede";
     	 $duo->save();
 
         return Redirect::to('profile/' . Session::get('user')->username);
@@ -18,14 +19,24 @@ class DuoController extends BaseController {
 
     public function handleDuoRequest()
     {
-    	$mk = Input::get('accept_button');
-    	echo $mk;
+    	if( Input::get('btn') == 'Kabul Et'){
+            $duo = Duo::find(Input::get('di'));
+            if( $duo->to_id == Session::get('id') && $duo->from_id == Input::get('fi') ){
+                $duo->request_status = "Kabul Edildi";
+                $duo->save();
+            }
 
-    	//Butonlara id ver, veritabanından kontrol et ona gore
-    	//$duo = Duo::find(Input::get('duo_id'));
-    	//$duo->request_status = "Accepted";
-    	//$duo->save();
-    	
+        }
+        else if(Input::get('btn') == 'Reddet'){
+            $duo = Duo::find(Input::get('di'));
+            if( $duo->to_id == Session::get('id') && $duo->from_id == Input::get('fi') ){
+                $duo->request_status = "Reddedildi";
+                $duo->save();
+            }
+        }
+
+        return Redirect::to('profile/' . Session::get('user')->username);
+   	
     }
 
     public static function getUsernameFromDuo($duo){

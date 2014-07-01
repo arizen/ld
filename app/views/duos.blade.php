@@ -40,7 +40,14 @@ ASDASDASDASDDSADASD
   <tr>
     <th scope="col"><a href='http://leagueduo.com/profile/{{Session::get('user')->username}}'>{{ $duoModel->fromUser->username }}</a></th>
     <th scope="col">{{$duoModel->fromSummoner->league}} {{$duoModel->fromSummoner->division}}</th>
-    <th scope="col"><button type="button" class="btn btn-success btn-lg">Success</button> <button type="button" class="btn btn-danger btn-lg">Danger</button></th>
+    {{ Form::open(array('action' => 'DuoController@handleDuoRequest',)) }}
+    <th scope="col">
+      {{ Form::hidden('fi', $duoModel->fromUser->id) }}
+      {{ Form::hidden('di', $duoModel->id) }}
+      {{ Form::submit('Kabul Et', array('class' => 'btn btn-success btn-lg', 'value' => '1', 'name'=>'btn')) }}
+    {{ Form::submit('Reddet', array('class' => 'btn btn-danger btn-lg', 'value' => '2', 'name' =>'btn')) }}
+    </th>
+    {{ Form::close() }}
   </tr>
   @endforeach
 </table>
