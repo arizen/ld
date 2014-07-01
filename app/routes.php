@@ -114,10 +114,13 @@ Route::get('profile/{username}/duos', function($username)
 
     $duoModelArray = array();
     foreach($user->duos as $duo){
-        $duoRequest = new DuoRequestModel;
-        $duoRequest->fromUser = User::find($duo->from_id);
-        $duoRequest->fromSummoner = Summoner::where('user_id','=',$duoRequest->fromUser->id)->first();
-        array_push($duoModelArray, $duoRequest);
+        if($duo->request_status == "Beklemede"){
+            $duoRequest = new DuoRequestModel;
+            $duoRequest->id = $duo->id;
+            $duoRequest->fromUser = User::find($duo->from_id);
+            $duoRequest->fromSummoner = Summoner::where('user_id','=',$duoRequest->fromUser->id)->first();
+            array_push($duoModelArray, $duoRequest);
+        }
     }
     
     Session::put('duoModelArray',$duoModelArray);
@@ -194,4 +197,5 @@ Route::post('login', array('uses' => 'UserController@login'));
 Route::post('step1', array('uses' => 'UserController@checkStep1'));
 Route::post('step2', array('uses' => 'UserController@checkStep2'));
 Route::post('step3', array('uses' => 'UserController@checkStep3'));
-Route::post('profile/', array('uses' => 'DuoController@sendDuoRequest'));
+Route::post('profiasdfle/', array('uses' => 'DuoController@sendDuoRequest'));
+Route::post('profile/', array('uses' => 'DuoController@handleDuoRequest'));
