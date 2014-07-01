@@ -5,7 +5,6 @@ class DuoController extends BaseController {
 
  	public function sendDuoRequest()
     {
-        //user'a daha önce duo atmamış olmalı
         
          $duo = new Duo;
 
