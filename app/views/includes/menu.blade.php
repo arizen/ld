@@ -65,42 +65,13 @@
 @else
 
                             <li>
-                                <a href="#">
+                                <a href="/login">
                                     <span class="label-nav">
-                                        Giriş Yap
+                                        Giriş Yap / Kayıt Ol
                                     </span>
                                 </a>
-                          <ul>  {{ Form::open(array('action' => 'UserController@login', 'id'=>'signup')) }}
-                                 
-        <br /><center><h2>Yeni bir deneyime hazır mısın? </h2></center>
-        <center>{{ Form::label('usernameLabel', 'Username') }} {{ Form::text('usernameText') }}
-        {{ Form::label('passwordLabel', 'Password') }}{{ Form::password('passwordText') }}      <br />  
-        {{ Form::submit('Login', array('class' => 'btn btn-primary btn-lg')) }} </center>
-    {{ Form::close() }}</ul>
                             </li>
                           
-                            <li>
-                                <a href="#" >
-                                    <span class="label-nav">
-                                     Kayıt Ol
-                                    </span>
-                                </a>
-                                <ul>
-                    {{ Form::open(array('action' => 'UserController@saveUser', 'id'=>'signup')) }}
-
-
-        <br /><center><h2>Duonuzu Bulmanın Zamanı Geldi.</h2></center>
-        <center>  {{ Form::label('usernameLabel', 'Username') }} {{ Form::text('usernameText') }}
-        {{ Form::label('emailLabel', 'E-mail') }} {{ Form::text('emailText') }}
-        {{ Form::label('passwordLabel', 'Password') }} {{ Form::password('passwordText') }}
-        {{ Form::label('passwordLabel', 'Password (Tekrar)') }} {{ Form::password('passwordText2') }}<br />                    
-        {{ Form::submit('OK', array('class' => 'btn btn-primary btn-lg')) }} </center>
-
-
-       {{ Form::close() }}
-                                </ul>
-                            </li>
-
 
 @endif
                         </ul>
