@@ -11,8 +11,8 @@
 <div id='profilemsol'>
 <ul>
    <li><a href='http://leagueduo.com/profile/{{Session::get('user')->username}}/comments'><span>Yorumlar</span></a></li>
-   <li><a href='#'><span>Mesajlarım (0)</span></a></li>
-   <li><a href='#'><span>DUO İsteklerim (0)</span></a></li>
+   <li><a href='http://leagueduo.com/profile/{{Session::get('user')->username}}/messages'><span>Mesajlarım (0)</span></a></li>
+   <li><a href='http://leagueduo.com/profile/{{Session::get('user')->username}}/duos'><span>DUO İsteklerim ( {{ DuoController::getDuoCount() }} )</span></a></li>
    <li class='last'><a href='#'><span>Destek Al</span></a></li>
 </ul>
 </div> 
