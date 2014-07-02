@@ -38,8 +38,8 @@
                           <th><center>Sihirdar Adı</center></th>
                           <th><center>KDA Ratio</center></th>
                           <th><center>League Duo Puanı</center></th>
-                             <th><center>Mesajlar</center></th>
-                          <th><center>Ayarlar</center></th>
+                             <th><center>Durum</center></th>
+                          <th><center></center></th>
                         </tr>
                       </thead>
                       <tbody>
@@ -48,8 +48,8 @@
                           <td> <center>deneme2</center></td>
                           <td><center>33/2</center></td>
                           <td><center>200</center></td>
-                          <td><center>Mesaj Gönder </center></td>
-                          <td><center>Sil !</center></td>
+                          <td><center>Online</center></td>
+                          <td><center>Sil !  -  Mesaj Gönder !</center></td>
                         </tr>
 
                         
