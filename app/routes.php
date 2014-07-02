@@ -13,16 +13,6 @@
 
 Route::get('/', function()
 {
-    $user = User::find(1);
-
-    $summoner = Summoner::where('user_id','=',$user->id)->first();
-
-    $stat = Stat::where('summoner_id', '=', $summoner->id)->first();
-
-    Session::put('user',$user);
-    Session::put('summoner',$summoner);
-    Session::put('stat',$stat);
-
     return View::make('index');
 });
 
@@ -194,11 +184,12 @@ Route::get('mh', function()
 
 Route::get('k', function()
 {
-    $user = User::find(4);
+    Session::put("id",3);
+    $user = User::find(3);
 
     //LolSkillController::getInformationFromSummoner($summoner);
     Session::put("user",$user);
-    DuoController::didUserAddThisUser();
+    echo DuoController::getDuoCount();
 
 //    foreach ($summoner->matches as $match) {
 //        foreach(ViewHelperController::stringToOneByOneArray($match->your_team,";") as $player){

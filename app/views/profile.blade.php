@@ -37,8 +37,8 @@
 <div class="clear"></div>		
 </div>
 <div class="profilei">
-<h3 class="profilei-title">Son 10 Maç</h3>  
-@foreach( Session::get('summoner')->matches as $match)
+<h3 class="profilei-title">Son 5 Maç</h3>  
+@foreach( Session::get('summoner')->matches->take(5) as $match)
 
 @if ($match->result  == 'Win')
  <table width="100%" border="0" bgcolor="#002100">

@@ -5,15 +5,18 @@ class DuoController extends BaseController {
 
  	public function sendDuoRequest()
     {
-        
-         $duo = new Duo;
+        if(!DuoController::didUserAddThisUser()){
+            $duo = new Duo;
 
-    	 $duo->from_id = Session::get('id');
-    	 $duo->to_id = Session::get('user')->id;
-    	 $duo->request_status = "Beklemede";
-    	 $duo->save();
-
-        return Redirect::to('profile/' . Session::get('user')->username);
+            $duo->from_id = Session::get('id');
+            $duo->to_id = Session::get('user')->id;
+            $duo->request_status = "Beklemede";
+            $duo->save();
+          return Redirect::to('profile/' . Session::get('user')->username);
+        }
+        else{
+            return Redirect::to('profile/123' . Session::get('user')->username);
+        }        
     }
 
     public function handleDuoRequest()
@@ -45,23 +48,26 @@ class DuoController extends BaseController {
     }
 
     public static function didUserAddThisUser(){
-        $user = User::find(Session::get('id'));
-        
-        $duos = Duo::where('from_id','=',$user->id)->get();
-
-        $thisUser = Session::get('user');
-        echo $thisUser->id;
-        
-        foreach ($duos as $duo) {
-            if($duo->from_id == $thisUser->id){
-                echo "mk";
-                return true;
-                
-            }
+        if(Session::get('id') == null){
+            return false;
         }
-        echo "sadrazam";
-        return false;
         
-        
+        $user = User::find(Session::get('id'));
+        $thisUser = Session::get('user');
+
+        $duo = Duo::where('from_id','=',$user->id)->where('to_id','=',$thisUser->id)->first();
+        if($duo){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    public static function getDuoRequestCount(){
+        $user = User::find(Session::get('id'));
+        $sayi = Duo::where('to_id','=',$user->id)->where('request_status','=','Beklemede')->count();
+
+        return $sayi;
     }
 }
