@@ -198,10 +198,10 @@ class LolSkillController extends BaseController {
 											$summoner->league = $league;
 											$division = $explodedString[1];
 											$summoner->division = $division;
-											$summoner->save();
 										}
-										else if('kda' == $classValue){
-											//echo $bodyElement->nodeValue;
+										if('kda' == $classValue){
+											$summoner->kda = $classValue;
+											$summoner->save();
 										}											 
 									}
 								}
