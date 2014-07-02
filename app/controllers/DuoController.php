@@ -48,6 +48,10 @@ class DuoController extends BaseController {
     }
 
     public static function didUserAddThisUser(){
+        if(Session::get('id') == null){
+            return false;
+        }
+        
         $user = User::find(Session::get('id'));
         $thisUser = Session::get('user');
 
@@ -60,7 +64,7 @@ class DuoController extends BaseController {
         }
     }
 
-    public static function getDuoCount(){
+    public static function getDuoRequestCount(){
         $user = User::find(Session::get('id'));
         $sayi = Duo::where('to_id','=',$user->id)->where('request_status','=','Beklemede')->count();
 

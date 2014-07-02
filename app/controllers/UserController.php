@@ -156,4 +156,18 @@ class UserController extends BaseController {
 
             return Redirect::intended('profile/' . $user->username);
     }  
+
+    public static function isHisProfile(){
+        if(Session::get('id') == null){
+            return false;
+        }
+
+        $loggedUser = User::find(Session::get('id'));
+        $profileUser = Session::get('user');
+
+        if($loggedUser->id == $profileUser->id){
+            return true;
+        }
+        return false;
+    } 
 }
