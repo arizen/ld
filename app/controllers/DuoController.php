@@ -51,16 +51,15 @@ class DuoController extends BaseController {
         if(Session::get('id') == null){
             return false;
         }
-        
+
         $user = User::find(Session::get('id'));
         $thisUser = Session::get('user');
-
         $duo = Duo::where('from_id','=',$user->id)->where('to_id','=',$thisUser->id)->first();
-        if($duo){
-            return true;
+        if($duo == null){
+            return false;
         }
         else{
-            return false;
+            return $duo->request_status;
         }
     }
 

@@ -105,6 +105,7 @@ Route::get('profile/{username}/myduos', function($username)
     $duoModelArray = array();
     foreach($user->duos as $duo){
         if($duo->request_status == "Kabul Edildi"){
+            //kabul edilme durumunda sadece kabul eden taraf görüyor gibi bir durum var onu çöz
             $duoRequest = new DuoRequestModel;
             $duoRequest->id = $duo->id;
             $duoRequest->fromUser = User::find($duo->from_id);
