@@ -43,14 +43,16 @@
                         </tr>
                       </thead>
                       <tbody>
+                        @foreach(Session::get("duoModelArray") as $duoModel)
                         <tr>
-                          <td><center>deneme</center></td>
-                          <td> <center>deneme2</center></td>
-                          <td><center>33/2</center></td>
-                          <td><center>200</center></td>
+                          <td><center>{{ $duoModel->fromUser->username }}</center></td>
+                          <td><center>{{ $duoModel->fromSummoner->summoner_name }}</center></td>
+                          <td><center>{{ $duoModel->fromSummoner->kda }}</center></td>
+                          <td><center>{{ $duoModel->fromSummoner->win_lose }}</center></td>
                           <td><center>Online</center></td>
                           <td><center>Sil !  -  Mesaj Gönder !</center></td>
                         </tr>
+                         @endforeach
 
                         
                       </tbody>

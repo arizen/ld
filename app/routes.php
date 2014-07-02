@@ -102,6 +102,19 @@ Route::get('profile/{username}/myduos', function($username)
     Session::put('summoner',$summoner);
     Session::put('stat',$stat);
 
+    $duoModelArray = array();
+    foreach($user->duos as $duo){
+        if($duo->request_status == "Kabul Edildi"){
+            $duoRequest = new DuoRequestModel;
+            $duoRequest->id = $duo->id;
+            $duoRequest->fromUser = User::find($duo->from_id);
+            $duoRequest->fromSummoner = Summoner::where('user_id','=',$duoRequest->fromUser->id)->first();
+            $duoRequest->fromStat = $duoRequest->fromSummoner->stats->first();
+            array_push($duoModelArray, $duoRequest);
+        }
+    }
+    Session::put('duoModelArray',$duoModelArray);
+
     return View::make('myduos');
 });
 
