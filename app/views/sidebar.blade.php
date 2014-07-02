@@ -21,119 +21,67 @@
    @endif
 </ul>
 </div> 
-<div class="istatistik" style="margin-top:20px;" >
-                <table >
-                    <tr>
-                        <td>
-                            Ranked İstatistikleri
-                        </td>
-                           <td>
-                           
-                        </td>
-                      
-                    </tr>
-                    <tr>
-                        <td >
-                           Toplam Oyun :
-                        </td>
-                        <td>
-                          {{Session::get('stat')->games_played}}
-                        </td>
-                      
-                    </tr>
-                    <tr>
-                        <td >
-                           Katledilenler :
-                        </td>
-                        <td>
-                           {{Session::get('stat')->kills}}
-                        </td>
-                      
-                    </tr>
-                    <tr>
-                        <td >
-                           Ölümler :
-                        </td>
-                        <td>
-                          {{Session::get('stat')->deaths}}
-                        </td>
-                      
-                    </tr>
-                    <tr>
-                        <td >
-                           Asistler :
-                        </td>
-                        <td>
-                            {{Session::get('stat')->assists}}
-                        </td>
-                      
-                    </tr>
-                    <tr>
-                        <td>
-                           Öldürülen Yaratık :
-                        </td>
-                        <td>
-                            {{Session::get('stat')->minions_killed}}
-                        </td>
-                      
-                    </tr>
-                    <tr>
-                        <td >
-                           Kazanılan Altın :
-                        </td>
-                        <td>
-                            {{Session::get('stat')->gold_earned}}
-                        </td>
-                      
-                    </tr>
-                     <tr>
-                        <td >
-                           2 de 2 :
-                        </td>
-                        <td>
-                            {{Session::get('stat')->double_kills}}
-                        </td>
-                      
-                    </tr>
-                    <tr>
-                        <td >
-                           3 te 3 :
-                        </td>
-                        <td>
-                            {{Session::get('stat')->triple_kills}}
-                        </td>
-                      
-                    </tr>
-                    <tr>
-                        <td >
-                           4 te 4 :
-                        </td>
-                        <td>
-                           {{Session::get('stat')->quadra_kills}}
-                        </td>
-                      
-                    </tr>
-                    <tr>
-                        <td >
-                           5 te 5 :
-                        </td>
-                        <td>
-                            {{Session::get('stat')->penta_kills}}
-                        </td>
-                      
-                    </tr>
-                    <tr>
-                        <td >
-                           Yıkılan Kuleler :
-                        </td>
-                        <td>
-                            {{Session::get('stat')->turrets_destroyed}}
-                        </td>
-                      
-                    </tr>
-                 
-                </table>
-            </div>   
+
+<table class="table hover">
+                    <thead>
+                        <tr>
+                          <th><center>Ranked</center></th>
+                          <th><center>İstatistikleri</center></th>
+
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><center> <b>Toplam Oyun :</b></center></td>
+                          <td> <center>{{Session::get('stat')->games_played}}</center></td>
+                        </tr>
+                        <tr>
+                          <td><center><b>Katledilenler :</b></center></td>
+                          <td> <center>{{Session::get('stat')->kills}}</center></td>
+                        </tr>
+                        <tr>
+                          <td><center><b>Ölümler :</b></center></td>
+                          <td> <center>{{Session::get('stat')->deaths}}</center></td>
+                        </tr>
+                        <tr>
+                          <td><center><b>Asistler :</b></center></td>
+                          <td> <center> {{Session::get('stat')->assists}}</center></td>
+                        </tr>
+                        <tr>
+                          <td><center><b>Öldürülen Yaratık :</b></center></td>
+                          <td> <center>{{Session::get('stat')->minions_killed}}</center></td>
+                        </tr>
+                        <tr>
+                          <td><center><b>Kazanılan Altın :</b></center></td>
+                          <td> <center>{{Session::get('stat')->gold_earned}}</center></td>
+                        </tr>
+                        <tr>
+                          <td><center><b>2 de 2 :</b></center></td>
+                          <td> <center>{{Session::get('stat')->double_kills}}</center></td>
+                        </tr>
+                        <tr>
+                          <td><center><b>3 te 3 :</b></center></td>
+                          <td> <center>{{Session::get('stat')->triple_kills}}</center></td>
+                        </tr>
+                        <tr>
+                          <td><center><b>4 te 4 :</b></center></td>
+                          <td> <center>{{Session::get('stat')->quadra_kills}}</center></td>
+                        </tr>
+                        <tr>
+                          <td><center><b>5 te 5 :</b></center></td>
+                          <td> <center>{{Session::get('stat')->penta_kills}}</center></td>
+                        </tr>
+                        <tr>
+                          <td><center><b>Yıkılan Kuleler :</b></center></td>
+                          <td> <center>{{Session::get('stat')->turrets_destroyed}}</center></td>
+                        </tr>
+
+
+                        
+                      </tbody>
+                </table>          
+
+
 <div class="clear"></div>		
 </div></div>
   </center>
