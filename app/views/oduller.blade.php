@@ -10,11 +10,8 @@
         <div class="row">
             <div class="col-md-12 col-sm-12">
                     <div class="center-title">
-                        <div class="heading-title">
-                            <h2 class="h2-section-title left-text">We Have The Answers</h2>
-                        </div>
                         <p>
-                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.                  
+<img src="http://leagueduo.com/images/slider1.png" width="1000">
                         </p>                       
                     </div>
                     <div class="divider divider-shadow"></div>

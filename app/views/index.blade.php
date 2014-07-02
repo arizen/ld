@@ -247,11 +247,88 @@ $(function() {
 										</div>
 
 <div class="col-md-3"> <div class="profilei">
-<h3 class="profilei-title">Sağ menü</h3>
+<h3 class="profilei-title">Profil</h3>
+
+asdasd
+
+										<div class="clear"></div>		
+</div>
+ <div class="profilei">
+<h3 class="profilei-title">Hall of Fame</h3>
+
+<table class="table hover">
+                    <thead>
+                        <tr>
+                          <th><center>Sıralama</center></th>
+                          <th><center>Kullanıcı Adı</center></th>
+                          <th><center>LD Puanı</center></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><center>1</center></td>
+                          <td> <center>BubbleBeast</center></td>
+                          <td><center> 300</center></td>
+                        </tr>
+                         <tr>
+                          <td><center>1</center></td>
+                          <td> <center>BubbleBeast</center></td>
+                          <td><center> 300</center></td>
+                        </tr>
+                         <tr>
+                          <td><center>1</center></td>
+                          <td> <center>BubbleBeast</center></td>
+                          <td><center> 300</center></td>
+                        </tr>
+                         <tr>
+                          <td><center>1</center></td>
+                          <td> <center>BubbleBeast</center></td>
+                          <td><center> 300</center></td>
+                        </tr>
+                         <tr>
+                          <td><center>1</center></td>
+                          <td> <center>BubbleBeast</center></td>
+                          <td><center> 300</center></td>
+                        </tr>
+                         <tr>
+                          <td><center>1</center></td>
+                          <td> <center>BubbleBeast</center></td>
+                          <td><center> 300</center></td>
+                        </tr>
+                         <tr>
+                          <td><center>1</center></td>
+                          <td> <center>BubbleBeast</center></td>
+                          <td><center> 300</center></td>
+                        </tr>
+                         <tr>
+                          <td><center>1</center></td>
+                          <td> <center>BubbleBeast</center></td>
+                          <td><center> 300</center></td>
+                        </tr>
+                         <tr>
+                          <td><center>1</center></td>
+                          <td> <center>BubbleBeast</center></td>
+                          <td><center> 300</center></td>
+                        </tr>
+                         <tr>
+                          <td><center>1</center></td>
+                          <td> <center>BubbleBeast</center></td>
+                          <td><center> 300</center></td>
+                        </tr>
+
+
+                        
+                      </tbody>
+                </table>          
+
+                    <div class="clear"></div>   
+</div>
+ <div class="profilei">
+<h3 class="profilei-title">Reklam Alanı</h3>
 
 sadsadasdadadasdasdadasdasdasd
 
-										<div class="clear"></div>		
+                    <div class="clear"></div>   
 </div></div>
 
 
