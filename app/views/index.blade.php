@@ -13,7 +13,8 @@
 <script type="text/javascript" src="http://www.dreamtemplate.com/dreamcodes/sliders/kbpanel-slider/js/jquery.touchwipe.min.js"></script>
  
 <script type="text/javascript" src="http://www.dreamtemplate.com/dreamcodes/sliders/kbpanel-slider/js/jquery.templateaccess.kenburns-panel.min.js"></script>
- 
+
+
 <!-- DC Ken Burns Panel Slider Settings -->
 <script type="text/javascript">
 $(function() {    
@@ -102,9 +103,11 @@ $(function() {
          
 });
 </script>
- 
+
+
+
 <!-- DC Ken Burns Panel slider Start -->
-<div style="width:100%; margin:0 auto; padding:10px; position:relative;"> <!-- define slider container width (by strict force) -->
+<div style="width:70%; margin:0 auto; padding:10px; position:relative;"> <!-- define slider container width (by strict force) -->
   <div class="demoholder">
     <div class="bggradient"></div>
     <!-- <div class="kbpanel-bannercontainer centerme light"> light theme -->
@@ -214,7 +217,74 @@ $(function() {
 
 
 
-
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                    <div class="process-container">
+        
+    <div class="single-process ">
+        <div class="process-step">
+            1
+        </div>
+        <div class="process-details">
+            <i class="icon-lightbulb"></i>
+            <div class="process_text">
+                <h4>Idea</h4>
+                <p>Cras sem erat, aliquet in egestas cursus, ullamcorper vitae
+                                                ligula. Nunc commodo lacinia eros ac condimentum</p>
+            </div>
+        </div>
+    </div>
+    
+        
+    <div class="single-process ">
+        <div class="process-step">
+            2
+        </div>
+        <div class="process-details">
+            <i class="icon-compass"></i>
+            <div class="process_text">
+                <h4>Strategy</h4>
+                <p>Cras sem erat, aliquet in egestas cursus, ullamcorper vitae
+                                                ligula. Nunc commodo lacinia eros ac condimentum</p>
+            </div>
+        </div>
+    </div>
+    
+        
+    <div class="single-process ">
+        <div class="process-step">
+            3
+        </div>
+        <div class="process-details">
+            <i class="icon-laptop"></i>
+            <div class="process_text">
+                <h4>Design</h4>
+                <p>Cras sem erat, aliquet in egestas cursus, ullamcorper vitae
+                                                ligula. Nunc commodo lacinia eros ac condimentum</p>
+            </div>
+        </div>
+    </div>
+    
+        
+    <div class="single-process  last">
+        <div class="process-step">
+            4
+        </div>
+        <div class="process-details">
+            <i class="icon-code"></i>
+            <div class="process_text">
+                <h4>Coding</h4>
+                <p>Cras sem erat, aliquet in egestas cursus, ullamcorper vitae
+                                                ligula. Nunc commodo lacinia eros ac condimentum</p>
+            </div>
+        </div>
+    </div>
+    
+    </div>            
+            </div>
+        </div>
+    </div>
 
 
 
@@ -223,9 +293,18 @@ $(function() {
         <div class="row">
             <div class="col-md-12 col-sm-12">  
  <div class="row">
+ <div class="col-md-3"> <div class="profilei">
+<h3 class="profilei-title">Neden Lig DUO ?</h3>
+
+Riot games tarafından ortaya çıkartılan istatistikler sonucunda takım çalışmasına önem gösteren oyuncular günde 1.7 milyon daha fazla oyun kazanıyor ve takım çalışması altında oynanılan oyunlarda %54 daha fazla kazanma oranı sağlanıyor. Takım çalışması genellikle duo şeklinde oyuna giren oyuncularda görülüyor. Fakat oyuna tek girdiğiniz zaman 4 tane hiç tanımadığınız, ruh halini dahi bilmediğiniz insanlarla oynarsınız. Bu durum %20 oranında iletişim bozukluğuna sebep olur. İşte burada league duo devreye giriyor. Sitemizin bünyesinde bulunan yüzlerce oyuncu arasından size en  yakın lig sıralamasına sahip oyuncuyu buluyoruz. Ve web sitemizin en güzel özelliklerinden birisi ile de birbirlerinizle iletişime geçmesi çok kolay bir hal alıyor. Tek yapmanız gereken siteye üye olup, sitenin online kullanıcılarından birisini kendinize duo olarak seçmek kalıyor. Sitemizde üyelerin sıralaması ise LD yani leagueduo point üzerinden yapılıyor. Sitemize kaydolduktan sonra, kaydolduğunuz hesap ile kazandığınız her oyun başına 5 ldp, kaybettiğiniz her oyun başına da 3 ldp azaltıyor. Bu özelliklerin yanı sıra sitemize üye olup aktif bir şekilde siteyi kullanan üyeleri her hafta süpriz ödüller bekliyor. Her haftasonu yapılan çekiliş ile birinciye 1780 RP, ikinciye 840 RP, üçüncüye 400 RP verilecektir. Sitenizdeki sıralamaınızı da ödüller sekmesinden bakabilirsiniz
+
+                    <div class="clear"></div>   
+</div>
+
+</div>
 
 <!-- Sağ İçerik -->
-  <div class="col-md-9">
+  <div class="col-md-6">
   <div class="profilei">
 <h3 class="profilei-title">Lig Seçin</h3>
 <div class="alert alert-info">
