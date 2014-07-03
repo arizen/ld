@@ -13,7 +13,7 @@
 
 Route::get('/', function()
 {
-    $users = User::all()->sortBy('ld_points')->take(10);
+    $users = User::orderBy('ld_points','desc')->get()->take(10);
     return View::make('index')->with('users',$users);
 });
 
@@ -58,7 +58,7 @@ Route::get('logout', function()
 
 Route::get('oduller', function()
 {
-    $users = User::all()->sortBy('ld_points')->take(100);
+    $users = User::orderBy('ld_points','desc')->get()->take(100);
 
     return View::make('oduller')->with('users',$users); //->with('users', $users);
 });
@@ -77,7 +77,7 @@ Route::get('profile/{username}/comments', function($username)
 
     return View::make('comments');
 });
-Route::get('profile/{username}/sendmessage', function($username)
+Route::get('profile/{username}/sendMessage', function($username)
 {
     $user = User::where('username', '=', $username)->first();
 
@@ -239,3 +239,4 @@ Route::post('step2', array('uses' => 'UserController@checkStep2'));
 Route::post('step3', array('uses' => 'UserController@checkStep3'));
 Route::post('profiasdfle/', array('uses' => 'DuoController@sendDuoRequest'));
 Route::post('profile/', array('uses' => 'DuoController@handleDuoRequest'));
+Route::post('profile/', array('uses' => 'MessageController@sendMessage'));

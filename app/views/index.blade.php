@@ -339,7 +339,7 @@ asdasd
                         @foreach($users as $key=>$user)
                         <tr>
                           <td><center>{{ $key + 1 }}</center></td>
-                          <td> <center><a href='http://leagueduo.com/profile/{{ $user->username }}'>{{ $user->username }}</center></td>
+                          <td> <center><a href='http://leagueduo.com/profile/{{ $user->username }}'>{{ $user->username }} </a></center></td>
                           <td><center> {{ $user->ld_points }}</center></td>
                         </tr>
                         @endforeach
