@@ -1,7 +1,10 @@
 <center> <div class="col-md-3"> <div class="profilei">
 
-  @if(UserController::isHisProfile())
-
+  @if(Session::get("id") == null)
+  <form action="http://leagueduo.com/login">
+    <input type="submit" class="btn btn-primary btn-lg"  value="Duo Ekle">
+  </form>
+  @elseif(UserController::isHisProfile())
   @elseif(!DuoController::didUserAddThisUser())
   {{ Form::open(array('action' => 'DuoController@sendDuoRequest')) }}
   {{ Form::submit('Duo Ekle', array('class' => 'btn btn-primary btn-lg')) }}

@@ -58,7 +58,9 @@ Route::get('logout', function()
 
 Route::get('oduller', function()
 {
-    return View::make('oduller'); //->with('users', $users);
+    $users = User::all()->sortBy('ld_points')->take(100);
+
+    return View::make('oduller')->with('users',$users); //->with('users', $users);
 });
 
 Route::get('profile/{username}/comments', function($username)
