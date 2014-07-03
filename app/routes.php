@@ -13,7 +13,8 @@
 
 Route::get('/', function()
 {
-    return View::make('index');
+    $users = User::all()->sortBy('ld_points')->take(10);
+    return View::make('index')->with('users',$users);
 });
 
 Route::get('signup', function()

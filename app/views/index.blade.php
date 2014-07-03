@@ -265,59 +265,13 @@ asdasd
                         </tr>
                       </thead>
                       <tbody>
+                        @foreach($users as $key=>$user)
                         <tr>
-                          <td><center>1</center></td>
-                          <td> <center>BubbleBeast</center></td>
-                          <td><center> 300</center></td>
+                          <td><center>{{ $key + 1 }}</center></td>
+                          <td> <center>{{ $user->username }}</center></td>
+                          <td><center> {{ $user->ld_points }}</center></td>
                         </tr>
-                         <tr>
-                          <td><center>1</center></td>
-                          <td> <center>BubbleBeast</center></td>
-                          <td><center> 300</center></td>
-                        </tr>
-                         <tr>
-                          <td><center>1</center></td>
-                          <td> <center>BubbleBeast</center></td>
-                          <td><center> 300</center></td>
-                        </tr>
-                         <tr>
-                          <td><center>1</center></td>
-                          <td> <center>BubbleBeast</center></td>
-                          <td><center> 300</center></td>
-                        </tr>
-                         <tr>
-                          <td><center>1</center></td>
-                          <td> <center>BubbleBeast</center></td>
-                          <td><center> 300</center></td>
-                        </tr>
-                         <tr>
-                          <td><center>1</center></td>
-                          <td> <center>BubbleBeast</center></td>
-                          <td><center> 300</center></td>
-                        </tr>
-                         <tr>
-                          <td><center>1</center></td>
-                          <td> <center>BubbleBeast</center></td>
-                          <td><center> 300</center></td>
-                        </tr>
-                         <tr>
-                          <td><center>1</center></td>
-                          <td> <center>BubbleBeast</center></td>
-                          <td><center> 300</center></td>
-                        </tr>
-                         <tr>
-                          <td><center>1</center></td>
-                          <td> <center>BubbleBeast</center></td>
-                          <td><center> 300</center></td>
-                        </tr>
-                         <tr>
-                          <td><center>1</center></td>
-                          <td> <center>BubbleBeast</center></td>
-                          <td><center> 300</center></td>
-                        </tr>
-
-
-                        
+                        @endforeach
                       </tbody>
                 </table>          
 
