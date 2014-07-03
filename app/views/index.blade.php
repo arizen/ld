@@ -272,7 +272,7 @@ $(function() {
             4
         </div>
         <div class="process-details">
-            <i class="icon-code"></i>
+            <i class="icon-circle-arrow-up"></i>
             <div class="process_text">
                 <h4>Coding</h4>
                 <p>Cras sem erat, aliquet in egestas cursus, ullamcorper vitae
