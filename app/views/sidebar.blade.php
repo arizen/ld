@@ -10,6 +10,8 @@
     Beklemede
   @elseif(DuoController::didUserAddThisUser() == "Kabul Edildi")
     Kabul Edildi
+  @elseif(DuoController::didUserAddThisUser() == "Reddedildi")
+    Kabul Edildi
   @endif
 <h3 class="profilei-title">Profil</h3>
 <div style="text-shadow: 1px 1px 1px #000; color:#D74536; font: normal 34px &quot;Trebuchet MS&quot;,Arial,sans-serif;font-weight: bold;margin-bottom: 6px; margin-left:1px; margin-top:6px;"><a href='http://leagueduo.com/profile/{{Session::get('user')->username}}'>{{Session::get('user')->username}}</a></div>
