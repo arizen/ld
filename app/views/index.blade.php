@@ -14,13 +14,7 @@
 
 </script>
 
-
-<ul class="bxslider">
-  <li><center><img src="http://leagueduo.com/images/slider1.png" /></center></li>
-  <li><center><img src="http://leagueduo.com/images/slider1.png" /></center></li>
-  <li><center><img src="http://leagueduo.com/images/slider1.png" /></center></li>
-  <li><center><img src="http://leagueduo.com/images/slider1.png" /></center></li>
-</ul>
+<center><img src="http://leagueduo.com/images/slider1.jpg" width="70%" height="550px" /></center>
 
     <div class="container">
         <div class="row">
