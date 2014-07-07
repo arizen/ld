@@ -207,7 +207,7 @@ Route::get('mh', function()
 
     //return View::make('users')->with('users', $users);
 
-    $user = User::find(1);
+    $user = User::find(2);
     $summoner =  $user->summoners()->get()->first();
     LolSkillController::getInformationFromSummoner($summoner);
 //
@@ -218,10 +218,10 @@ Route::get('mh', function()
 
 Route::get('k', function()
 {
-    //Session::put("id",1);
-    $user = User::find(1);
+    Session::put("id",2);
+    //$user = User::find(1);
 
-    LolSkillController::givePointsToUser($user);
+    //LolSkillController::givePointsToUser($user);
 
     //LolSkillController::getInformationFromSummoner($summoner);
    // Session::put("user",$user);
@@ -242,5 +242,5 @@ Route::post('step1', array('uses' => 'UserController@checkStep1'));
 Route::post('step2', array('uses' => 'UserController@checkStep2'));
 Route::post('step3', array('uses' => 'UserController@checkStep3'));
 Route::post('profiasdfle/', array('uses' => 'DuoController@sendDuoRequest'));
-Route::post('profile/', array('uses' => 'DuoController@handleDuoRequest'));
+Route::post('duos/', array('uses' => 'DuoController@handleDuoRequest'));
 Route::post('profile/', array('uses' => 'MessageController@sendMessage'));

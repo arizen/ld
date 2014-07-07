@@ -352,12 +352,10 @@ class LolSkillController extends BaseController {
 
     public static function givePointsToAllUsers($user){
     	$users = User::all();
-
+    	
     	foreach($users as $user){
     		LolSkillController::givePointsToUser($user);
     	}
-
-    	
     }
 
     public static function givePointsToUser($user){
@@ -366,7 +364,7 @@ class LolSkillController extends BaseController {
     	$summoner =  $user->summoners()->get()->first(); 
     	
     	$firstMatch = $summoner->matches()->get()->first();
-    	$limit = 0; //puanlanacak mac index'i
+    	$limit = 0; //kac mac puanlanacak
     	foreach($matchArray as $matchA){
     			$arrayString = $matchA->your_team . $matchA->enemy_team;
     			$dbString = $firstMatch->your_team . $firstMatch->enemy_team;

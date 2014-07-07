@@ -21,6 +21,7 @@ class DuoController extends BaseController {
 
     public function handleDuoRequest()
     {
+        
     	if( Input::get('btn') == 'Kabul Et'){
             $duo = Duo::find(Input::get('di'));
             if( $duo->to_id == Session::get('id') && $duo->from_id == Input::get('fi') ){
