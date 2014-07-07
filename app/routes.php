@@ -207,7 +207,9 @@ Route::get('mh', function()
 
     //return View::make('users')->with('users', $users);
 
-    $user = User::find(3);
+    $user = User::find(1);
+    $summoner =  $user->summoners()->get()->first();
+    LolSkillController::getInformationFromSummoner($summoner);
 //
     //foreach($user->matches as $match){
     	//echo $match->id;
@@ -216,12 +218,14 @@ Route::get('mh', function()
 
 Route::get('k', function()
 {
-    Session::put("id",3);
-    $user = User::find(3);
+    //Session::put("id",1);
+    $user = User::find(1);
+
+    LolSkillController::givePointsToUser($user);
 
     //LolSkillController::getInformationFromSummoner($summoner);
-    Session::put("user",$user);
-    echo DuoController::getDuoCount();
+   // Session::put("user",$user);
+    //echo DuoController::getDuoCount();
 
 //    foreach ($summoner->matches as $match) {
 //        foreach(ViewHelperController::stringToOneByOneArray($match->your_team,";") as $player){

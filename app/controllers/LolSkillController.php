@@ -340,19 +340,164 @@ class LolSkillController extends BaseController {
 				$match->save();		
 			} 			  	
 		}
-		
-
 		if (FALSE === $html)
 	        throw new Exception(curl_error($ch), curl_errno($ch));
-		
 		//var_dump($data);	
-
 		//echo curl_getinfo($ch) . '<br/>';
 		//echo curl_errno($ch) . '<br/>';
 		//echo curl_error($ch) . '<br/>';	
-
 		curl_close($ch);
     	
     }
 
+    public static function givePointsToAllUsers($user){
+    	$users = User::all();
+
+    	foreach($users as $user){
+    		LolSkillController::givePointsToUser($user);
+    	}
+
+    	
+    }
+
+    public static function givePointsToUser($user){
+
+    	$matchArray = LolSkillController::constructMatchArray($user); // matchArray yeni gelen, match veri tabanindan gelen
+    	$summoner =  $user->summoners()->get()->first(); 
+    	
+    	$firstMatch = $summoner->matches()->get()->first();
+    	$limit = 0; //puanlanacak mac index'i
+    	foreach($matchArray as $matchA){
+    			$arrayString = $matchA->your_team . $matchA->enemy_team;
+    			$dbString = $firstMatch->your_team . $firstMatch->enemy_team;
+
+    			if($arrayString == $dbString){
+    				break;
+    			}
+    			$limit++;
+    	}
+
+    	for ( $i=0; $i < $limit; $i++ ) { 
+    		$matchArray[$i]->your_team;
+
+    		foreach ($user->duos as $duo) {
+    			if($duo->request_status == "Kabul Edildi")
+    			{
+    				$otherUser = User::find($duo->from_id);
+    				$otherSummoner = $otherUser->summoners()->get()->first();
+
+    				if(strpos($matchArray[$i]->your_team, $otherSummoner->summoner_name) !== FALSE){
+    					if($matchArray[$i]->result == "Win"){
+    						$otherUser->ld_points = $otherUser->ld_points + 5;
+							$user->ld_points = $user->ld_points + 5;
+							$otherUser->save();
+							$user->save();
+    					}
+    					else{
+    						$otherUser->ld_points = $otherUser->ld_points - 3;
+							$user->ld_points = $user->ld_points - 3;
+							$otherUser->save();
+							$user->save();
+    					}
+					}
+    			}
+    		}
+    	}
+    }
+
+    public static function constructMatchArray($user){
+
+    	$summoner = $user->summoners()->get()->first();
+
+    	$summonerName = $summoner->summoner_name;
+    	
+    	//echo $summonerName . "<br>";
+    	if(strpos($summoner->summoner_name, ' ') !== FALSE){
+    		 $summonerName= str_replace(" ", "%20", $summonerName);
+    	}
+		//echo $summonerName . "<br>";
+		
+    	$url= 'http://www.lolskill.net/summoner/TR/' . $summonerName ;
+    	
+
+	    $ch = curl_init();
+		$timeout = 0;
+		curl_setopt($ch, CURLOPT_URL, $url);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);        
+		curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+		curl_setopt($ch, CURLOPT_TIMEOUT, 10000000);
+		$html = curl_exec($ch);	
+
+		//echo htmlspecialchars($data);
+
+		$html = preg_replace("/>s+</", "><", $html);
+
+		$dom = new DOMDocument();
+		libxml_use_internal_errors(true);
+		$dom->loadHTML($html);
+		$dom->preserveWhiteSpace = false;
+
+		$domString = LolSkillController::varDumpToString($dom);
+
+		if(strpos($domString, 'Summoner Not Found') !== FALSE){
+			//summonerNotFound
+		}
+		else{
+			//summonerHasFound
+		}
+
+		$tableMatchHistory = $dom->getElementById('matchHistory');
+		$matchArray = array();
+		foreach($tableMatchHistory->childNodes as $eachMatch)
+		{
+			$class_value = $eachMatch->getAttribute('class');
+			if (strpos($class_value, 'match') !== FALSE){
+				$match = new Match;
+
+				$match->summoner_id = $summoner->id;
+
+				$explodedString = explode(" ", $class_value);
+
+				if($explodedString[1] == 'win'){
+					$match->result = "Win";
+				}
+				else{
+					$match->result = "Loss";
+				}
+
+				foreach( $eachMatch->childNodes as $matchInformation )
+				{
+					if( $matchInformation->nodeType == 1){
+						$class_value = $matchInformation->getAttribute('class');
+						if("matchup" == $class_value){
+							$i = 0;
+							foreach( $matchInformation->childNodes as $teamInformation )
+							{
+								if( $teamInformation->nodeType == 1){
+									$teamString = "";
+									foreach( $teamInformation->childNodes as $playerInformation )
+									{
+										if( $playerInformation->nodeType == 1){
+											$summoner_name = substr($playerInformation->nodeValue,0,-1); //takimdakilerin kullanici adi, sonda bi bosluk var
+											$teamString = $teamString . $summoner_name . ";";
+										}
+									}
+									if($i == 0){
+										$match->your_team = $teamString;
+									}
+									else{
+										$match->enemy_team = $teamString;
+									}
+									$i++;
+								}
+							}
+						}
+					}					
+				}
+				array_push($matchArray, $match);
+				//$match->save();		
+			} 			  	
+		}
+		return $matchArray;
+    }
 }
