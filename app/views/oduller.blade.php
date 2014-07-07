@@ -31,12 +31,14 @@
                         </tr>
                       </thead>
                       <tbody>
+                        @foreach($users as $key => $user)
                         <tr>
-                          <td><center>1</center></td>
-                          <td> <center>BubbleBeast</center></td>
-                          <td><center>33/2</center></td>
-                          <td><center>200</center></td>
+                          <td><center>{{ $key + 1 }}</center></td>
+                          <td> <center><a href='http://leagueduo.com/profile/{{ $user->username }}'>{{ $user->username }} </a></center></td>
+                          <td><center> {{$user->summoners()->first()->kda}} </center></td>
+                          <td><center>{{ $user->ld_points }}</center></td>
                         </tr>
+                        @endforeach
 
                         
                       </tbody>

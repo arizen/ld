@@ -31,22 +31,24 @@
   <div class="profilei">
 <h3 class="profilei-title">Duolarım</h3>
 
+  
+  
 
-                <form class="form-wrapper" id="contact-form" method="post" novalidate role="form">
+                <!-- <form class="form-wrapper" id="contact-form" method="post" novalidate role="form"> -->
+                  {{ Form::open(array('action' => 'MessageController@sendMessage' , 'class' => 'form-wrapper')) }}
                     <div class="contactus-form1-row">
-                        <input type="text" id="name" name="name" data-errmsg="Name *" minlength="2" placeholder="Name *"
+                        <input type="text" id="name" name="subject" data-errmsg="Name *" minlength="2" placeholder="Konu"
                                required/>
                     </div><br />
                     <div class="contactus-form1-row">
-                        <input type="email" name="email" id="email" placeholder="E-mail *" required/>
+                        <textarea name="content" id="message" placeholder="Mesaj *" required></textarea>
                     </div><br />
                     <div class="contactus-form1-row">
-                        <textarea name="message" id="message" placeholder=" Message *" required></textarea>
-                    </div><br />
-                    <div class="contactus-form1-row">
-                        <input type="submit" height="50px" value="Send" class="btn btn-primary btn-full-width"/>
+                        {{ Form::submit('Yolla', array('class' => 'btn btn-primary btn-lg')) }}
+                     <!--   <input type="submit" height="50px" value="Send" class="btn btn-primary btn-full-width"/> -->
                     </div>
-                </form>
+                    {{ Form::close() }}
+                <!-- </form> -->
 
 
 

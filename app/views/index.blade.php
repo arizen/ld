@@ -148,9 +148,17 @@
                         </tr>
                       </thead>
                       <tbody>
+<<<<<<< HEAD
                                                 <tr>
                           <td><center><p style="font-size:16px;"><a href='http://leagueduo.com/profile/{{Session::get('user')->username}}'>{{Session::get('user')->username}}</a></p></center></td>
 
+=======
+                        @foreach($users as $key=>$user)
+                        <tr>
+                          <td><center>{{ $key + 1 }}</center></td>
+                          <td> <center><a href='http://leagueduo.com/profile/{{ $user->username }}'>{{ $user->username }} </a></center></td>
+                          <td><center> {{ $user->ld_points }}</center></td>
+>>>>>>> 9ac6d16b4023432ff7c0b3f2380d1adcfa8aa5e0
                         </tr>
                                                 <tr>
                           <td><center><img src="http://avatar-user.s.aeriastatic.com/61386851/0327ddc4-84fe-4306-a367-80a8e947171e" style="height:200px;border-radius: 10px;border: 1px solid rgb(0, 0, 0);box-shadow: 0 0 10px #000;"></center></td>
