@@ -219,9 +219,9 @@ Route::get('mh', function()
 Route::get('k', function()
 {
     Session::put("id",2);
-    //$user = User::find(1);
+    $user = User::find(1);
 
-    //LolSkillController::givePointsToUser($user);
+    LolSkillController::givePointsToUser($user);
 
     //LolSkillController::getInformationFromSummoner($summoner);
    // Session::put("user",$user);
