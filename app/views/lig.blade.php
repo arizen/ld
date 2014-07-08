@@ -10,15 +10,16 @@
          </header>
          <div class="row">
                                                          <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 coach-wrapper">
+                  @foreach(Session::get("userArray") as $user)
                   <div class="coach-box">
                      <header>
                         
-                        <span class="coach-name">{{Session::get('user')->username}}</span><br /><br />
+                        <span class="coach-name">{{$user->username}}</span><br /><br />
                         <div class="coach">
                            <img src="http://avatar-user.s.aeriastatic.com/61386851/0327ddc4-84fe-4306-a367-80a8e947171e" class="photo">
                         </div>
-                                                <img src="http://leagueduo.com/static/league/{{Session::get('summoner')->league}}.png" style="height: 120px;" alt="{{Session::get('summoner')->league}}"><br />
-                       <p style="color:white; font-weight:bold;">{{Session::get('summoner')->league}} {{Session::get('summoner')->division}} </p>                      </header>
+                                                <img src="http://leagueduo.com/static/league/{{$user->summoners()->get()->first()->league}}.png" style="height: 120px;" alt="{{$user->summoners()->get()->first()->league}}"><br />
+                       <p style="color:white; font-weight:bold;">{{ $user->summoners()->get()->first()->league}} {{$user->summoners()->get()->first()->division }} </p>                      </header>
 
                 <div class="perk center">
                         <div class="content">
@@ -41,8 +42,9 @@
                         </div>
                      </div>
 
-                     <a href='http://leagueduo.com/profile/{{Session::get('user')->username}}' class="btn btn-default">PROFİLİ GÖRÜNTÜLE !</a>
+                     <a href='http://leagueduo.com/profile/{{$user->username}}' class="btn btn-default">PROFİLİ GÖRÜNTÜLE !</a>
                   </div>
+                  @endforeach
                </div>
                                                         
                         </div>
