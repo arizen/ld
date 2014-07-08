@@ -21,17 +21,19 @@ Route::get('signup', function()
 {
     return View::make('signup'); //->with('users', $users);
 });
-Route::get('lig', function()
+Route::get('league/{leagueType}', function($leagueType)
 {
-    $user = User::find(1);
+    $users = User::all();
 
-    $summoner = Summoner::where('user_id','=',$user->id)->first();
+    $userArray = array();
+    foreach ($users as $user) {
+        $summoner = $user->summoners()->get()->first();
+       if( strcasecmp($summoner->league,  $leagueType)  == 0){
+            array_push($userArray, $user);
+       }
+    }
 
-    $stat = Stat::where('summoner_id', '=', $summoner->id)->first();
-
-    Session::put('user',$user);
-    Session::put('summoner',$summoner);
-    Session::put('stat',$stat);
+    Session::put("userArray", $userArray);
 
     return View::make('lig');
 });
