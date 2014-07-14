@@ -77,7 +77,15 @@ Route::get('profile/{username}/comments', function($username)
     Session::put('summoner',$summoner);
     Session::put('stat',$stat);
 
-    return View::make('comments');
+    $queries = DB::table('users')
+            ->join('comments', 'users.id', '=', 'comments.from_id')
+            ->join('summoners', 'users.id', '=', 'summoners.user_id')
+            ->where('comments.to_id','=',$user->id)
+            ->select('users.username','summoners.summoner_name' ,'summoners.league','summoners.division','comments.content')
+            ->get();
+
+
+    return View::make('comments')->with("queries",$queries);
 });
 Route::get('profile/{username}/sendMessage', function($username)
 {
@@ -106,6 +114,8 @@ Route::get('profile/{username}/messages', function($username)
     Session::put('user',$user);
     Session::put('summoner',$summoner);
     Session::put('stat',$stat);
+
+    
 
     return View::make('messages');
 });
@@ -218,12 +228,41 @@ Route::get('mh', function()
     //}
 });
 
+Route::get('q', function()
+{
+    $user1= User::find(1);
+    $user2= User::find(2);
+    
+    DuoController::doUsersAreDuos($user1,$user2);
+
+});
+
+
+
+Route::get('y', function()
+{
+
+    $queries = DB::table('users')
+            ->join('summoners', 'users.id', '=', 'summoners.user_id')
+            ->join('duos', 'users.id', '=', 'duos.from_id')
+            ->select('users.id','summoners.summoner_name' ,'duos.request_status')
+            ->get();
+
+    foreach($queries as $query){
+        echo $query->id . $query->summoner_name . $query->request_status . "</br>" ;
+    }
+
+});
+
 Route::get('k', function()
 {
-    Session::put("id",2);
-    $user = User::find(1);
+    Session::put("id",1);
+    $user = User::find(2);
+    Session::put("user",$user);
 
-    LolSkillController::givePointsToUser($user);
+    CommentController::userWroteComment();
+
+    //LolSkillController::givePointsToUser($user);
 
     //LolSkillController::getInformationFromSummoner($summoner);
    // Session::put("user",$user);
@@ -246,3 +285,4 @@ Route::post('step3', array('uses' => 'UserController@checkStep3'));
 Route::post('profiasdfle/', array('uses' => 'DuoController@sendDuoRequest'));
 Route::post('duos/', array('uses' => 'DuoController@handleDuoRequest'));
 Route::post('profile/', array('uses' => 'MessageController@sendMessage'));
+Route::post('2', array('uses' => 'CommentController@writeComment'));

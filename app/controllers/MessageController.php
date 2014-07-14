@@ -17,10 +17,11 @@ class MessageController extends BaseController {
 		return Redirect::intended('profile/' . $toUser->username);
 	}
 
-	public function getUnreadMessageCount(){
+	public static function getUnreadMessageCount(){
 
 		$user = User::find(Session::get('id'));
-		$sayi = Message::where('to_id','=',$user->id)->where('read','=',(int)false)->count();
+
+		$sayi = Message::where('to_id','=',$user->id)->where('read','=',0)->count();
 
 		return $sayi;
 	}

@@ -43,12 +43,9 @@ class UserController extends BaseController {
                 Session::put('id', $user->id);
                 $idk = $user->id;
             }
-            echo "redirect";
-            return Redirect::to('step1');
+            return Redirect::intended('step1');
         
-
-                // return View::make('user.profile', array('user' => $user));
-            }
+        }
     }
 
     public function login(){

@@ -46,30 +46,37 @@
     <div class="testimonial-vertical-arrow"></div>
     <!-- Arrow -->
 
+@foreach($queries as $query)
     <div class="testimonial-vertical-content">
                     <div class="testimonial-vertical-text" id="accord-3">
                 <div>
-                    Cras sem erat, aliquet in egestas cursus sem erat, ullamcorper vitae ligula. Nunc commodo lacinia eros ac condimentum Nunc commodo lacinia eros ac condimentu
+                  {{ $query->content }}
                 </div>
                 <div class="testimonial-vertical-author">
-                    <a href='http://leagueduo.com/profile/{{Session::get('user')->username}}'>{{Session::get('user')->username}}</a>
+                    <a href='http://leagueduo.com/profile/{{$query->username}}'>{{$query->username}}</a>
                 </div>
                 <div class="testimonial-vertical-author-position">
-                      {{Session::get('summoner')->league}} {{Session::get('summoner')->division}}
+                      {{$query->league}} {{$query->division}}
                 </div>
             </div>
             </div>
+            @endforeach
 
 </div>
+@if(CommentController::userCanWriteComment())
 <div style="height:10px; weight:100%;"></div>
    <div class="divider divider-shadow"></div>
 <p style="font-size:22px; margin-left:10px; font-type:bold;"><a href='http://leagueduo.com/profile/{{Session::get('user')->username}}'>{{Session::get('user')->username}}</a> hakkındaki görüşleriniz :</p>
-   <form action="s" style="">
-
+{{ Form::open(array('action' => 'CommentController@writeComment')) }}
 <textarea style="width:100%; height:100px;" name="yorum" cols="" rows=""></textarea> <br />
 <input style="margin-top:15px;" class="btn btn-primary btn-lg" name="submit" type="submit" />
+{{ Form::close() }}
+@elseif(!DuoController::doUsersAreDuos())
+Duo değilsiniz.
+@else
+Yorum yazmıştınız.
+@endif
 
-</form>
 
 <div class="clear"></div>		
 </div>

@@ -200,7 +200,8 @@ class LolSkillController extends BaseController {
 											$summoner->division = $division;
 										}
 										if('kda' == $classValue){
-											$summoner->kda = $classValue;
+											$explodedString = explode(" ", $bodyElement->nodeValue);
+											$summoner->kda = $explodedString[2];
 											$summoner->save();
 										}											 
 									}
@@ -383,18 +384,16 @@ class LolSkillController extends BaseController {
     			{
     				$otherUser = User::find($duo->from_id);
     				$otherSummoner = $otherUser->summoners()->get()->first();
+    				$duo->match_count = $duo->match_count + 1;
+    				$duo->save();
 
     				if(strpos($matchArray[$i]->your_team, $otherSummoner->summoner_name) !== FALSE){
     					if($matchArray[$i]->result == "Win"){
-    						$otherUser->ld_points = $otherUser->ld_points + 5;
 							$user->ld_points = $user->ld_points + 5;
-							$otherUser->save();
 							$user->save();
     					}
     					else{
-    						$otherUser->ld_points = $otherUser->ld_points - 3;
 							$user->ld_points = $user->ld_points - 3;
-							$otherUser->save();
 							$user->save();
     					}
 					}

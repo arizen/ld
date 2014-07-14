@@ -19,6 +19,7 @@ class CreateDuosTable extends Migration {
         	$table->integer('from_id');
         	$table->integer('to_id');
         	$table->string('request_status');
+        	$table->integer('match_count');
         	$table->timestamps();
     	});
 	}
