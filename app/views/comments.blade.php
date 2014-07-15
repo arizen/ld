@@ -63,9 +63,10 @@
             @endforeach
 
 </div>
-@if(CommentController::userCanWriteComment())
+
 <div style="height:10px; weight:100%;"></div>
    <div class="divider divider-shadow"></div>
+   @if(CommentController::userCanWriteComment())
 <p style="font-size:22px; margin-left:10px; font-type:bold;"><a href='http://leagueduo.com/profile/{{Session::get('user')->username}}'>{{Session::get('user')->username}}</a> hakkındaki görüşleriniz :</p>
 {{ Form::open(array('action' => 'CommentController@writeComment')) }}
 <textarea style="width:100%; height:100px;" name="yorum" cols="" rows=""></textarea> <br />

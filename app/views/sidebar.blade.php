@@ -5,6 +5,8 @@
     <input type="submit" class="btn btn-primary btn-lg"  value="Duo Ekle">
   </form>
   @elseif(UserController::isHisProfile())
+  @elseif(DuoController::doUsersAreDuos())
+  DUONUZ
   @elseif(!DuoController::didUserAddThisUser())
   {{ Form::open(array('action' => 'DuoController@sendDuoRequest')) }}
   {{ Form::submit('Duo Ekle', array('class' => 'btn btn-primary btn-lg')) }}
@@ -32,6 +34,7 @@
    @if( UserController::isHisProfile() )
    <li><a href='http://leagueduo.com/profile/{{Session::get('user')->username}}/messages'><span>Mesajlarım ( {{ MessageController::getUnreadMessageCount()}} )</span></a></li>
    <li><a href='http://leagueduo.com/profile/{{Session::get('user')->username}}/duos'><span>DUO İsteklerim ( {{ DuoController::getDuoRequestCount() }} )</span></a></li>
+      <li><a href='http://leagueduo.com/profile/{{Session::get('user')->username}}/myduos'><span>DUOLARIM</span></a></li>
    <li class='last'><a href='#'><span>Destek Al</span></a></li>
    @endif
 </ul>

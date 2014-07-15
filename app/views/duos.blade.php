@@ -31,11 +31,13 @@
   <div class="profilei">
 <h3 class="profilei-title">Duo İstekleri</h3>
 
-ASDASDASDASDDSADASD
-
 <div></div>
 
 <table width="100%" border="1">
+  @foreach(Session::get("fromMeArray") as $duoRequest)
+  <p> {{ $duoRequest->toUser->username }} {{ $duoRequest->duo->request_status }} </p>
+  @endforeach
+
   @foreach(Session::get("duoModelArray") as $duoModel)
   <tr>
     <th scope="col"><a href='http://leagueduo.com/profile/{{Session::get('user')->username}}'>{{ $duoModel->fromUser->username }}</a></th>

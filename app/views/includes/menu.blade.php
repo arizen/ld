@@ -29,6 +29,15 @@
 
                     <nav>
                         <ul class="navigation">
+                            @if(Session::get('id') != null)
+                            <li>
+                                <a href="/profile">
+                                    <span class="label-nav">
+                                        Profile
+                                    </span>
+                                </a>
+                            </li>
+                            @endif
                             <li>
                                 <a href="/">
                                     <span class="label-nav">

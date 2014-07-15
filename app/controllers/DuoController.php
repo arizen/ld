@@ -52,39 +52,13 @@ class DuoController extends BaseController {
         $user1 = User::find(Session::get('id'));
         $user2 = Session::get('user');
 
-        $rows = DB::table('users')
-        ->join('duos', function($join) use ($user1,$user2)
-        {
-            $join->on('users.id', '=', 'duos.to_id')
-                 ->where('duos.from_id', '=', $user2->id);
+        $rows1 = Duo::where('from_id','=',$user1->id)->where('to_id','=',$user2->id)->where('request_status','=','Kabul Edildi')->get();
+        $rows2 = Duo::where('from_id','=',$user2->id)->where('to_id','=',$user1->id)->where('request_status','=','Kabul Edildi')->get();
 
-        })
-        ->where('duos.request_status', '=', 'Kabul Edildi')
-        ->select('users.username', 'duos.from_id', 'duos.to_id')
-        ->get();
-
-        if(count($rows) > 0){
+        if(count($rows1) > 0 || count($rows2) > 0){
             return true;
         }
-        else{
-            $rows = DB::table('users')
-            ->join('duos as d' , function($join) use ($user1,$user2)
-            {
-                $join->on('users.id', '=', 'd.from_id')
-                    ->where('d.to_id', '=', $user2->id);
-
-            })
-            ->where('d.request_status', '=', 'Kabul Edildi')
-            ->select('users.username', 'd.from_id', 'd.to_id')
-            ->get();
-            
-             if(count($rows) > 0){
-                return true;
-             }
-             else{
-                return false;
-             }
-        }
+        return false;     
     }
 
     public static function didUserAddThisUser(){

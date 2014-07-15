@@ -35,7 +35,7 @@ Route::get('league/{leagueType}', function($leagueType)
 
     Session::put("userArray", $userArray);
 
-    return View::make('lig');
+    return View::make('league');
 });
 
 
@@ -144,6 +144,8 @@ Route::get('profile/{username}/myduos', function($username)
             array_push($duoModelArray, $duoRequest);
         }
     }
+
+
     Session::put('duoModelArray',$duoModelArray);
 
     return View::make('myduos');
@@ -173,6 +175,20 @@ Route::get('profile/{username}/duos', function($username)
     }
     
     Session::put('duoModelArray',$duoModelArray);
+
+    $fromMeArray = array();
+    $fromMes = Duo::where('from_id','=', User::find(Session::get('id'))->id)->get();
+    foreach($fromMes as $duo){
+        //user'ın kendi yaptıgı istekler
+            $duoRequest = new DuoRequestModel;
+            $duoRequest->duo = $duo;
+            $duoRequest->toUser = User::find($duo->to_id);
+            $duoRequest->toSummoner = Summoner::where('user_id','=',$duoRequest->toUser->id)->first();
+            array_push($fromMeArray, $duoRequest);
+    }
+
+    Session::put('fromMeArray', $fromMeArray);
+
     return View::make('duos');
 });
 
@@ -187,8 +203,17 @@ Route::get('login', function()
 Route::get('profile', function()
 {
     $user = User::find(Session::get('id'));
+
+    $summoner = Summoner::where('user_id','=',$user->id)->first();
+
+    $stat = Stat::where('summoner_id', '=', $summoner->id)->first();
+
+    Session::put('user',$user);
+    Session::put('summoner',$summoner);
+    Session::put('stat',$stat);
+
+    return View::make('profile');
     
-    return View::make('profile')->with('user', $user);
 });
 
 Route::get('profile/{username}', function($username)
@@ -260,7 +285,8 @@ Route::get('k', function()
     $user = User::find(2);
     Session::put("user",$user);
 
-    CommentController::userWroteComment();
+    DuoController::doUsersAreDuos();
+    //CommentController::userWroteComment();
 
     //LolSkillController::givePointsToUser($user);
 

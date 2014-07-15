@@ -9,8 +9,9 @@
             <span class="line"></span>
          </header>
          <div class="row">
+            @foreach(Session::get("userArray") as $user)
                                                          <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 coach-wrapper">
-                  @foreach(Session::get("userArray") as $user)
+                  
                   <div class="coach-box">
                      <header>
                         
@@ -32,7 +33,7 @@
                         <div class="content">
                            <span>
                                                             <small style="font-weight: bold;">
-                               <center> <span style="color: rgb(51, 153, 102);">60</span> / <span style="color: rgb(255, 0, 0);">50</span>       </center>             </small>
+                               <center> <span style="color: rgb(51, 153, 102);">{{ $user->summoners()->get()->first()->kda }}</span> </center>  </small>
                            </span>
                         </div>
                      </div>
@@ -44,8 +45,9 @@
 
                      <a href='http://leagueduo.com/profile/{{$user->username}}' class="btn btn-default">PROFİLİ GÖRÜNTÜLE !</a>
                   </div>
-                  @endforeach
+                
                </div>
+                 @endforeach
                                                         
                         </div>
                      </div>
