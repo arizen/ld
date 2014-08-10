@@ -281,12 +281,11 @@ Route::get('y', function()
 
 Route::get('k', function()
 {
-    echo "Armut";
-//    Session::put("id",1);
-//    $user = User::find(2);
-//    Session::put("user",$user);
-//
-//    DuoController::doUsersAreDuos();
+    Session::put("id",1);
+    $user = User::find(2);
+    Session::put("user",$user);
+
+    DuoController::doUsersAreDuos();
     //CommentController::userWroteComment();
 
     //LolSkillController::givePointsToUser($user);
