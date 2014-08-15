@@ -60,7 +60,10 @@
 <script src="/js/retina.js" type="text/javascript"></script> 
 <script src="/js/timeago.js" type="text/javascript"></script> 
 <script src="/js/tweetable.jquery.js" type="text/javascript"></script> 
-<script src="/js/zeina.js" type="text/javascript"></script> 
+<script src="/js/zeina.js" type="text/javascript"></script>
+<script src="/js/denemeajax.js" type="text/javascript"></script>
+<script type="text/javascript" src="/js/notifIt.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/notifIt.css">
 
         <!-- Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>

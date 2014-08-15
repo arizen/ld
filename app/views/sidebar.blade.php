@@ -30,12 +30,21 @@
             
 <div id='profilemsol'>
 <ul>
-   <li><a href='http://leagueduo.com/profile/{{Session::get('user')->username}}/comments'><span>Yorumlar</span></a></li>
+   <li><a href='./profile/{{Session::get('user')->username}}/comments'><span>Yorumlar</span></a></li>
    @if( UserController::isHisProfile() )
-   <li><a href='http://leagueduo.com/profile/{{Session::get('user')->username}}/messages'><span>Mesajlarım ( {{ MessageController::getUnreadMessageCount()}} )</span></a></li>
-   <li><a href='http://leagueduo.com/profile/{{Session::get('user')->username}}/duos'><span>DUO İsteklerim ( {{ DuoController::getDuoRequestCount() }} )</span></a></li>
-      <li><a href='http://leagueduo.com/profile/{{Session::get('user')->username}}/myduos'><span>DUOLARIM</span></a></li>
-   <li class='last'><a href='#'><span>Destek Al</span></a></li>
+   <li>
+    <a href='./profile/{{Session::get('user')->username}}/messages'>
+    <span>Mesajlarım ( <span id="messageRequests"> {{ MessageController::getUnreadMessageCount() }} </span> )</span>
+  </a>
+</li>
+   <li>
+    <a href='./profile/{{Session::get('user')->username}}/duos'>
+      <span> 
+      DUO İsteklerim (  <span id="duoRequests"> {{ DuoController::getDuoRequestCount() }} </span> )</span>
+    </a>
+  </li>
+      <li><a href='./profile/{{Session::get('user')->username}}/myduos'><span>DUOLARIM</span></a></li>
+   <li class='last'><a href='#'><span onclick="not2()">Destek Al</span></a></li>
    @endif
 </ul>
 </div> 

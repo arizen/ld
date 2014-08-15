@@ -281,8 +281,9 @@ Route::get('y', function()
 
 Route::get('k', function()
 {
-    echo "Armut";
-//    Session::put("id",1);
+
+    echo 4;
+
 //    $user = User::find(2);
 //    Session::put("user",$user);
 //
@@ -312,4 +313,6 @@ Route::post('step3', array('uses' => 'UserController@checkStep3'));
 Route::post('profiasdfle/', array('uses' => 'DuoController@sendDuoRequest'));
 Route::post('duos/', array('uses' => 'DuoController@handleDuoRequest'));
 Route::post('profile/', array('uses' => 'MessageController@sendMessage'));
+Route::post('profile/drc', array('uses' => 'DuoController@getDuoRequestCount'));
+Route::post('profile/mcc', array('uses' => 'MessageController@getUnreadMessageCount'));
 Route::post('2', array('uses' => 'CommentController@writeComment'));
